@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "JJTools"
   s.version      = "0.0.1"
-  s.summary      = "include some category based on masonry for create UI  and some others useful tools "
+  s.summary      = "some others useful tools "
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC 
-some others useful tools
+include some category based on masonry for create UI  and some others useful tools
                    DESC
 
   s.homepage     = "https://github.com/chance395/JJTools"
@@ -68,7 +68,7 @@ some others useful tools
   # s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+   s.ios.deployment_target = "8.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -117,8 +117,8 @@ some others useful tools
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.framework  = 'UIKit'
+  #s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
