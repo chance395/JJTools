@@ -19,6 +19,7 @@
         uname(&systemInfo);
         model = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     });
+  
     return model;
 }
 

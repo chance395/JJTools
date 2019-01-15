@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JJTools"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "some others useful tools "
 
   # This description is used to generate tags and improve search results.
@@ -133,6 +133,12 @@ include some category based on masonry for create UI  and some others useful too
    s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-   s.dependency "Masonry", "~> 1.1.0"
+   s.dependency 'Masonry', '~> 1.1.0'
+
+non_arc_files = 'JJTools/JJTools/Classes/JJSafeKit/NSObjectSafe.m'//这是需要添加mrc标识的文件，为相对路径
+s.exclude_files = non_arc_files//在工程中首先排除一下
+s.subspec 'no-arc' do |sp|//一下就是子设置，为需要添加mrc标识的文件进行设置
+sp.source_files = non_arc_files
+sp.requires_arc = false
 
 end
