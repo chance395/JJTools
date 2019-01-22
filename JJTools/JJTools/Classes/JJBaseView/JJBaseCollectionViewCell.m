@@ -5,7 +5,8 @@
 //  Created by Brain on 2018/9/20.
 //  Copyright © 2018 In-next. All rights reserved.
 //
-
+#import "Masonry.h"
+#import "JJBaseHeader.h"
 #import "JJBaseCollectionViewCell.h"
 
 @implementation JJBaseCollectionViewCell

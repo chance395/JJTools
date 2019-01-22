@@ -149,7 +149,7 @@
 
  @return 加密后的str
  */
-- (NSString *)MD5FromatString;
+//- (NSString *)MD5FromatString;
 
 /**
  *  生成固定长度的随机字符串
@@ -166,7 +166,7 @@
  *
  *  @return uuid字符串
  */
-+ (NSString *)getUUIDString;//NS_AVAILABLE_IOS(6_0)
+//+ (NSString *)getUUIDString;//NS_AVAILABLE_IOS(6_0)
 
 
 /**
@@ -178,7 +178,7 @@
  *
  *  @return 加密后的字符串
  */
-+ (NSString *)encryptUseDES:(NSString*)plainText key:(NSString *)key isHaveRandomNumber:(BOOL)randomFlag;
+//+ (NSString *)encryptUseDES:(NSString*)plainText key:(NSString *)key isHaveRandomNumber:(BOOL)randomFlag;
 
 /**
  *  解密字符串
@@ -189,7 +189,7 @@
  *
  *  @return 解密后的字符串
  */
-+ (NSString *)decryptUseDES:(NSString*)cipherText key:(NSString*)key isHaveRandomNumber:(BOOL)randomFlag;
+//+ (NSString *)decryptUseDES:(NSString*)cipherText key:(NSString*)key isHaveRandomNumber:(BOOL)randomFlag;
 
 
 
@@ -201,7 +201,7 @@
  *
  *  @return 加密后的字符串
  */
-+(NSString *)HmacSha1:(NSString *)key data:(NSString *)data;
+//+(NSString *)HmacSha1:(NSString *)key data:(NSString *)data;
 
 
 @end

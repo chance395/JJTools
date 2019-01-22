@@ -7,13 +7,10 @@
 //
 
 #import "MBProgressHUD.h"
-#import "JJUserManager.h"
-#import "UIDevice+JJDevice.h"
 #import "AFNetworking.h"
 #import "JJBaseRequest.h"
-#import "NSString+JJTools.h"
-#import "JJMacroDefine.h"
-#import "JJTool.h"
+#import "JJBaseHeader.h"
+
 @interface AFHTTPSessionManager (ShareManagerForPreventLeaks)
 
 + (instancetype)shareManager;
@@ -40,7 +37,7 @@
     [dataDic setObject:APP_NAME forKey:@"appName"];
     [dataDic setObject:@"ios" forKey:@"clientType"];
     [dataDic setObject:AppVersion forKey:@"appVersion"];
-    [dataDic setObject:[NSString getUUIDString] forKey:@"deviceId"];
+//    [dataDic setObject:[NSString getUUIDString] forKey:@"deviceId"];
     [dataDic setObject:@"oss" forKey:@"channelName"];
     [dataDic setValue:UserDefaultsGetter(@"userPhone") forKey:@"mobilePhone"];
     
@@ -92,12 +89,12 @@
     // 签名
     NSString *signature = [NSString stringWithFormat:@"%@%@%@",strUrlPadding,strDate,strRandom];
     
-    NSString *strDataSigntureNew = [NSString  HmacSha1:kSaltShA1Key data:signature];
+//    NSString *strDataSigntureNew = [NSString  HmacSha1:kSaltShA1Key data:signature];
 
-    if (strDataSigntureNew && ![strDataSigntureNew isEmptyStr])
-    {
-        [manager.requestSerializer setValue:strDataSigntureNew forHTTPHeaderField:@"signature"];
-    }
+//    if (strDataSigntureNew && ![strDataSigntureNew isEmptyStr])
+//    {
+//        [manager.requestSerializer setValue:strDataSigntureNew forHTTPHeaderField:@"signature"];
+//    }
     
     [manager.requestSerializer setValue:strRandom forHTTPHeaderField:@"echostr"];
     [manager.requestSerializer setValue:strDate  forHTTPHeaderField:@"timestamp"];
@@ -166,8 +163,8 @@
         NSData * data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
         NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
         str = str.length >0? str :@"errorData return nil";
-        NSString * deviceID =[NSString getUUIDString];
-        
+//        NSString * deviceID =[NSString getUUIDString];
+        NSString * deviceID =@"dd";
         NSString* phoneStr =UserDefaultsGetter(@"userPhone")? UserDefaultsGetter(@"userPhone"):@"未登录";
         NSString* iosVersion=[NSString stringWithFormat:@"%.1lf",IOSVERSION];
         NSString *deviceType =[[[UIDevice alloc]init]machineModelName];
@@ -255,8 +252,9 @@
     // 签名
     NSString *signature = [NSString stringWithFormat:@"%@%@%@",strUrlPadding,strDate,strRandom];
     
-    NSString *strDataSigntureNew = [NSString  HmacSha1:kSaltShA1Key data:signature];
+//    NSString *strDataSigntureNew = [NSString  HmacSha1:kSaltShA1Key data:signature];
 
+    NSString *strDataSigntureNew =@"ddd";
     [manager.requestSerializer setValue:strDataSigntureNew forHTTPHeaderField:@"signature"];
 //
     [manager.requestSerializer setValue:strRandom forHTTPHeaderField:@"echostr"];
@@ -329,8 +327,8 @@
         NSData * data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
         NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
         str = str.length >0? str :@"errorData return nil";
-        NSString * deviceID =[NSString getUUIDString];
-        
+//        NSString * deviceID =[NSString getUUIDString];
+        NSString * deviceID =@"ddd";
         NSString* phoneStr =UserDefaultsGetter(@"userPhone")? UserDefaultsGetter(@"userPhone"):@"未登录";
         NSString* iosVersion=[NSString stringWithFormat:@"%.1lf",IOSVERSION];
         NSString *deviceType =[[[UIDevice alloc]init]machineModelName];
@@ -376,11 +374,12 @@
     hud.animationType = MBProgressHUDAnimationZoomOut;
     hud.mode = MBProgressHUDModeText;
     //    hud.labelText = [TipMessage shared].tipMessage.tipTitle;
+    //Customize bezelView properties instead
     hud.detailsLabel.text = msg;
     hud.margin = 10.f;
-    hud.opacity = 0.5;
+    hud.bezelView.alpha = 0.5;
     hud.removeFromSuperViewOnHide = YES;
-    [hud hide:YES afterDelay:0.8];
+    [hud hideAnimated:YES afterDelay:0.8];
 }
 
 @end

@@ -5,7 +5,8 @@
 //  Created by Brain on 2018/9/14.
 //  Copyright © 2018 In-next. All rights reserved.
 //
-
+#import "Masonry.h"
+#import "JJBaseHeader.h"
 #import "JJBaseTableViewHeaderFooterView.h"
 
 @interface JJBaseTableViewHeaderFooterView ()
@@ -69,49 +70,23 @@
 
 - (void)setupSubViews:(NSMutableArray*)arr
 {
-//    NSUInteger count =arr.count;
-//    CGFloat height =0.f;
-//    if (count>0) {
-//        UILabel * label =[UILabel new];
-//        label.text =arr[count-1][@"statusStr"];
-//        height =[label JJTextHeightWithFont:FONT(12) width:SCREEN_WIDTH-40];
-//    }
+
     self.vcontentView =[UIView MAGetUIViewWithBackgroundColor:[UIColor whiteColor] superView:self masonrySet:^(UIView *currentView, MASConstraintMaker *make) {
         make.top.mas_equalTo(10);
         make.left.and.right.mas_equalTo(self);
         make.height.mas_equalTo(80);
     }];
+    
     UIView *superView =self.vcontentView;
     
-//    self.lefColor =[UIView MAGetUIViewWithBackgroundColor:[UIColor JJColorWithHexStr:@"#8C88FF"] superView:superView masonrySet:^(UIView *currentView, MASConstraintMaker *make) {
-//        make.left.and.top.mas_equalTo(15);
-//        make.width.and.height.mas_equalTo(10);
-//    }];
+
     
     self.headerLabel =[UILabel MAGetLabelWithFont:FONT(12) text:@"当前进度" textColor:[UIColor JJColorWithHexStr:@"#5E5E5E"] textAlignment:NSTextAlignmentLeft superView:superView masonrySet:^(UILabel *currentLabel, MASConstraintMaker *make) {
         make.left.mas_equalTo(20);
         make.top.mas_equalTo(15);
     }];
     
-//    self.underLineView =[UIView MAGetUIViewWithBackgroundColor:Color_Button_Disabled superView:superView masonrySet:^(UIView *currentView, MASConstraintMaker *make) {
-//        make.left.equalTo(self.lefColor);
-//        make.top.equalTo(self.lefColor.mas_bottom).mas_offset(16);
-//        make.right.equalTo(self.mas_right).mas_offset(-15);
-//        make.height.mas_equalTo(1);
-//    }];
-//
-//    self.currenProcessLabel =[UILabel MAGetLabelWithFont:FONT(15) text:@"当前进度" textColor:[UIColor JJColorWithHexStr:@"#1D1D26"] textAlignment:NSTextAlignmentLeft superView:superView masonrySet:^(UILabel *currentLabel, MASConstraintMaker *make) {
-//        make.top.equalTo(self.underLineView.mas_bottom).mas_offset(11);
-//        make.left.mas_equalTo(19);
-//
-//    }];
-    
-//    self.historyImageView =[UIImageView MAGetImageViewWith:@"history_detail" superView:superView masonrySet:^(UIImageView *currentImageView, MASConstraintMaker *make) {
-//        make.left.equalTo(self.currenProcessLabel);
-//        make.top.equalTo(self.currenProcessLabel.mas_bottom).mas_offset(15);
-//        make.width.and.height.mas_equalTo(15);
-//    }];
-//
+
     
     self.detailProcessLabel =[UILabel MAGetLabelWithFont:FONT(12) text:@"" textColor:[UIColor JJColorWithHexStr:@"#FF6042"] textAlignment:NSTextAlignmentLeft superView:superView masonrySet:^(UILabel *currentLabel, MASConstraintMaker *make) {
         make.left.equalTo(self.headerLabel.mas_left);

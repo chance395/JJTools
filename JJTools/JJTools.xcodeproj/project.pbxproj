@@ -17,7 +17,6 @@
 		F74999C721BF90F8006E7D77 /* UIImage+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F74999BF21BF90F8006E7D77 /* UIImage+JJTools.m */; };
 		F74999D021BF9200006E7D77 /* NSString+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F74999CB21BF9200006E7D77 /* NSString+JJTools.m */; };
 		F74999D121BF9200006E7D77 /* UIColor+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F74999CC21BF9200006E7D77 /* UIColor+JJTools.m */; };
-		F74999D221BF9200006E7D77 /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F74999CD21BF9200006E7D77 /* NSObjectSafe.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F74999D321BF9200006E7D77 /* NSObject+JJTools_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F74999CF21BF9200006E7D77 /* NSObject+JJTools_Runtime.m */; };
 		F74999DA21BFBC78006E7D77 /* JJReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F74999D921BFBC78006E7D77 /* JJReachability.m */; };
 		F74999DD21BFC12A006E7D77 /* JJSystemCall.m in Sources */ = {isa = PBXBuildFile; fileRef = F74999DC21BFC12A006E7D77 /* JJSystemCall.m */; };
@@ -87,12 +86,10 @@
 		F74999BF21BF90F8006E7D77 /* UIImage+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JJTools.m"; sourceTree = "<group>"; };
 		F74999C021BF90F8006E7D77 /* UILabel+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MasonryLayout.h"; sourceTree = "<group>"; };
 		F74999C121BF90F8006E7D77 /* UIImageView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MasonryLayout.h"; sourceTree = "<group>"; };
-		F74999C821BF9200006E7D77 /* NSObjectSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSObjectSafe.h; path = ../../../../brain/JJTools/JJTools/JJTools/Classes/JJSafeKit/NSObjectSafe.h; sourceTree = "<group>"; };
 		F74999C921BF9200006E7D77 /* UIColor+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJTools.h"; sourceTree = "<group>"; };
 		F74999CA21BF9200006E7D77 /* NSString+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JJTools.h"; sourceTree = "<group>"; };
 		F74999CB21BF9200006E7D77 /* NSString+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJTools.m"; sourceTree = "<group>"; };
 		F74999CC21BF9200006E7D77 /* UIColor+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJTools.m"; sourceTree = "<group>"; };
-		F74999CD21BF9200006E7D77 /* NSObjectSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSObjectSafe.m; path = ../../../../brain/JJTools/JJTools/JJTools/Classes/JJSafeKit/NSObjectSafe.m; sourceTree = "<group>"; };
 		F74999CE21BF9200006E7D77 /* NSObject+JJTools_Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JJTools_Runtime.h"; path = "../../../../brain/JJTools/JJTools/JJTools/Classes/JJSafeKit/NSObject+JJTools_Runtime.h"; sourceTree = "<group>"; };
 		F74999CF21BF9200006E7D77 /* NSObject+JJTools_Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JJTools_Runtime.m"; path = "../../../../brain/JJTools/JJTools/JJTools/Classes/JJSafeKit/NSObject+JJTools_Runtime.m"; sourceTree = "<group>"; };
 		F74999D821BFBC78006E7D77 /* JJReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JJReachability.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJNetWork/JJReachability.h; sourceTree = "<group>"; };
@@ -295,8 +292,6 @@
 			children = (
 				F74999CE21BF9200006E7D77 /* NSObject+JJTools_Runtime.h */,
 				F74999CF21BF9200006E7D77 /* NSObject+JJTools_Runtime.m */,
-				F74999C821BF9200006E7D77 /* NSObjectSafe.h */,
-				F74999CD21BF9200006E7D77 /* NSObjectSafe.m */,
 			);
 			name = JJSafeKit;
 			path = ../../../../douyouhua_ios/JJTools/JJSafeKit;
@@ -638,7 +633,6 @@
 				F7865CDB21EDC56B0084ED2E /* JJLoginSecondViewController.m in Sources */,
 				F7865CD521ED94CF0084ED2E /* JJBaseNavigationViewController.m in Sources */,
 				F74999DA21BFBC78006E7D77 /* JJReachability.m in Sources */,
-				F74999D221BF9200006E7D77 /* NSObjectSafe.m in Sources */,
 				F74999C221BF90F8006E7D77 /* UIView+MasonryLayout.m in Sources */,
 				F74999C521BF90F8006E7D77 /* UIImageView+MasonryLayout.m in Sources */,
 				F7865CCE21ED8F8F0084ED2E /* JJBaseModel.m in Sources */,

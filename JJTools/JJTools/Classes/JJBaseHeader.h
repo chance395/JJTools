@@ -16,14 +16,14 @@
 #import "UITextField+MasonryLayout.h"
 #import "UIImage+JJTools.h"
 //baseView
-#import "JJBaseTableViewCell.h"
-#import "JJBaseTableView.h"
-#import "JJBaseComponent.h"
+//#import "JJBaseTableViewCell.h"
+//#import "JJBaseTableView.h"
+//#import "JJBaseComponent.h"
 //category
 #import "NSString+JJTools.h"
 #import "UIColor+JJTools.h"
 #import "UIDevice+JJDevice.h"
-#import "NSObjectSafe.h"
+//#import "NSObjectSafe.h"
 //define
 #import "JJConstants.h"
 #import "JJFontDefine.h"
@@ -40,5 +40,9 @@
 //
 
 #import "JJTool.h"
+#import "JJUserManager.h"
+
+//
+#import "JJDispatch_queue.h"
 
 #endif /* Header_h */

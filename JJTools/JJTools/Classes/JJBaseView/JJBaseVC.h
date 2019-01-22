@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger,PageGobackType)
 @property (nonatomic, assign, getter=isUserInterActive) BOOL userInterActive;
 
 //版本更新接口
--(void)requestAppVersionStatus;
+//-(void)requestAppVersionStatus;
 
 /**
  *  页面基本设置
@@ -101,10 +101,10 @@ typedef NS_ENUM(NSInteger,PageGobackType)
 - (BOOL)checkIsHaveNet;
 
 //添加提示 是否有网络 是否有数据 可添加在tableView 上 可以滑动
-- (void)showTipViewWithData:(NSMutableArray *)arr superView:(UIView *)vSuper;
-
-//添加提示 是否有网络 是否有数据 添加的是self.view 不可以滑动
-- (void)showTipViewWithData:(NSMutableArray *)arr withFrame:(CGRect)frameRect;
+//- (void)showTipViewWithData:(NSMutableArray *)arr superView:(UIView *)vSuper;
+//
+////添加提示 是否有网络 是否有数据 添加的是self.view 不可以滑动
+//- (void)showTipViewWithData:(NSMutableArray *)arr withFrame:(CGRect)frameRect;
 
 //显示底部导航栏
 - (void )showNaviBottomLine;

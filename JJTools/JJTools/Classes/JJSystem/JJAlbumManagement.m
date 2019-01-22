@@ -8,6 +8,7 @@
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "JJAlbumManagement.h"
+#import "JJMacroDefine.h"
 
 @interface JJAlbumManagement()
 

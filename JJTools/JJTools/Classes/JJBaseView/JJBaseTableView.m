@@ -6,11 +6,10 @@
 //  Copyright © 2018 In-next. All rights reserved.
 //
 #import "DZNEmptyDataSet.h"
-#import "JJReachability.h"
+#import "Masonry.h"
+#import "JJBaseHeader.h"
 #import "JJBaseTableView.h"
-#import "NSString+JJTools.h"
-#import "JJColorDefine.h"
-#import "JJMacroDefine.h"
+
 @interface JJBaseTableView () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @end

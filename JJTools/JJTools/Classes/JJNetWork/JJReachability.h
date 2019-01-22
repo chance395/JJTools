@@ -7,7 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>
-#import <netinet/in.h>
+//#import <netinet/in.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

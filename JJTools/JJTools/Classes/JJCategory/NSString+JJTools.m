@@ -5,13 +5,13 @@
 //  Created by Brain on 2018/9/11.
 //  Copyright © 2018 In-next. All rights reserved.
 //
-#import <CommonCrypto/CommonCrypto.h>
-#import "GTMBase64.h"
-#import "GTMDefines.h"
-#import <CommonCrypto/CommonHMAC.h>
-#import <CommonCrypto/CommonDigest.h>
+//#import <CommonCrypto/CommonCrypto.h>
+//#import "GTMBase64.h"
+//#import "GTMDefines.h"
+//#import <CommonCrypto/CommonHMAC.h>
+//#import <CommonCrypto/CommonDigest.h>
 #import "NSString+JJTools.h"
-#import "UICKeyChainStore.h"
+
 
 @implementation NSString (JJTools)
 
@@ -248,19 +248,20 @@
 
 - (NSString *)MD5FromatString
 {
-    if(self == nil || [self length] == 0)
-        return nil;
-    
-    const char *value = [self UTF8String];
-    unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
-    unsigned char x = strlen(value);
-    CC_MD5(value,x, outputBuffer);
-    
-    NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
-        [outputString appendFormat:@"%02x",outputBuffer[count]];
-    }
-    return outputString;
+//    if(self == nil || [self length] == 0)
+//        return nil;
+//
+//    const char *value = [self UTF8String];
+//    unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
+//    unsigned char x = strlen(value);
+//    CC_MD5(value,x, outputBuffer);
+//
+//    NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+//    for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
+//        [outputString appendFormat:@"%02x",outputBuffer[count]];
+//    }
+//    return outputString;
+    return nil;
 }
 
 + (NSString *)generateRandomStringWithLength:(NSInteger)iLength{
@@ -279,94 +280,97 @@
 
 + (NSString*)getUUIDString{
 
-    UICKeyChainStore * keychain = [UICKeyChainStore keyChainStoreWithService:APP_NAME];
-    NSString *currentDeviceUUIDStr =keychain[@"uuid"];
-    
-    if (currentDeviceUUIDStr == nil || [currentDeviceUUIDStr isEqualToString:@""])
-    {
-        NSUUID * currentDeviceUUID  = [UIDevice currentDevice].identifierForVendor;
-        currentDeviceUUIDStr = currentDeviceUUID.UUIDString;
-        currentDeviceUUIDStr = [currentDeviceUUIDStr stringByReplacingOccurrencesOfString:@"-" withString:@""];
-        currentDeviceUUIDStr = [currentDeviceUUIDStr lowercaseString];
-        [keychain setString:currentDeviceUUIDStr forKey:@"uuid"];
-    }
-    return currentDeviceUUIDStr;
+//    UICKeyChainStore * keychain = [UICKeyChainStore keyChainStoreWithService:APP_NAME];
+//    NSString *currentDeviceUUIDStr =keychain[@"uuid"];
+//    
+//    if (currentDeviceUUIDStr == nil || [currentDeviceUUIDStr isEqualToString:@""])
+//    {
+//        NSUUID * currentDeviceUUID  = [UIDevice currentDevice].identifierForVendor;
+//        currentDeviceUUIDStr = currentDeviceUUID.UUIDString;
+//        currentDeviceUUIDStr = [currentDeviceUUIDStr stringByReplacingOccurrencesOfString:@"-" withString:@""];
+//        currentDeviceUUIDStr = [currentDeviceUUIDStr lowercaseString];
+//        [keychain setString:currentDeviceUUIDStr forKey:@"uuid"];
+//    }
+//    return currentDeviceUUIDStr;
+    return nil;
 }
 
 //加密
 + (NSString *)encryptUseDES:(NSString*)plainText key:(NSString *)key isHaveRandomNumber:(BOOL)randomFlag{
-    NSString *ciphertext = nil;
-    const char *textBytes = [plainText UTF8String];
-    NSUInteger dataLength = [plainText length];
-    unsigned char buffer[1024];
-    memset(buffer, 0, sizeof(char));
-    CCCryptorStatus cryptStatus;
-    size_t numBytesEncrypted = 0;
-    if (randomFlag) {
-        Byte iv[] = {1,2,3,4,5,6,7,8};
-        cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmDES,
-                              kCCOptionPKCS7Padding,
-                              [key UTF8String], kCCKeySizeDES,
-                              iv,
-                              textBytes, dataLength,
-                              buffer, 1024,
-                              &numBytesEncrypted);
-    }else{
-        cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmDES,
-                              kCCOptionPKCS7Padding | kCCOptionECBMode,
-                              [key UTF8String], kCCKeySizeDES,
-                              nil,
-                              textBytes, dataLength,
-                              buffer, dataLength + kCCBlockSizeAES128,
-                              &numBytesEncrypted);
-    }
-    
-    if (cryptStatus == kCCSuccess) {
-        NSData *data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesEncrypted];
-        ciphertext = [[NSString alloc] initWithData:[GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
-    }
-    return ciphertext;
+//    NSString *ciphertext = nil;
+//    const char *textBytes = [plainText UTF8String];
+//    NSUInteger dataLength = [plainText length];
+//    unsigned char buffer[1024];
+//    memset(buffer, 0, sizeof(char));
+//    CCCryptorStatus cryptStatus;
+//    size_t numBytesEncrypted = 0;
+//    if (randomFlag) {
+//        Byte iv[] = {1,2,3,4,5,6,7,8};
+//        cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmDES,
+//                              kCCOptionPKCS7Padding,
+//                              [key UTF8String], kCCKeySizeDES,
+//                              iv,
+//                              textBytes, dataLength,
+//                              buffer, 1024,
+//                              &numBytesEncrypted);
+//    }else{
+//        cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmDES,
+//                              kCCOptionPKCS7Padding | kCCOptionECBMode,
+//                              [key UTF8String], kCCKeySizeDES,
+//                              nil,
+//                              textBytes, dataLength,
+//                              buffer, dataLength + kCCBlockSizeAES128,
+//                              &numBytesEncrypted);
+//    }
+//
+//    if (cryptStatus == kCCSuccess) {
+//        NSData *data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesEncrypted];
+//        ciphertext = [[NSString alloc] initWithData:[GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
+//    }
+//    return ciphertext;
+    return nil;
 }
 
 //解密
 + (NSString *)decryptUseDES:(NSString*)cipherText key:(NSString*)key isHaveRandomNumber:(BOOL)randomFlag{
-    NSData* cipherData = [GTMBase64 decodeString:cipherText];
-    unsigned char buffer[1024];
-    memset(buffer, 0, sizeof(char));
-    size_t numBytesDecrypted = 0;
-    CCCryptorStatus cryptStatus;
-    if (randomFlag) {
-        Byte iv[] = {1,2,3,4,5,6,7,8};
-        cryptStatus = CCCrypt(kCCDecrypt,
-                              kCCAlgorithmDES,
-                              kCCOptionPKCS7Padding,
-                              [key UTF8String],
-                              kCCKeySizeDES,
-                              iv,
-                              [cipherData bytes],
-                              [cipherData length],
-                              buffer,
-                              1024,
-                              &numBytesDecrypted);
-    }else{
-        cryptStatus = CCCrypt(kCCDecrypt,
-                              kCCAlgorithmDES,
-                              kCCOptionPKCS7Padding | kCCOptionECBMode,
-                              [key UTF8String],
-                              kCCKeySizeDES,
-                              nil,
-                              [cipherData bytes],
-                              [cipherData length],
-                              buffer,
-                              [cipherData length] + kCCBlockSizeAES128,
-                              &numBytesDecrypted);
-    }
-    NSString* plainText = nil;
-    if (cryptStatus == kCCSuccess) {
-        NSData* data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesDecrypted];
-        plainText = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    }
-    return plainText;
+//    NSData* cipherData = [GTMBase64 decodeString:cipherText];
+//    unsigned char buffer[1024];
+//    memset(buffer, 0, sizeof(char));
+//    size_t numBytesDecrypted = 0;
+//    CCCryptorStatus cryptStatus;
+//    if (randomFlag) {
+//        Byte iv[] = {1,2,3,4,5,6,7,8};
+//        cryptStatus = CCCrypt(kCCDecrypt,
+//                              kCCAlgorithmDES,
+//                              kCCOptionPKCS7Padding,
+//                              [key UTF8String],
+//                              kCCKeySizeDES,
+//                              iv,
+//                              [cipherData bytes],
+//                              [cipherData length],
+//                              buffer,
+//                              1024,
+//                              &numBytesDecrypted);
+//    }else{
+//        cryptStatus = CCCrypt(kCCDecrypt,
+//                              kCCAlgorithmDES,
+//                              kCCOptionPKCS7Padding | kCCOptionECBMode,
+//                              [key UTF8String],
+//                              kCCKeySizeDES,
+//                              nil,
+//                              [cipherData bytes],
+//                              [cipherData length],
+//                              buffer,
+//                              [cipherData length] + kCCBlockSizeAES128,
+//                              &numBytesDecrypted);
+//    }
+//    NSString* plainText = nil;
+//    if (cryptStatus == kCCSuccess) {
+//        NSData* data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesDecrypted];
+//        plainText = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    }
+//    return plainText;
+    return nil;
 }
 
 
@@ -381,49 +385,49 @@
 +(NSString *)HmacSha1:(NSString *)key data:(NSString *)data{
     
     
-    const char *cKey  = [key cStringUsingEncoding:NSUTF8StringEncoding];
+//    const char *cKey  = [key cStringUsingEncoding:NSUTF8StringEncoding];
+//
+//
+//
+//    const char *cData = [data cStringUsingEncoding:NSUTF8StringEncoding];
+//
+//
+//
+//    uint8_t cHMAC[CC_SHA1_DIGEST_LENGTH];
+//
+//
+//
+//    CCHmac(kCCHmacAlgSHA1, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+//
+//
+//
+//    //NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:CC_SHA1_DIGEST_LENGTH];
+//
+//
+//
+//    NSString *hash;
+//
+//
+//
+//    NSMutableString * output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+//
+//
+//
+//    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
+//
+//
+//
+//        [output appendFormat:@"%02x", cHMAC[i]];
+//
+//
+//
+//    hash = output;
+//
+//
+//
+//    return hash;
     
-    
-    
-    const char *cData = [data cStringUsingEncoding:NSUTF8StringEncoding];
-    
-    
-    
-    uint8_t cHMAC[CC_SHA1_DIGEST_LENGTH];
-    
-    
-    
-    CCHmac(kCCHmacAlgSHA1, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
-    
-    
-    
-    //NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:CC_SHA1_DIGEST_LENGTH];
-    
-    
-    
-    NSString *hash;
-    
-    
-    
-    NSMutableString * output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
-    
-    
-    
-    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
-        
-        
-        
-        [output appendFormat:@"%02x", cHMAC[i]];
-    
-    
-    
-    hash = output;
-    
-    
-    
-    return hash;
-    
-    
+    return nil;
 }
 
 

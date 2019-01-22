@@ -5,7 +5,7 @@
 //  Created by Brain on 2018/12/11.
 //  Copyright © 2018 Brain. All rights reserved.
 //
-
+#import "JJBaseHeader.h"
 #import <Photos/Photos.h>
 #import "JJSystemCall.h"
 #import <CoreLocation/CoreLocation.h>

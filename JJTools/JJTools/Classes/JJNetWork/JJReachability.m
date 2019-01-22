@@ -9,7 +9,7 @@
 #import <ifaddrs.h>
 #import <netdb.h>
 #import <sys/socket.h>
-
+#import "JJBaseHeader.h"
 #import <CoreFoundation/CoreFoundation.h>
 #import "JJReachability.h"
 

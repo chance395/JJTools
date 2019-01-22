@@ -80,7 +80,7 @@ include some category based on masonry for create UI  and some others useful too
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/chance395/JJTools.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/chance395/JJTools.git", :tag => "v#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,11 +91,14 @@ include some category based on masonry for create UI  and some others useful too
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "JJTools/JJTools/Classes/**/*.{h,m}"
+ 
   #s.exclude_files = "Classes/Exclude"
+   s.source_files  = "Classes", "JJTools/JJTools/Classes/**/*.{h,m}"
+   s.public_header_files = "JJTools/JJTools/Classes/JJBaseHeader.h"
 
-  # s.public_header_files = "Classes/**/*.h"
 
+  #s.public_header_files = 'JJTools/JJTools/Classes/JJBaseHeader.h'
+  #s.source_files = 'JJTools/JJTools/Classes/JJBaseHeader.h'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -118,7 +121,9 @@ include some category based on masonry for create UI  and some others useful too
   #
 
   #s.framework  = 'UIKit'
-  s.frameworks = "UIKit", "Foundation","CoreLocation"
+  s.frameworks = "UIKit", "Foundation","CoreLocation","objc","Photos","AssetsLibrary","SystemConfiguration","Security"
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/sys" }
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -130,18 +135,27 @@ include some category based on masonry for create UI  and some others useful too
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-   s.requires_arc = true
+   
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-   s.dependency 'Masonry', '~> 1.1.0'
-   s.dependency 'AFNetworking', '~> 3.2.1'
-   s.dependency 'MBProgressHUD', '~> 1.1.0'
-   s.dependency 'UICKeyChainStore', '~> 2.1.2'
+   s.dependency 'Masonry'
+   s.dependency 'AFNetworking'
+   s.dependency 'MBProgressHUD'
+   #s.dependency 'Masonry', '~> 1.1.0'
+   #s.dependency 'AFNetworking', '~> 3.2.1'
+   #s.dependency 'MBProgressHUD', '~> 1.1.0'
+   #s.dependency 'UICKeyChainStore', '~> 2.1.2'
 
-non_arc_files = 'JJTools/JJTools/Classes/JJSafeKit/NSObjectSafe.m'//这是需要添加mrc标识的文件，为相对路径
-s.exclude_files = non_arc_files//在工程中首先排除一下
-s.subspec 'no-arc' do |sp|//一下就是子设置，为需要添加mrc标识的文件进行设置
-sp.source_files = non_arc_files
-sp.requires_arc = false
+s.requires_arc = true
+#non_arc_files = 'JJTools/JJTools/Classes/JJSafeKit/NSObjectSafe.m'
+#s.exclude_files = non_arc_files
+#s.subspec 'no-arc' do |sp|
+#sp.source_files = non_arc_files
+#sp.requires_arc = false
+
+#s.requires_arc = false
+#s.requires_arc = ['JJTools/JJTools/Classes/JJSafeKit/NSObjectSafe.m']
+
+
 
 end

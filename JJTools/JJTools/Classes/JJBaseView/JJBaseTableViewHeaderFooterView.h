@@ -19,11 +19,7 @@
 @interface JJDetailOrderHeaderView : UITableViewHeaderFooterView
 
 @property (nonatomic,strong) UIView     *vcontentView;
-//@property (nonatomic,strong) UIImageView *historyImageView;
-//@property (nonatomic,strong) UIView     *lefColor;
 @property (nonatomic,strong) UILabel     *headerLabel;
-//@property (nonatomic,strong) UIView      *underLineView;
-//@property (nonatomic,strong) UILabel     *currenProcessLabel;
 @property (nonatomic,strong) UILabel     *detailProcessLabel;
 @property (nonatomic,strong) UIButton     *arrowBtn;
 @property (nonatomic,strong) UIView       *underLineView2;

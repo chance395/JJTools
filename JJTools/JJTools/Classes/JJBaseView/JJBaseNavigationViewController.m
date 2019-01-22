@@ -6,6 +6,8 @@
 //  Copyright © 2019 Brain. All rights reserved.
 //
 
+#import "Masonry.h"
+#import "JJBaseHeader.h"
 #import "JJBaseNavigationViewController.h"
 
 @interface JJBaseNavigationViewController ()
