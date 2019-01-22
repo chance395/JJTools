@@ -36,6 +36,8 @@
 		F7B09F9921BE4F8F001C7641 /* JJBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B09F8E21BE4F8F001C7641 /* JJBaseTableView.m */; };
 		F7B09F9A21BE4F8F001C7641 /* JJBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B09F8F21BE4F8F001C7641 /* JJBaseCollectionViewCell.m */; };
 		F7B09F9B21BE4F8F001C7641 /* JJBaseTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B09F9121BE4F8F001C7641 /* JJBaseTableViewHeaderFooterView.m */; };
+		F7BCA75B21F721E0005A0045 /* JJDispatch_queue.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCA75A21F721E0005A0045 /* JJDispatch_queue.m */; };
+		F7BCA75D21F72342005A0045 /* 修改模板.zip in Resources */ = {isa = PBXBuildFile; fileRef = F7BCA75C21F72342005A0045 /* 修改模板.zip */; };
 		F7BF3C2221BC1FAA00E6C4EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF3C2121BC1FAA00E6C4EC /* AppDelegate.m */; };
 		F7BF3C2521BC1FAA00E6C4EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF3C2421BC1FAA00E6C4EC /* ViewController.m */; };
 		F7BF3C2821BC1FAA00E6C4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7BF3C2621BC1FAA00E6C4EC /* Main.storyboard */; };
@@ -133,6 +135,9 @@
 		F7B09F8F21BE4F8F001C7641 /* JJBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		F7B09F9121BE4F8F001C7641 /* JJBaseTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTableViewHeaderFooterView.m; sourceTree = "<group>"; };
 		F7B09F9221BE4F8F001C7641 /* JJBaseComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseComponent.h; sourceTree = "<group>"; };
+		F7BCA75921F721E0005A0045 /* JJDispatch_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJDispatch_queue.h; sourceTree = "<group>"; };
+		F7BCA75A21F721E0005A0045 /* JJDispatch_queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJDispatch_queue.m; sourceTree = "<group>"; };
+		F7BCA75C21F72342005A0045 /* 修改模板.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "修改模板.zip"; sourceTree = "<group>"; };
 		F7BF3C1D21BC1FAA00E6C4EC /* JJTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7BF3C2021BC1FAA00E6C4EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7BF3C2121BC1FAA00E6C4EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -338,6 +343,7 @@
 		F7B09FE021BE78E1001C7641 /* JJFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F7BCA73C21F6D08B005A0045 /* 修改模板 */,
 			);
 			path = JJFiles;
 			sourceTree = "<group>";
@@ -353,6 +359,23 @@
 				F74999E121BFCAF9006E7D77 /* JJMacroDefine.h */,
 			);
 			path = JJDefine;
+			sourceTree = "<group>";
+		};
+		F7BCA73C21F6D08B005A0045 /* 修改模板 */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCA75C21F72342005A0045 /* 修改模板.zip */,
+			);
+			path = "修改模板";
+			sourceTree = "<group>";
+		};
+		F7BCA75121F6DAEB005A0045 /* Dispatch_Queue */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCA75921F721E0005A0045 /* JJDispatch_queue.h */,
+				F7BCA75A21F721E0005A0045 /* JJDispatch_queue.m */,
+			);
+			path = Dispatch_Queue;
 			sourceTree = "<group>";
 		};
 		F7BF3C1421BC1FAA00E6C4EC = {
@@ -415,6 +438,7 @@
 		F7BF3C5521BC216700E6C4EC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7BCA75121F6DAEB005A0045 /* Dispatch_Queue */,
 				F7865CCF21ED93AB0084ED2E /* ViewControllers */,
 				F77DFB8B21C25857004B9FB8 /* JJModel */,
 				F77DFB7F21C234E7004B9FB8 /* JJTool */,
@@ -539,6 +563,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7BCA75D21F72342005A0045 /* 修改模板.zip in Resources */,
 				F7BF3C2D21BC1FAB00E6C4EC /* LaunchScreen.storyboard in Resources */,
 				F7BF3C2A21BC1FAB00E6C4EC /* Assets.xcassets in Resources */,
 				F7BF3C2821BC1FAA00E6C4EC /* Main.storyboard in Resources */,
@@ -606,6 +631,7 @@
 				F74999C321BF90F8006E7D77 /* UILabel+MasonryLayout.m in Sources */,
 				F7B09F9421BE4F8F001C7641 /* JJBaseComponent.m in Sources */,
 				F7B09F9A21BE4F8F001C7641 /* JJBaseCollectionViewCell.m in Sources */,
+				F7BCA75B21F721E0005A0045 /* JJDispatch_queue.m in Sources */,
 				F74999DD21BFC12A006E7D77 /* JJSystemCall.m in Sources */,
 				F718FC8A21C0019800C927AA /* UIScrollView+EmptyDataSet.m in Sources */,
 				F7BF3C2221BC1FAA00E6C4EC /* AppDelegate.m in Sources */,

@@ -117,8 +117,8 @@ include some category based on masonry for create UI  and some others useful too
   #  the lib prefix of their name.
   #
 
-  s.framework  = 'UIKit'
-  #s.frameworks = "SomeFramework", "AnotherFramework"
+  #s.framework  = 'UIKit'
+  s.frameworks = "UIKit", "Foundation","CoreLocation"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -134,6 +134,9 @@ include some category based on masonry for create UI  and some others useful too
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
    s.dependency 'Masonry', '~> 1.1.0'
+   s.dependency 'AFNetworking', '~> 3.2.1'
+   s.dependency 'MBProgressHUD', '~> 1.1.0'
+   s.dependency 'UICKeyChainStore', '~> 2.1.2'
 
 non_arc_files = 'JJTools/JJTools/Classes/JJSafeKit/NSObjectSafe.m'//这是需要添加mrc标识的文件，为相对路径
 s.exclude_files = non_arc_files//在工程中首先排除一下

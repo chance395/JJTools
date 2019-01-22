@@ -281,8 +281,10 @@
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
         result = [pred evaluateWithObject:pass];
     }
+ 
     return result;
 }
+//线程相关
 
 
 @end
