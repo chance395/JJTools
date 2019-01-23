@@ -37,7 +37,7 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
 
   s.subspec 'Dispatch_Queue' do |ss|
 
-  ss.source_files = 'JJTools/JJTools/Classes/JJDispatch_queue.{h,m}'
+  ss.source_files = 'JJTools/JJDispatch_queue.{h,m}'
    
     ss.frameworks = 'Foundation'
 
