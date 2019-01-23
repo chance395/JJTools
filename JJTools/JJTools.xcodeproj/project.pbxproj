@@ -35,9 +35,7 @@
 		F7D7FCFF21F847D10033C4B0 /* JJReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCCA21F847D10033C4B0 /* JJReachability.m */; };
 		F7D7FD0021F847D10033C4B0 /* JJBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCCB21F847D10033C4B0 /* JJBaseRequest.m */; };
 		F7D7FD0121F847D10033C4B0 /* JJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCCD21F847D10033C4B0 /* JJBaseModel.m */; };
-		F7D7FD0221F847D10033C4B0 /* JJAlbumManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCD021F847D10033C4B0 /* JJAlbumManagement.m */; };
 		F7D7FD0321F847D10033C4B0 /* JJSystemCall.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCD121F847D10033C4B0 /* JJSystemCall.m */; };
-		F7D7FD0421F847D10033C4B0 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCD621F847D10033C4B0 /* GTMBase64.m */; };
 		F7D7FD0521F847D10033C4B0 /* JJBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCD921F847D10033C4B0 /* JJBaseTabBarViewController.m */; };
 		F7D7FD0621F847D10033C4B0 /* JJBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCDD21F847D10033C4B0 /* JJBaseNavigationViewController.m */; };
 		F7D7FD0721F847D10033C4B0 /* JJBaseComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FCDE21F847D10033C4B0 /* JJBaseComponent.m */; };
@@ -119,7 +117,6 @@
 		F7D7FCBE21F847D00033C4B0 /* UIImageView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MasonryLayout.h"; sourceTree = "<group>"; };
 		F7D7FCBF21F847D00033C4B0 /* UIColor+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJTools.h"; sourceTree = "<group>"; };
 		F7D7FCC021F847D00033C4B0 /* JJBaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseHeader.h; path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseHeader.h; sourceTree = "<group>"; };
-		F7D7FCC121F847D00033C4B0 /* JJPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJPrefixHeader.pch; path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/JJPrefixHeader.pch; sourceTree = "<group>"; };
 		F7D7FCC321F847D10033C4B0 /* JJLoginFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLoginFirstViewController.h; sourceTree = "<group>"; };
 		F7D7FCC421F847D10033C4B0 /* JJLoginSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLoginSecondViewController.h; sourceTree = "<group>"; };
 		F7D7FCC521F847D10033C4B0 /* JJLoginFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLoginFirstViewController.m; sourceTree = "<group>"; };
@@ -130,13 +127,8 @@
 		F7D7FCCB21F847D10033C4B0 /* JJBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseRequest.m; sourceTree = "<group>"; };
 		F7D7FCCD21F847D10033C4B0 /* JJBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseModel.m; sourceTree = "<group>"; };
 		F7D7FCCE21F847D10033C4B0 /* JJBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseModel.h; sourceTree = "<group>"; };
-		F7D7FCD021F847D10033C4B0 /* JJAlbumManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAlbumManagement.m; sourceTree = "<group>"; };
 		F7D7FCD121F847D10033C4B0 /* JJSystemCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSystemCall.m; sourceTree = "<group>"; };
-		F7D7FCD221F847D10033C4B0 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
-		F7D7FCD321F847D10033C4B0 /* JJAlbumManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAlbumManagement.h; sourceTree = "<group>"; };
 		F7D7FCD421F847D10033C4B0 /* JJSystemCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSystemCall.h; sourceTree = "<group>"; };
-		F7D7FCD521F847D10033C4B0 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		F7D7FCD621F847D10033C4B0 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		F7D7FCD821F847D10033C4B0 /* JJBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseVC.h; sourceTree = "<group>"; };
 		F7D7FCD921F847D10033C4B0 /* JJBaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTabBarViewController.m; sourceTree = "<group>"; };
 		F7D7FCDA21F847D10033C4B0 /* JJBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseTableViewCell.h; sourceTree = "<group>"; };
@@ -272,7 +264,6 @@
 				F7D7FCB021F847D00033C4B0 /* JJFiles */,
 				F7D7FCCC21F847D10033C4B0 /* JJModel */,
 				F7D7FCC721F847D10033C4B0 /* JJNetWork */,
-				F7D7FCC121F847D00033C4B0 /* JJPrefixHeader.pch */,
 				F7D7FCA621F847D00033C4B0 /* JJSafeKit */,
 				F7D7FCCF21F847D10033C4B0 /* JJSystem */,
 				F7D7FCA121F847D00033C4B0 /* JJTool */,
@@ -399,13 +390,8 @@
 		F7D7FCCF21F847D10033C4B0 /* JJSystem */ = {
 			isa = PBXGroup;
 			children = (
-				F7D7FCD021F847D10033C4B0 /* JJAlbumManagement.m */,
 				F7D7FCD121F847D10033C4B0 /* JJSystemCall.m */,
-				F7D7FCD221F847D10033C4B0 /* GTMBase64.h */,
-				F7D7FCD321F847D10033C4B0 /* JJAlbumManagement.h */,
 				F7D7FCD421F847D10033C4B0 /* JJSystemCall.h */,
-				F7D7FCD521F847D10033C4B0 /* GTMDefines.h */,
-				F7D7FCD621F847D10033C4B0 /* GTMBase64.m */,
 			);
 			name = JJSystem;
 			path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/JJSystem;
@@ -415,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D7FCD821F847D10033C4B0 /* JJBaseVC.h */,
+				F7D7FCE521F847D10033C4B0 /* JJBaseVC.m */,
 				F7D7FCD921F847D10033C4B0 /* JJBaseTabBarViewController.m */,
 				F7D7FCDA21F847D10033C4B0 /* JJBaseTableViewCell.h */,
 				F7D7FCDB21F847D10033C4B0 /* JJBaseCollectionViewCell.h */,
@@ -424,7 +411,6 @@
 				F7D7FCDF21F847D10033C4B0 /* JJBaseTableViewHeaderFooterView.h */,
 				F7D7FCE021F847D10033C4B0 /* JJBaseTableViewCell.m */,
 				F7D7FCE121F847D10033C4B0 /* NoData */,
-				F7D7FCE521F847D10033C4B0 /* JJBaseVC.m */,
 				F7D7FCE621F847D10033C4B0 /* JJBaseTabBarViewController.h */,
 				F7D7FCE721F847D10033C4B0 /* JJBaseNavigationViewController.h */,
 				F7D7FCE821F847D10033C4B0 /* JJBaseTableView.m */,
@@ -449,8 +435,8 @@
 		F7D7FCEC21F847D10033C4B0 /* Dispatch_Queue */ = {
 			isa = PBXGroup;
 			children = (
-				F7D7FCED21F847D10033C4B0 /* JJDispatch_queue.m */,
 				F7D7FCEE21F847D10033C4B0 /* JJDispatch_queue.h */,
+				F7D7FCED21F847D10033C4B0 /* JJDispatch_queue.m */,
 			);
 			name = Dispatch_Queue;
 			path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/Dispatch_Queue;
@@ -630,14 +616,12 @@
 				F7D7FCFF21F847D10033C4B0 /* JJReachability.m in Sources */,
 				F7D7FCF621F847D10033C4B0 /* UIView+MasonryLayout.m in Sources */,
 				F7D7FCFD21F847D10033C4B0 /* JJLoginFirstViewController.m in Sources */,
-				F7D7FD0421F847D10033C4B0 /* GTMBase64.m in Sources */,
 				F7D7FCF021F847D10033C4B0 /* JJTool.m in Sources */,
 				F7D7FCF921F847D10033C4B0 /* UIColor+JJTools.m in Sources */,
 				F7D7FCEF21F847D10033C4B0 /* JJConstants.m in Sources */,
 				F7D7FCFA21F847D10033C4B0 /* UIImageView+MasonryLayout.m in Sources */,
 				F7D7FD0C21F847D10033C4B0 /* JJBaseCollectionViewCell.m in Sources */,
 				F7D7FBFC21F83DBC0033C4B0 /* main.m in Sources */,
-				F7D7FD0221F847D10033C4B0 /* JJAlbumManagement.m in Sources */,
 				F7D7FCF721F847D10033C4B0 /* UILabel+MasonryLayout.m in Sources */,
 				F7D7FCFE21F847D10033C4B0 /* JJLoginSecondViewController.m in Sources */,
 				F7D7FBEE21F83DBA0033C4B0 /* AppDelegate.m in Sources */,

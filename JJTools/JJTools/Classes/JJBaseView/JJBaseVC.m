@@ -6,12 +6,12 @@
 //  Copyright © 2018年 In-next. All rights reserved.
 
 #import "JJBaseVC.h"
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
 
 
 @interface JJBaseVC ()
 
-@property (nonatomic, strong) MBProgressHUD *progressHud;
+//@property (nonatomic, strong) MBProgressHUD *progressHud;
 @property (nonatomic, strong) void (^completion)(BOOL cancelled);
 
 @end
@@ -349,16 +349,16 @@
     if ([msg isEmptyStr]) {
         return;
     }
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.animationType = MBProgressHUDAnimationZoomOut;
-    hud.mode = MBProgressHUDModeText;
-    //    hud.label.text = [TipMessage shared].tipMessage.tipTitle;
-    hud.detailsLabel.text = msg;
-    hud.detailsLabel.font = FONT(18);
-    hud.margin = 27;
-    hud.backgroundView.alpha = 0.5;
-    hud.removeFromSuperViewOnHide = YES;
-    [hud hideAnimated:YES afterDelay:2.0];
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.animationType = MBProgressHUDAnimationZoomOut;
+//    hud.mode = MBProgressHUDModeText;
+//    //    hud.label.text = [TipMessage shared].tipMessage.tipTitle;
+//    hud.detailsLabel.text = msg;
+//    hud.detailsLabel.font = FONT(18);
+//    hud.margin = 27;
+//    hud.backgroundView.alpha = 0.5;
+//    hud.removeFromSuperViewOnHide = YES;
+//    [hud hideAnimated:YES afterDelay:2.0];
 }
 
 
@@ -366,69 +366,48 @@
 - (void)hideLoading{
     
     
-    [self.progressHud hideAnimated:YES];
+//    [self.progressHud hideAnimated:YES];
     
 }
 
 - (void)showLoading:(NSString *)msg{
-    
-    //    [SVProgressHUD setMinimumDismissTimeInterval:5.0f];
-    //    [SVProgressHUD showLoading];
-    
-    //    if (!self.progressHud) {
-    
-    
-    [self hideLoading];
-    
-    self.progressHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    //    }
-    
-    
-    //    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    self.progressHud.animationType = MBProgressHUDAnimationZoomOut;
-    self.progressHud.mode = MBProgressHUDModeIndeterminate;
-    //        hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    
-    //    hud.label.text = [TipMessage shared].tipMessage.tipTitle;
-    self.progressHud.detailsLabel.text = msg;
-    self.progressHud.detailsLabel.font = FONT(18);
-    self.progressHud.margin = 15;
-    self.progressHud.backgroundView.alpha = 0.8;
-    self.progressHud.removeFromSuperViewOnHide = YES;
-    //    [hud hideAnimated:YES afterDelay:0.1];
-    
-    //    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    //
-    //    hud.label.textColor = [UIColor whiteColor];
-    //
-    //    hud.label.text = msg;
-    //    //    [self.progressHud show:YES];
-    //
-    //    [hud  hideAnimated:YES afterDelay:2.f];
+//    [self hideLoading];
+//
+//    self.progressHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//
+//    self.progressHud.animationType = MBProgressHUDAnimationZoomOut;
+//    self.progressHud.mode = MBProgressHUDModeIndeterminate;
+//
+//    self.progressHud.detailsLabel.text = msg;
+//    self.progressHud.detailsLabel.font = FONT(18);
+//    self.progressHud.margin = 15;
+//    self.progressHud.backgroundView.alpha = 0.8;
+//    self.progressHud.removeFromSuperViewOnHide = YES;
+
     
 }
 
 //提示有对号的
 - (void)showAlertMessage:(NSString *)strMessage{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    
-    // Set the custom view mode to show any view.
-    hud.mode = MBProgressHUDModeCustomView;
-    // Set an image view with a checkmark.
-    UIImage *image = [[UIImage imageNamed:@"checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    hud.customView = [[UIImageView alloc] initWithImage:image];
-    // Looks a bit nicer if we make it square.
-    hud.square = YES;
-    // Optional label text.
-    hud.label.text = strMessage;
-    hud.label.font = FONT(13);
-    hud.label.textAlignment = NSTextAlignmentCenter;
-    hud.label.numberOfLines = 0;
-    hud.label.textColor = Color_WhiteColor;
-    hud.label.lineBreakMode = NSLineBreakByWordWrapping;
-    
-    hud.bezelView.backgroundColor = Color_Hud_BackGroundColor;
-    [hud hideAnimated:YES afterDelay:2.f];
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//
+//    // Set the custom view mode to show any view.
+//    hud.mode = MBProgressHUDModeCustomView;
+//    // Set an image view with a checkmark.
+//    UIImage *image = [[UIImage imageNamed:@"checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    hud.customView = [[UIImageView alloc] initWithImage:image];
+//    // Looks a bit nicer if we make it square.
+//    hud.square = YES;
+//    // Optional label text.
+//    hud.label.text = strMessage;
+//    hud.label.font = FONT(13);
+//    hud.label.textAlignment = NSTextAlignmentCenter;
+//    hud.label.numberOfLines = 0;
+//    hud.label.textColor = Color_WhiteColor;
+//    hud.label.lineBreakMode = NSLineBreakByWordWrapping;
+//
+//    hud.bezelView.backgroundColor = Color_Hud_BackGroundColor;
+//    [hud hideAnimated:YES afterDelay:2.f];
 }
 
 
@@ -498,33 +477,33 @@
 
 - (void)showWindowMessage:(NSString *)msg{
     
-    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
-    hud.animationType = MBProgressHUDAnimationZoomOut;
-    hud.mode = MBProgressHUDModeText;
-    //    hud.labelText = [TipMessage shared].tipMessage.tipTitle;
-    hud.detailsLabel.text = msg;
-    hud.label.font = [UIFont systemFontOfSize:17];
-    hud.detailsLabel.font = [UIFont systemFontOfSize:15];
-    hud.margin = 10.f;
-    hud.bezelView.alpha = 0.8;
-    hud.removeFromSuperViewOnHide = YES;
-    [hud hideAnimated:YES afterDelay:1.2f];
+//    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
+//    hud.animationType = MBProgressHUDAnimationZoomOut;
+//    hud.mode = MBProgressHUDModeText;
+//    //    hud.labelText = [TipMessage shared].tipMessage.tipTitle;
+//    hud.detailsLabel.text = msg;
+//    hud.label.font = [UIFont systemFontOfSize:17];
+//    hud.detailsLabel.font = [UIFont systemFontOfSize:15];
+//    hud.margin = 10.f;
+//    hud.bezelView.alpha = 0.8;
+//    hud.removeFromSuperViewOnHide = YES;
+//    [hud hideAnimated:YES afterDelay:1.2f];
 }
 
 - (void)showMessage:(NSString *)msg yOffset:(CGFloat)yOffset  afterDelay:(NSTimeInterval)delayTime{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.animationType = MBProgressHUDAnimationZoomOut;
-    hud.mode = MBProgressHUDModeText;
-    hud.label.font = [UIFont systemFontOfSize:17];
-    hud.detailsLabel.font = [UIFont systemFontOfSize:15];
-    //    hud.yOffset = yOffset;
-    [hud setOffset:CGPointMake(0, yOffset)];
-    hud.detailsLabel.text = msg;
-    hud.margin = 10.f;
-    hud.bezelView.alpha = 0.8;
-    hud.removeFromSuperViewOnHide = YES;
-    [hud hideAnimated:YES afterDelay:delayTime];
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.animationType = MBProgressHUDAnimationZoomOut;
+//    hud.mode = MBProgressHUDModeText;
+//    hud.label.font = [UIFont systemFontOfSize:17];
+//    hud.detailsLabel.font = [UIFont systemFontOfSize:15];
+//    //    hud.yOffset = yOffset;
+//    [hud setOffset:CGPointMake(0, yOffset)];
+//    hud.detailsLabel.text = msg;
+//    hud.margin = 10.f;
+//    hud.bezelView.alpha = 0.8;
+//    hud.removeFromSuperViewOnHide = YES;
+//    [hud hideAnimated:YES afterDelay:delayTime];
     
 }
 

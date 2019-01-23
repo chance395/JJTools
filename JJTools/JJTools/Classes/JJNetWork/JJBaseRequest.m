@@ -6,7 +6,7 @@
 //  Copyright © 2018 Brain. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
 #import "AFNetworking.h"
 #import "JJBaseRequest.h"
 #import "JJBaseHeader.h"
@@ -366,16 +366,16 @@
 
 #pragma mark - 提示消息
 - (void)showMessage:(NSString *)msg{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    hud.animationType = MBProgressHUDAnimationZoomOut;
-    hud.mode = MBProgressHUDModeText;
-    //    hud.labelText = [TipMessage shared].tipMessage.tipTitle;
-    //Customize bezelView properties instead
-    hud.detailsLabel.text = msg;
-    hud.margin = 10.f;
-    hud.bezelView.alpha = 0.5;
-    hud.removeFromSuperViewOnHide = YES;
-    [hud hideAnimated:YES afterDelay:0.8];
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+//    hud.animationType = MBProgressHUDAnimationZoomOut;
+//    hud.mode = MBProgressHUDModeText;
+//    //    hud.labelText = [TipMessage shared].tipMessage.tipTitle;
+//    //Customize bezelView properties instead
+//    hud.detailsLabel.text = msg;
+//    hud.margin = 10.f;
+//    hud.bezelView.alpha = 0.5;
+//    hud.removeFromSuperViewOnHide = YES;
+//    [hud hideAnimated:YES afterDelay:0.8];
 }
 
 @end

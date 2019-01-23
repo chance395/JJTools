@@ -20,14 +20,14 @@ include some category based on masonry for create UI  and some others useful too
    s.source_files  = "Classes", "JJTools/JJTools/Classes/**/*.{h,m}"
    s.public_header_files = "JJTools/JJTools/Classes/JJBaseHeader.h"
 
-  s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","AssetsLibrary","SystemConfiguration","Security","CoreFoundation"
+  s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/sys" }
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/objc" }
 
    s.dependency 'Masonry'
    s.dependency 'AFNetworking'
-   s.dependency 'MBProgressHUD'
+   #s.dependency 'MBProgressHUD'
 
 
 s.requires_arc = true

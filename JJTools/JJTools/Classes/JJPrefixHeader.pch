@@ -12,6 +12,6 @@
 #import "Masonry.h"
 #import "JJBaseHeader.h"
 #import "AFNetworking.h"
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
 
 #endif /* JJPrefixHeader_pch */
