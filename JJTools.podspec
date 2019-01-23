@@ -26,7 +26,7 @@ include some category based on masonry for create UI  and some others useful too
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/objc" }
 
    s.dependency 'Masonry'
-   s.dependency 'AFNetworking'
+   #s.dependency 'AFNetworking'
    #s.dependency 'MBProgressHUD'
 
 
