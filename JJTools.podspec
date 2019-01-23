@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "0.9.0"
+  s.version      = "0.9.1"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -34,5 +34,12 @@ s.requires_arc = true
 
 s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 
+
+  s.subspec 'Dispatch_Queue' do |ss|
+    ss.source_files = 'JJTools/JJTools/Classes/*.{h,m}'
+   
+    ss.frameworks = 'Foundation'
+
+  end
 
 end
