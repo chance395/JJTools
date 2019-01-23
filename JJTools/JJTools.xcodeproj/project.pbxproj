@@ -545,6 +545,7 @@
 			baseConfigurationReference = 1C20AC76ADF976D68B65DBB4 /* Pods-JJTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AS52JH4CQN;
 				INFOPLIST_FILE = JJTools/Info.plist;
@@ -563,6 +564,7 @@
 			baseConfigurationReference = F88A122A776DC9F62468BFD0 /* Pods-JJTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AS52JH4CQN;
 				INFOPLIST_FILE = JJTools/Info.plist;

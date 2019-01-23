@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -18,7 +18,7 @@ include some category based on masonry for create UI  and some others useful too
 
 
    s.source_files  = "Classes", "JJTools/JJTools/Classes/**/*.{h,m}"
-   s.public_header_files = "JJTools/JJTools/Classes/JJBaseHeader.h"
+   #s.public_header_files = "JJTools/JJTools/Classes/JJBaseHeader.h"
 
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
@@ -32,7 +32,7 @@ include some category based on masonry for create UI  and some others useful too
 
 s.requires_arc = true
 
-
+s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 
 
 end
