@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "0.2.0"
+  s.version      = "0.9.0"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -20,14 +20,14 @@ include some category based on masonry for create UI  and some others useful too
    s.source_files  = "Classes", "JJTools/JJTools/Classes/**/*.{h,m}"
    #s.public_header_files = "JJTools/JJTools/Classes/JJBaseHeader.h"
 
-  s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation"
+  s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/sys" }
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/objc" }
 
    s.dependency 'Masonry'
-   #s.dependency 'AFNetworking'
-   #s.dependency 'MBProgressHUD'
+   s.dependency 'AFNetworking'
+   s.dependency 'MBProgressHUD'
 
 
 s.requires_arc = true
