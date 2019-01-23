@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "0.9.1"
+  s.version      = "0.9.2"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
