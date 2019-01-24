@@ -10,7 +10,7 @@
 #define JJUrlDefine_h
 
 //#if   DebugServer
-#if   0
+#if   1
 #define Url_Server                                       @"http://139.224.111.200:8081"
 #endif
 
