@@ -17,8 +17,8 @@ include some category based on masonry for create UI  and some others useful too
   s.source       = { :git => "https://github.com/chance395/JJTools.git", :tag => "v#{s.version}" }
 
 
-   s.source_files  = "Classes", "JJTools/JJTools/Classes/**/*.{h,m}"
-   #s.public_header_files = "JJTools/JJTools/Classes/JJBaseHeader.h"
+   s.source_files  = 'JJTools/JJTools/Classes/*'
+   #s.public_header_files = 'JJTools/Classes/JJBaseHeader.h'
 
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
@@ -32,12 +32,9 @@ include some category based on masonry for create UI  and some others useful too
 
 s.requires_arc = true
 
-s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
-
-
   s.subspec 'Dispatch_Queue' do |ss|
 
-  ss.source_files = 'JJTools/JJTools/Classes/Dispatch_Queue/*'
+  ss.source_files = 'JJTools/JJTools/Classes/Dispatch_Queue/*.{h,m}'
    
     #ss.frameworks = 'Foundation'
   end
@@ -49,7 +46,7 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
   end
 
  s.subspec 'JJModel' do |ss|
-  ss.source_files = "JJModel", "JJTools/JJTools/Classes/JJModel/*"
+  ss.source_files = 'JJTools/JJTools/Classes/JJModel/*'
   
     #ss.frameworks = 'UIKit'
   end
@@ -104,5 +101,6 @@ s.subspec 'JJBaseView' do |ss|
     #ss.frameworks = 'UIKit'
   end
 
+s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 
 end

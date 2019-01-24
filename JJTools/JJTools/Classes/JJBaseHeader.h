@@ -44,7 +44,7 @@
 #import "JJBaseRequest.h"
 
 //system
-#import "JJSystemCall.h"
+//#import "JJSystemCall.h"
 
 //tool
 #import "JJTool.h"
