@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -18,8 +18,8 @@ include some category based on masonry for create UI  and some others useful too
 
 
    #s.source_files  = 'JJTools/JJTools/Classes/**/*'
-   #s.public_header_files = 'JJTools/JJTools/Classes/JJBaseHeader.h'
-
+   #s.public_header_files = 'JJTools/JJTools/Classes/**/JJBaseHeader.h'
+    s.prefix_header_contents = '#import"JJBaseHeader.h"'
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/sys" }
@@ -82,7 +82,7 @@ s.subspec 'JJBaseView' do |ss|
   end
 
  s.subspec 'JJSystem' do |ss|
-  ss.source_files = 'JJTools/JJTools/Classes/JJDefine/*'
+  ss.source_files = 'JJTools/JJTools/Classes/JJSystem/*'
 
   end
 
