@@ -20,7 +20,6 @@
 #import "JJBaseTableViewCell.h"
 #import "JJBaseTableView.h"
 #import "JJBaseComponent.h"
-//#import "JJBaseVC.h"
 #import "JJBaseNavigationViewController.h"
 #import "JJBaseTabBarViewController.h"
 #import "JJBaseTableViewHeaderFooterView.h"
@@ -44,7 +43,7 @@
 #import "JJBaseRequest.h"
 
 //system
-//#import "JJSystemCall.h"
+#import "JJSystemCall.h"
 
 //tool
 #import "JJTool.h"
@@ -54,8 +53,11 @@
 #import "JJDispatch_queue.h"
 
 //concontroller
-//#import "JJLoginFirstViewController.h"
-//#import "JJLoginSecondViewController.h"
+#import "JJBaseVC.h"
+#import "JJBaseLoginFirstViewController.h"
+#import "JJBaseLoginSecondViewController.h"
+#import "JJBaseNavigationViewController.h"
+#import "JJBaseTabBarViewController.h"
 
 //dependency
 #import "Masonry.h"

@@ -1,5 +1,5 @@
 //
-//  JJLoginSecondViewController.h
+//  JJBaseLoginFirstViewController.h
 //  JJTools
 //
 //  Created by Brain on 2019/1/15.
@@ -7,11 +7,10 @@
 //
 
 #import "JJBaseVC.h"
-#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JJLoginSecondViewController : JJBaseVC
+@interface JJBaseLoginFirstViewController : JJBaseVC
 
 @end
 

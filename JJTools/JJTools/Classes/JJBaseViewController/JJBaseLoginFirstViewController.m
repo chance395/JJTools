@@ -1,18 +1,18 @@
 //
-//  JJLoginFirstViewController.m
+//  JJBaseLoginFirstViewController.m
 //  JJTools
 //
 //  Created by Brain on 2019/1/15.
 //  Copyright © 2019 Brain. All rights reserved.
 //
 
-#import "JJLoginFirstViewController.h"
+#import "JJBaseLoginFirstViewController.h"
 
-@interface JJLoginFirstViewController ()
+@interface JJBaseLoginFirstViewController ()
 
 @end
 
-@implementation JJLoginFirstViewController
+@implementation JJBaseLoginFirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

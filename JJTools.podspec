@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -18,7 +18,7 @@ include some category based on masonry for create UI  and some others useful too
 
 
    #s.source_files  = 'JJTools/JJTools/Classes/**/*'
-   #s.public_header_files = 'JJTools/Classes/JJBaseHeader.h'
+   #s.public_header_files = 'JJTools/JJTools/Classes/JJBaseHeader.h'
 
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
@@ -45,10 +45,17 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
   
   end
 
+ s.subspec 'JJBaseViewController' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJBaseViewController/*'
+   ss.dependency 'JJTools/JJDefine'
+   #ss.dependency 'JJTools/JJBaseView'
+
+  end
+
  s.subspec 'JJTool' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJTool/*'
    ss.dependency 'JJTools/JJDefine'
-   ss.dependency 'JJTools/JJBaseView'
+   ss.dependency 'JJTools/JJBaseViewController'
 
   end
 
@@ -69,7 +76,6 @@ s.subspec 'JJBaseView' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJBaseView/*'
    ss.dependency 'JJTools/JJDefine'
    ss.dependency 'JJTools/JJCategory'
-   #ss.dependency 'JJTools/JJTool'
    ss.dependency 'JJTools/JJNetWork'
    ss.dependency 'JJTools/JJUILayout'
 
