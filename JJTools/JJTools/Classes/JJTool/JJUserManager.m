@@ -6,10 +6,12 @@
 //  Copyright © 2018 Brain. All rights reserved.
 //
 #import <objc/runtime.h>
-#import "JJBaseHeader.h"
+#import "JJTool.h"
+#import "JJMacroDefine.h"
 #import "JJUserManager.h"
 #import "JJLoginFirstViewController.h"
 #import "JJLoginSecondViewController.h"
+//#import "JJBaseNavigationViewController.h"
 
 @implementation JJUserManager
 
@@ -52,18 +54,13 @@
     return self;
 }
 
-
-
 - (BOOL)checkLogin:(UIViewController *)viewController{
     NSString *token = getStringValue([UserDefaults objectForKey:@"token"]);
     if (token.length == 0) {
         if (![[JJTool obtainTopViewController] isKindOfClass:[JJLoginFirstViewController   class]]){
             JJLoginFirstViewController *vcLogin = [[JJLoginFirstViewController alloc] init];
-            JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
+            UINavigationController *vcNavigation = [[UINavigationController alloc] initWithRootViewController:vcLogin];
             [viewController presentViewController:vcNavigation animated:YES completion:nil];
-            
-            
-            
         }
         return NO;
     }
@@ -81,7 +78,7 @@
 - (void)showLoginPage:(UIViewController *)viewController{
     if (![[JJTool obtainTopViewController] isKindOfClass:[JJLoginFirstViewController   class]]){
         JJLoginFirstViewController *vcLogin = [[JJLoginFirstViewController alloc] init];
-        JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
+        UINavigationController *vcNavigation = [[UINavigationController alloc] initWithRootViewController:vcLogin];
         [viewController presentViewController:vcNavigation animated:YES completion:nil];
         
     }
@@ -90,7 +87,7 @@
 - (void)showLoginSecondPage:(UIViewController *)viewController{
     if (![[JJTool obtainTopViewController] isKindOfClass:[JJLoginFirstViewController   class]]){
         JJLoginSecondViewController*vcLogin = [[JJLoginSecondViewController alloc] init];
-        JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
+        UINavigationController *vcNavigation = [[UINavigationController alloc] initWithRootViewController:vcLogin];
         [viewController presentViewController:vcNavigation animated:YES completion:nil];
         
     }

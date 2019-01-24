@@ -5,9 +5,21 @@
 //  Created by Brain on 2018/12/12.
 //  Copyright © 2018 Brain. All rights reserved.
 //
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
 
 #import "JJBaseRequest.h"
-#import "JJBaseHeader.h"
+#import "JJMacroDefine.h"
+#import "JJFontDefine.h"
+#import "JJColorDefine.h"
+#import "JJUrlDefine.h"
+#import "JJConstants.h"
+#import "UIColor+JJTools.h"
+#import "NSString+JJTools.h"
+#import "JJTool.h"
+#import "JJUserManager.h"
+#import "UIDevice+JJDevice.h"
+#import "JJReachability.h"
 
 @interface AFHTTPSessionManager (ShareManagerForPreventLeaks)
 

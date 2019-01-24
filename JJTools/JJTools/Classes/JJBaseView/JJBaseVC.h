@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JJBaseHeader.h"
 
 typedef NS_ENUM(NSInteger,PageGobackType)
 {
@@ -97,7 +96,7 @@ typedef NS_ENUM(NSInteger,PageGobackType)
 - (void)dsPushViewController:(UIViewController*)vc animated:(BOOL)animated;
 
 //判断是否有网络
-- (BOOL)checkIsHaveNet;
+//- (BOOL)checkIsHaveNet;
 
 //添加提示 是否有网络 是否有数据 可添加在tableView 上 可以滑动
 //- (void)showTipViewWithData:(NSMutableArray *)arr superView:(UIView *)vSuper;

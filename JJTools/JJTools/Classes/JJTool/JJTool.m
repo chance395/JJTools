@@ -6,8 +6,8 @@
 //  Copyright © 2018 Brain. All rights reserved.
 //
 #include <sys/sysctl.h>
-//#include <net/if.h>
-//#include <net/if_dl.h>
+#include <net/if.h>
+#include <net/if_dl.h>
 #import "JJTool.h"
 
 
@@ -35,7 +35,6 @@
 
 + (NSString*)getCurrentTimestamp{
     NSDate *datenow = [NSDate date];
-    
     NSTimeZone *zone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
     NSInteger interval = [zone secondsFromGMTForDate:datenow];
     NSDate *localeDate = [datenow dateByAddingTimeInterval:interval];

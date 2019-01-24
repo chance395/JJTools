@@ -7,7 +7,17 @@
 //
 #import "DZNEmptyDataSet.h"
 #import "Masonry.h"
-#import "JJBaseHeader.h"
+#import "JJMacroDefine.h"
+#import "JJFontDefine.h"
+#import "JJColorDefine.h"
+#import "UIColor+JJTools.h"
+#import "UILabel+MasonryLayout.h"
+#import "UIButton+MasonryLayout.h"
+#import "UIImageView+MasonryLayout.h"
+#import "UIView+MasonryLayout.h"
+#import "UITextField+MasonryLayout.h"
+#import "UIImage+JJTools.h"
+#import "JJReachability.h"
 #import "JJBaseTableView.h"
 
 @interface JJBaseTableView () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
@@ -42,7 +52,7 @@
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = [self.emptyTitle isEmptyStr] ? nil :self.emptyTitle;
+    NSString *text = self.emptyTitle.length >0 ? nil :self.emptyTitle;
     
     UIFont *font = nil;
     UIColor *textColor = nil;
@@ -63,7 +73,7 @@
 }
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = [self.emptyDescription isEmptyStr]? nil :self.emptyDescription;
+    NSString *text = self.emptyDescription.length >0? nil :self.emptyDescription;
     UIFont *font = nil;
     UIColor *textColor = nil;
     
@@ -75,11 +85,11 @@
     
     
     
-    if (![self checkIsHaveNet] && [self.emptyDescription isEmptyStr] ) {
+    if (![self checkIsHaveNet] && self.emptyDescription.length >0 ) {
         
         text = @"请检查网络";
     }
-    if ([self checkIsHaveNet] && [self.emptyDescription isEmptyStr] )
+    if ([self checkIsHaveNet] && self.emptyDescription.length >0 )
     {
         
         text = @"当前暂无订单";
@@ -111,13 +121,13 @@
         return [UIImage imageNamed:@"" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
     }
     else {
-        NSString *imageName =[self.emptyImageName isEmptyStr] ?  @"nodata" : self.emptyImageName;
+        NSString *imageName =self.emptyDescription.length >0 ?  @"nodata" : self.emptyImageName;
         
-        if (![self checkIsHaveNet] && [self.emptyImageName isEmptyStr]) {
+        if (![self checkIsHaveNet] && self.emptyDescription.length >0) {
             
             imageName = @"nonet";
         }
-        if ([self checkIsHaveNet] && [self.emptyImageName isEmptyStr])
+        if ([self checkIsHaveNet] && self.emptyDescription.length >0)
         {
             
             imageName = @"nodata";
@@ -173,13 +183,13 @@
 {
     
     
-    NSString *imageName = [self.emptyImageName isEmptyStr] ? @"nodata" : self.emptyImageName;
+    NSString *imageName = self.emptyDescription.length >0 ? @"nodata" : self.emptyImageName;
     
-    if (![self checkIsHaveNet] && [self.emptyImageName isEmptyStr]) {
+    if (![self checkIsHaveNet] && self.emptyDescription.length >0) {
         
         imageName = @"nonet";
     }
-    if([self checkIsHaveNet] && [self.emptyImageName isEmptyStr])
+    if([self checkIsHaveNet] && self.emptyDescription.length >0)
     {
         
         imageName = @"nodata";

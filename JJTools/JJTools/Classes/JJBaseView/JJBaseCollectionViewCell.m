@@ -5,13 +5,17 @@
 //  Created by Brain on 2018/9/20.
 //  Copyright © 2018 In-next. All rights reserved.
 //
+#import "Masonry.h"
+#import "JJMacroDefine.h"
+#import "JJFontDefine.h"
+#import "JJColorDefine.h"
+#import "UIColor+JJTools.h"
 #import "UILabel+MasonryLayout.h"
 #import "UIButton+MasonryLayout.h"
 #import "UIImageView+MasonryLayout.h"
 #import "UIView+MasonryLayout.h"
 #import "UITextField+MasonryLayout.h"
 #import "UIImage+JJTools.h"
-#import "UIColor+JJTools.h"
 #import "JJBaseCollectionViewCell.h"
 
 @implementation JJBaseCollectionViewCell

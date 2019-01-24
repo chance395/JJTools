@@ -6,7 +6,18 @@
 //  Copyright © 2018年 In-next. All rights reserved.
 
 #import "JJBaseVC.h"
-
+#import "JJMacroDefine.h"
+#import "JJFontDefine.h"
+#import "JJColorDefine.h"
+#import "UIColor+JJTools.h"
+//#import "UILabel+MasonryLayout.h"
+//#import "UIButton+MasonryLayout.h"
+//#import "UIImageView+MasonryLayout.h"
+//#import "UIView+MasonryLayout.h"
+//#import "UITextField+MasonryLayout.h"
+//#import "UIImage+JJTools.h"
+#import "JJConstants.h"
+#import "MBProgressHUD.h"
 @interface JJBaseVC ()
 
 @property (nonatomic, strong) MBProgressHUD *progressHud;
@@ -125,9 +136,9 @@
         [backButton setTitle:title forState:UIControlStateSelected];
         
         backButton.titleLabel.font = FONT(17);//[UIFont systemFontOfSize:15.0f];
-        [backButton setTitleColor:[UIColor JJColorWithHexStr:@"#353030"] forState:UIControlStateNormal];
-        [backButton setTitleColor:[UIColor JJColorWithHexStr:@"#353030"] forState:UIControlStateHighlighted];
-        [backButton setTitleColor:[UIColor JJColorWithHexStr:@"#353030"] forState:UIControlStateSelected];
+        [backButton setTitleColor:Color_LeftBar_BtnColor forState:UIControlStateNormal];
+        [backButton setTitleColor:Color_LeftBar_BtnColor forState:UIControlStateHighlighted];
+        [backButton setTitleColor:Color_LeftBar_BtnColor forState:UIControlStateSelected];
         [backButton addTarget:self action:@selector(goBackController:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -162,10 +173,7 @@
     [self.navigationController setNavigationBarHidden:NO];
     
     // 中间标题
-    if (![text isEmptyStr]) {
         self.title = title;
-    }
-    
     
     // 右边样式
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -344,7 +352,7 @@
     if (!msg ) {
         return;
     }
-    if ([msg isEmptyStr]) {
+    if (msg.length ==0) {
         return;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -582,35 +590,35 @@
 }
 
 #pragma mark - 判断是否有网络
-- (BOOL)checkIsHaveNet{
+//- (BOOL)checkIsHaveNet{
+
     
+//    BOOL isExistenceNetwork = YES;
+//
+//    JJReachability   *reach = [JJReachability reachabilityWithHostName:@"www.apple.com"];
+//
+//    NSParameterAssert([reach isKindOfClass:[JJReachability class]]);
+//
+//    NetworkStatus stats = [reach currentReachabilityStatus];
+//
+//    if (stats == NotReachable)
+//        //没有网络
+//        isExistenceNetwork = NO;
+//    else if (stats == ReachableViaWiFi)
+//        isExistenceNetwork = YES;
+//    else if (stats == ReachableViaWWAN)
+//        isExistenceNetwork = YES;
+//    else if (stats == ReachableViaWiFi)
+//        isExistenceNetwork = YES;
+//
+//    if (!isExistenceNetwork) {
+//
+//        return NO;
+//    }
+//
+//    return isExistenceNetwork;
     
-    BOOL isExistenceNetwork = YES;
-    
-    JJReachability   *reach = [JJReachability reachabilityWithHostName:@"www.apple.com"];
-    
-    NSParameterAssert([reach isKindOfClass:[JJReachability class]]);
-    
-    NetworkStatus stats = [reach currentReachabilityStatus];
-    
-    if (stats == NotReachable)
-        //没有网络
-        isExistenceNetwork = NO;
-    else if (stats == ReachableViaWiFi)
-        isExistenceNetwork = YES;
-    else if (stats == ReachableViaWWAN)
-        isExistenceNetwork = YES;
-    else if (stats == ReachableViaWiFi)
-        isExistenceNetwork = YES;
-    
-    if (!isExistenceNetwork) {
-        
-        return NO;
-    }
-    
-    return isExistenceNetwork;
-    
-}
+//}
 
 ////添加提示 是否有网络 是否有数据 可添加在tableView 上 可以滑动
 //- (void)showTipViewWithData:(NSMutableArray *)arr superView:(UIView *)vSuper{
@@ -661,7 +669,7 @@
         _completion = completion;
     }
     UIAlertController *alerVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    if (message && ![message isEmptyStr])
+    if (message && message.length > 0)
     {
         message = [NSString stringWithFormat:@"%@",[message stringByReplacingOccurrencesOfString:@"\\n\\n" withString:@" \r\n" ]];
         NSMutableAttributedString *Message = [[NSMutableAttributedString alloc] initWithString:message];
@@ -688,7 +696,7 @@
         
     }
     
-    if (title && ![title isEmptyStr])
+    if (title && title.length >0)
     {
         NSMutableAttributedString *Title = [[NSMutableAttributedString alloc] initWithString:title];
         [Title addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [Title length])];
@@ -698,7 +706,7 @@
         
     }
    
-    if (knowTitle && ![knowTitle isEmptyStr])
+    if (knowTitle && knowTitle.length >0)
     {
         // 2.创建并添加按钮
         __weak typeof(self) wSelf = self;
@@ -738,7 +746,7 @@
         _completion = completion;
     }
     UIAlertController *alerVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    if (message && ![message isEmptyStr])
+    if (message && message.length >0)
     {
         message = [NSString stringWithFormat:@"%@",[message stringByReplacingOccurrencesOfString:@"\\n\\n" withString:@" \r\n" ]];
         NSMutableAttributedString *Message = [[NSMutableAttributedString alloc] initWithString:message];
@@ -765,7 +773,7 @@
         
     }
     
-    if (title && ![title isEmptyStr])
+    if (title && title.length>0)
     {
         NSMutableAttributedString *Title = [[NSMutableAttributedString alloc] initWithString:title];
         [Title addAttribute:NSForegroundColorAttributeName value:Color_Alert_Message range:NSMakeRange(0, [Title length])];
@@ -775,7 +783,7 @@
         
     }
     
-    if (knowTitle && ![knowTitle isEmptyStr])
+    if (knowTitle && knowTitle.length>0)
     {
         // 2.创建并添加按钮
         __weak typeof(self) wSelf = self;
@@ -826,7 +834,7 @@
     
     UIAlertController *alerVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
-    if (message && ![message isEmptyStr])
+    if (message && message.length>0)
     {
         NSMutableAttributedString *Message = [[NSMutableAttributedString alloc] initWithString:message];
         [Message addAttribute:NSForegroundColorAttributeName value:Color_Alert_Message range:NSMakeRange(0, [Message length])];
@@ -835,7 +843,7 @@
         [ alerVC setValue:Message forKey:@"attributedMessage"];
         
     }
-    if (title && ![title isEmptyStr])
+    if (title && title.length>0)
     {
         NSMutableAttributedString *Title = [[NSMutableAttributedString alloc] initWithString:title];
         [Title addAttribute:NSForegroundColorAttributeName value:Color_Alert_Message range:NSMakeRange(0, [Title length])];
@@ -846,7 +854,7 @@
     
       __weak typeof(self) wSelf = self;
     
-    if (strOk && ![strOk isEmptyStr])
+    if (strOk && strOk.length>0)
     {
         // 2.创建并添加按钮
       
@@ -872,7 +880,7 @@
     UIFont *font = [UIFont systemFontOfSize:14];
     appearanceLabel.font = font;
    
-    if (cancel && ![cancel isEmptyStr])
+    if (cancel && cancel.length >0)
     {
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancel style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"Cancel Action");
@@ -904,7 +912,7 @@
     
     UIAlertController *alerVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
-    if (message && ![message isEmptyStr])
+    if (message && message.length >0)
     {
         NSMutableAttributedString *Message = [[NSMutableAttributedString alloc] initWithString:message];
         [Message addAttribute:NSForegroundColorAttributeName value:Color_Alert_Red range:NSMakeRange(3, 4)];
@@ -913,7 +921,7 @@
         [ alerVC setValue:Message forKey:@"attributedMessage"];
         
     }
-    if (title && ![title isEmptyStr])
+    if (title && title.length >0)
     {
         NSMutableAttributedString *Title = [[NSMutableAttributedString alloc] initWithString:title];
         [Title addAttribute:NSForegroundColorAttributeName value:Color_Alert_Message range:NSMakeRange(0, [Title length])];
@@ -924,7 +932,7 @@
     
     __weak typeof(self) wSelf = self;
     
-    if (strOk && ![strOk isEmptyStr])
+    if (strOk && strOk.length >0)
     {
         // 2.创建并添加按钮
         
@@ -950,7 +958,7 @@
     UIFont *font = [UIFont systemFontOfSize:14];
     appearanceLabel.font = font;
     
-    if (cancel && ![cancel isEmptyStr])
+    if (cancel && cancel.length >0)
     {
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancel style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"Cancel Action");

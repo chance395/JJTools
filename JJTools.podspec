@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "0.9.4"
+  s.version      = "0.9.5"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -37,10 +37,72 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
 
   s.subspec 'Dispatch_Queue' do |ss|
 
-  ss.source_files = 'JJTools/JJTools/Classes/Dispatch_Queue/JJDispatch_queue.{h,m}'
+  ss.source_files = 'JJTools/JJTools/Classes/Dispatch_Queue/*'
    
-    ss.frameworks = 'Foundation'
-
+    #ss.frameworks = 'Foundation'
   end
+
+ s.subspec 'ViewControllers' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/ViewControllers/*'  
+  #ss.dependency 'JJTools/JJBaseView'
+    #ss.frameworks = 'UIKit'
+  end
+
+ s.subspec 'JJModel' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJModel/*'
+  
+    #ss.frameworks = 'UIKit'
+  end
+
+ s.subspec 'JJTool' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJTool/*'
+   ss.dependency 'JJTools/ViewControllers'
+   ss.dependency 'JJTools/JJDefine'
+   #ss.dependency 'JJTools/JJBaseView'
+    #ss.frameworks = 'UIKit'
+  end
+
+ s.subspec 'JJNetWork' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJNetWork/*'
+   ss.dependency 'JJTools/JJDefine'
+  ss.dependency 'JJTools/JJTool'
+  ss.dependency 'JJTools/JJCategory'
+
+    #ss.frameworks = 'UIKit'
+  end
+
+
+ s.subspec 'JJDefine' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJDefine/*'
+    #ss.frameworks = 'UIKit'
+  end
+
+s.subspec 'JJBaseView' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJBaseView/*'
+   ss.dependency 'JJTools/JJDefine'
+   ss.dependency 'JJTools/JJCategory'
+   #ss.dependency 'JJTools/JJTool'
+   ss.dependency 'JJTools/JJNetWork'
+   ss.dependency 'JJTools/JJUILayout'
+
+    #ss.frameworks = 'UIKit'
+  end
+
+ s.subspec 'JJSystem' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJDefine/*'
+    #ss.frameworks = 'UIKit'
+  end
+
+ s.subspec 'JJCategory' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJCategory/*'
+    #ss.frameworks = 'UIKit'
+  end
+
+ s.subspec 'JJUILayout' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJUILayout/*'  
+ ss.dependency 'JJTools/JJCategory'
+    #ss.frameworks = 'UIKit'
+  end
+
 
 end

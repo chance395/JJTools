@@ -5,13 +5,14 @@
 //  Created by Brain on 2018/12/11.
 //  Copyright © 2018 Brain. All rights reserved.
 //
-#import "JJMacroDefine.h"
 
 #ifndef JJColorDefine_h
 #define JJColorDefine_h
 
 
 #define Color_App_topic                                UIColorFromHex(0xF05656)
+
+#define Color_LeftBar_BtnColor                          UIColorFromHex(0x353030)
 
 #define Color_TableView_backGroundColor                UIColorFromHex(0xF6F6F9)
 
