@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "0.9.8"
+  s.version      = "1.0.1"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -17,7 +17,7 @@ include some category based on masonry for create UI  and some others useful too
   s.source       = { :git => "https://github.com/chance395/JJTools.git", :tag => "v#{s.version}" }
 
 
-   s.source_files  = 'JJTools/JJTools/Classes/*'
+   s.source_files  = 'JJTools/JJTools/Classes/**/*'
    #s.public_header_files = 'JJTools/Classes/JJBaseHeader.h'
 
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
