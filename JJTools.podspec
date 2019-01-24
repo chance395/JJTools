@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -38,27 +38,18 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
 
   ss.source_files = 'JJTools/JJTools/Classes/Dispatch_Queue/*.{h,m}'
    
-    #ss.frameworks = 'Foundation'
-  end
-
- s.subspec 'ViewControllers' do |ss|
-  ss.source_files = 'JJTools/JJTools/Classes/ViewControllers/*'  
-  #ss.dependency 'JJTools/JJBaseView'
-    #ss.frameworks = 'UIKit'
   end
 
  s.subspec 'JJModel' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJModel/*'
   
-    #ss.frameworks = 'UIKit'
   end
 
  s.subspec 'JJTool' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJTool/*'
-   ss.dependency 'JJTools/ViewControllers'
    ss.dependency 'JJTools/JJDefine'
-   #ss.dependency 'JJTools/JJBaseView'
-    #ss.frameworks = 'UIKit'
+   ss.dependency 'JJTools/JJBaseView'
+
   end
 
  s.subspec 'JJNetWork' do |ss|
@@ -67,13 +58,11 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
   ss.dependency 'JJTools/JJTool'
   ss.dependency 'JJTools/JJCategory'
 
-    #ss.frameworks = 'UIKit'
   end
 
 
  s.subspec 'JJDefine' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJDefine/*'
-    #ss.frameworks = 'UIKit'
   end
 
 s.subspec 'JJBaseView' do |ss|
@@ -84,23 +73,22 @@ s.subspec 'JJBaseView' do |ss|
    ss.dependency 'JJTools/JJNetWork'
    ss.dependency 'JJTools/JJUILayout'
 
-    #ss.frameworks = 'UIKit'
   end
 
  s.subspec 'JJSystem' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJDefine/*'
-    #ss.frameworks = 'UIKit'
+
   end
 
  s.subspec 'JJCategory' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJCategory/*'
-    #ss.frameworks = 'UIKit'
+
   end
 
  s.subspec 'JJUILayout' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJUILayout/*'  
  ss.dependency 'JJTools/JJCategory'
-    #ss.frameworks = 'UIKit'
+
   end
 
 

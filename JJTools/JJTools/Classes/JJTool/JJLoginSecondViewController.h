@@ -6,12 +6,12 @@
 //  Copyright © 2019 Brain. All rights reserved.
 //
 
-//#import "JJBaseVC.h"
+#import "JJBaseVC.h"
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JJLoginSecondViewController : UIViewController
+@interface JJLoginSecondViewController : JJBaseVC
 
 @end
 

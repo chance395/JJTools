@@ -11,7 +11,7 @@
 #import "JJUserManager.h"
 #import "JJLoginFirstViewController.h"
 #import "JJLoginSecondViewController.h"
-//#import "JJBaseNavigationViewController.h"
+#import "JJBaseNavigationViewController.h"
 
 @implementation JJUserManager
 
@@ -59,7 +59,7 @@
     if (token.length == 0) {
         if (![[JJTool obtainTopViewController] isKindOfClass:[JJLoginFirstViewController   class]]){
             JJLoginFirstViewController *vcLogin = [[JJLoginFirstViewController alloc] init];
-            UINavigationController *vcNavigation = [[UINavigationController alloc] initWithRootViewController:vcLogin];
+            JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
             [viewController presentViewController:vcNavigation animated:YES completion:nil];
         }
         return NO;
@@ -78,7 +78,7 @@
 - (void)showLoginPage:(UIViewController *)viewController{
     if (![[JJTool obtainTopViewController] isKindOfClass:[JJLoginFirstViewController   class]]){
         JJLoginFirstViewController *vcLogin = [[JJLoginFirstViewController alloc] init];
-        UINavigationController *vcNavigation = [[UINavigationController alloc] initWithRootViewController:vcLogin];
+        JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
         [viewController presentViewController:vcNavigation animated:YES completion:nil];
         
     }
@@ -87,7 +87,7 @@
 - (void)showLoginSecondPage:(UIViewController *)viewController{
     if (![[JJTool obtainTopViewController] isKindOfClass:[JJLoginFirstViewController   class]]){
         JJLoginSecondViewController*vcLogin = [[JJLoginSecondViewController alloc] init];
-        UINavigationController *vcNavigation = [[UINavigationController alloc] initWithRootViewController:vcLogin];
+        JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
         [viewController presentViewController:vcNavigation animated:YES completion:nil];
         
     }

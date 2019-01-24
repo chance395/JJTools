@@ -66,6 +66,7 @@
 /* Begin PBXFileReference section */
 		1C20AC76ADF976D68B65DBB4 /* Pods-JJTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJTools/Pods-JJTools.debug.xcconfig"; sourceTree = "<group>"; };
 		CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F772940521F9C82600D633EA /* JJBaseHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JJBaseHeader.h; path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseHeader.h; sourceTree = "<group>"; };
 		F7D7FBE921F83DBA0033C4B0 /* JJTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D7FBEC21F83DBA0033C4B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -249,7 +250,7 @@
 		F7D7FC1E21F840290033C4B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F7D7FD7C21F86A590033C4B0 /* ViewControllers */,
+				F772940521F9C82600D633EA /* JJBaseHeader.h */,
 				F7D7FD7821F86A540033C4B0 /* Dispatch_Queue */,
 				F7D7FD7421F86A2E0033C4B0 /* JJModel */,
 				F7D7FD6D21F869CB0033C4B0 /* JJTool */,
@@ -319,10 +320,6 @@
 				F7D7FD9221F86C9C0033C4B0 /* JJBaseTableView.m */,
 				F7D7FD9021F86C9C0033C4B0 /* JJBaseTableViewCell.h */,
 				F7D7FD8F21F86C9C0033C4B0 /* JJBaseTableViewCell.m */,
-				F7D7FD6421F8697A0033C4B0 /* JJBaseNavigationViewController.h */,
-				F7D7FD6721F8697A0033C4B0 /* JJBaseNavigationViewController.m */,
-				F7D7FD6621F8697A0033C4B0 /* JJBaseTabBarViewController.h */,
-				F7D7FD6821F8697A0033C4B0 /* JJBaseTabBarViewController.m */,
 				F7D7FD6921F8697A0033C4B0 /* JJBaseTableViewHeaderFooterView.h */,
 				F7D7FD6521F8697A0033C4B0 /* JJBaseTableViewHeaderFooterView.m */,
 				F7D7FD4721F864F10033C4B0 /* JJBaseComponent.h */,
@@ -363,6 +360,14 @@
 		F7D7FD6D21F869CB0033C4B0 /* JJTool */ = {
 			isa = PBXGroup;
 			children = (
+				F7D7FD6421F8697A0033C4B0 /* JJBaseNavigationViewController.h */,
+				F7D7FD6721F8697A0033C4B0 /* JJBaseNavigationViewController.m */,
+				F7D7FD6621F8697A0033C4B0 /* JJBaseTabBarViewController.h */,
+				F7D7FD6821F8697A0033C4B0 /* JJBaseTabBarViewController.m */,
+				F7D7FD9621F8704C0033C4B0 /* JJLoginFirstViewController.h */,
+				F7D7FD9521F8704C0033C4B0 /* JJLoginFirstViewController.m */,
+				F7D7FD9721F8704C0033C4B0 /* JJLoginSecondViewController.h */,
+				F7D7FD9821F8704C0033C4B0 /* JJLoginSecondViewController.m */,
 				F7D7FD6F21F869CB0033C4B0 /* JJUserManager.m */,
 				F7D7FD7121F869CB0033C4B0 /* JJUserManager.h */,
 				F7D7FD6E21F869CB0033C4B0 /* JJTool.m */,
@@ -390,18 +395,6 @@
 			);
 			name = Dispatch_Queue;
 			path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/Dispatch_Queue;
-			sourceTree = "<group>";
-		};
-		F7D7FD7C21F86A590033C4B0 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				F7D7FD9621F8704C0033C4B0 /* JJLoginFirstViewController.h */,
-				F7D7FD9521F8704C0033C4B0 /* JJLoginFirstViewController.m */,
-				F7D7FD9721F8704C0033C4B0 /* JJLoginSecondViewController.h */,
-				F7D7FD9821F8704C0033C4B0 /* JJLoginSecondViewController.m */,
-			);
-			name = ViewControllers;
-			path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
