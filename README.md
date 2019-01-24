@@ -1,7 +1,7 @@
 # JJTools
 include some category based on masonry for create UI  and some others useful tools 
 库里面包含了一些常用的控件和类扩展
-2019.01.25更新 初衷是提供一些常用的基类和业务逻辑把这些整合在一起供自己快速开发。目前整理了以下大类：
+2019.01.25更新 初衷是提供一些常用的基类和业务逻辑把这些整合在一起供自己快速开发。目前整理了以下大类:\n
 layout->依赖于链式自动布局masonry，封装了常用的一些控件并提供block回调;
 baseView->对常用的View提供一些基础业务处理，增加调用接口，可以后期继承后增加项目实际需要的逻辑;
 category->对常用的类扩展，增加复用和代码的管理；
