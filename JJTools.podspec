@@ -17,7 +17,7 @@ include some category based on masonry for create UI  and some others useful too
   s.source       = { :git => "https://github.com/chance395/JJTools.git", :tag => "v#{s.version}" }
 
 
-   s.source_files  = 'JJTools/JJTools/Classes/**/*'
+   #s.source_files  = 'JJTools/JJTools/Classes/**/*'
    #s.public_header_files = 'JJTools/Classes/JJBaseHeader.h'
 
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
