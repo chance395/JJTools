@@ -32,6 +32,8 @@ include some category based on masonry for create UI  and some others useful too
 
 s.requires_arc = true
 
+s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+
   s.subspec 'Dispatch_Queue' do |ss|
 
   ss.source_files = 'JJTools/JJTools/Classes/Dispatch_Queue/*.{h,m}'
@@ -101,6 +103,6 @@ s.subspec 'JJBaseView' do |ss|
     #ss.frameworks = 'UIKit'
   end
 
-s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+
 
 end

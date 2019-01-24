@@ -104,7 +104,6 @@
 		F7D7FD4021F85C670033C4B0 /* JJSystemCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSystemCall.h; sourceTree = "<group>"; };
 		F7D7FD4321F861920033C4B0 /* JJBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseCollectionViewCell.h; sourceTree = "<group>"; };
 		F7D7FD4421F861920033C4B0 /* JJBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseCollectionViewCell.m; sourceTree = "<group>"; };
-		F7D7FD4621F864D80033C4B0 /* JJBaseHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJBaseHeader.h; sourceTree = "<group>"; };
 		F7D7FD4721F864F10033C4B0 /* JJBaseComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseComponent.h; sourceTree = "<group>"; };
 		F7D7FD4821F864F10033C4B0 /* JJBaseComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseComponent.m; sourceTree = "<group>"; };
 		F7D7FD4B21F865A50033C4B0 /* JJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJConstants.m; sourceTree = "<group>"; };
@@ -250,7 +249,6 @@
 		F7D7FC1E21F840290033C4B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F7D7FD4621F864D80033C4B0 /* JJBaseHeader.h */,
 				F7D7FD7C21F86A590033C4B0 /* ViewControllers */,
 				F7D7FD7821F86A540033C4B0 /* Dispatch_Queue */,
 				F7D7FD7421F86A2E0033C4B0 /* JJModel */,
