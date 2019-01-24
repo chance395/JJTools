@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -17,9 +17,12 @@ include some category based on masonry for create UI  and some others useful too
   s.source       = { :git => "https://github.com/chance395/JJTools.git", :tag => "v#{s.version}" }
 
 
-   #s.source_files  = 'JJTools/JJTools/Classes/**/*'
-   #s.public_header_files = 'JJTools/JJTools/Classes/**/JJBaseHeader.h'
-    s.prefix_header_contents = '#import"JJBaseHeader.h"'
+     s.source_files  = 'JJTools/JJTools/Classes/JJBaseHeader.h'
+     s.public_header_files = 'JJTools/JJTools/Classes/JJBaseHeader.h'
+    #s.prefix_header_contents = '#import"<JJTools/JJBaseHeader.h>"'
+    s.resource_bundle            = { 'JJTools' => ['JJTools/**/*.xcassets'] }
+   # s.resource                   = 'xxx/xxx.bundle'
+
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/sys" }

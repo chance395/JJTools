@@ -66,7 +66,6 @@
 /* Begin PBXFileReference section */
 		1C20AC76ADF976D68B65DBB4 /* Pods-JJTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJTools/Pods-JJTools.debug.xcconfig"; sourceTree = "<group>"; };
 		CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F772940521F9C82600D633EA /* JJBaseHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JJBaseHeader.h; path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseHeader.h; sourceTree = "<group>"; };
 		F7D7FBE921F83DBA0033C4B0 /* JJTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D7FBEC21F83DBA0033C4B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -141,6 +140,7 @@
 		F7DC9CAC21FA067C00D3BD6D /* JJBaseLoginSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseLoginSecondViewController.m; sourceTree = "<group>"; };
 		F7DC9CAD21FA067C00D3BD6D /* JJBaseLoginFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseLoginFirstViewController.h; sourceTree = "<group>"; };
 		F7DC9CAE21FA067C00D3BD6D /* JJBaseLoginSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseLoginSecondViewController.h; sourceTree = "<group>"; };
+		F7DC9CB221FA14F600D3BD6D /* JJBaseHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JJBaseHeader.h; path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseHeader.h; sourceTree = "<group>"; };
 		F7EED94521F95A1C007C72A4 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		F7EED94621F95A1C007C72A4 /* DZNEmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNEmptyDataSet.h; sourceTree = "<group>"; };
 		F7EED94721F95A1C007C72A4 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
@@ -250,8 +250,8 @@
 		F7D7FC1E21F840290033C4B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7DC9CB221FA14F600D3BD6D /* JJBaseHeader.h */,
 				F7DC9CB121FA07EE00D3BD6D /* JJBaseViewController */,
-				F772940521F9C82600D633EA /* JJBaseHeader.h */,
 				F7D7FD7821F86A540033C4B0 /* Dispatch_Queue */,
 				F7D7FD7421F86A2E0033C4B0 /* JJModel */,
 				F7D7FD6D21F869CB0033C4B0 /* JJTool */,
