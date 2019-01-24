@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "0.9.6"
+  s.version      = "0.9.7"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -49,7 +49,7 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
   end
 
  s.subspec 'JJModel' do |ss|
-  ss.source_files = 'JJTools/JJTools/Classes/JJModel/JJBaseModel.{h,m}'
+  ss.source_files = "Classes", "JJTools/JJTools/Classes/**/JJBaseModel.{h,m}"
   
     #ss.frameworks = 'UIKit'
   end
