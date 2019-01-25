@@ -29,7 +29,7 @@
 #import "NSString+JJTools.h"
 #import "UIColor+JJTools.h"
 #import "UIDevice+JJDevice.h"
-//#import "NSObjectSafe.h"
+#import "NSObjectSafe.h"
 
 //define
 #import "JJConstants.h"
