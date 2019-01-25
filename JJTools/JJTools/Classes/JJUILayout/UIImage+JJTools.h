@@ -13,6 +13,14 @@
 /** 把颜色转换为图片 */
 + (UIImage *)imageWithColor:(UIColor *)color;
 
+/**
+ *  颜色转图片渐变
+ *
+ *  @param colors   颜色数组
+ *  @param frame    位置
+ *  @return UIView
+ */
++ (UIImage*)BgImageFromColors:(NSArray*)colors withFrame: (CGRect)frame;
 /** 返回一张可以随意拉伸不变形的图片 */
 + (UIImage *)resizableImage:(NSString *)imageName;
 

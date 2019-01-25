@@ -24,6 +24,55 @@
     return image;
 }
 
++ (UIImage*)BgImageFromColors:(NSArray*)colors withFrame: (CGRect)frame
+
+{
+    
+    NSMutableArray *ar = [NSMutableArray array];
+    
+    for(UIColor *c in colors) {
+        
+        [ar addObject:(id)c.CGColor];
+        
+    }
+    
+    UIGraphicsBeginImageContextWithOptions(frame.size, YES, 1);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSaveGState(context);
+    
+    CGColorSpaceRef colorSpace = CGColorGetColorSpace([[colors lastObject] CGColor]);
+    
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (CFArrayRef)ar, NULL);
+    
+    CGPoint start;
+    
+    CGPoint end;
+    
+    
+    
+    start = CGPointMake(0.0, frame.size.height);
+    
+    end = CGPointMake(frame.size.width, 0.0);
+    
+    
+    
+    CGContextDrawLinearGradient(context, gradient, start, end,kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    CGGradientRelease(gradient);
+    
+    CGContextRestoreGState(context);
+    
+    CGColorSpaceRelease(colorSpace);
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+    
+}
 + (UIImage *)resizableImage:(NSString *)imageName
 {
     UIImage *normal = [UIImage imageNamed:imageName];
