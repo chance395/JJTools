@@ -53,8 +53,10 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
   
   end
 
+non_arc_files = 'JJTools/JJTools/Classes/MRC/*.{h,m}'
+s.exclude_files = non_arc_files
  s.subspec 'MRC' do |ss|
-  ss.source_files = 'JJTools/JJTools/Classes/MRC/*'
+  ss.source_files = non_arc_files
   ss.requires_arc = false
 
   end
