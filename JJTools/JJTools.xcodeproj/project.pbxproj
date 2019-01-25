@@ -130,6 +130,7 @@
 		F7789ADF21FAF7C50052748D /* JJUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJUserManager.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJTool/JJUserManager.h; sourceTree = "<group>"; };
 		F7789AE021FAF7C50052748D /* JJTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJTool.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJTool/JJTool.h; sourceTree = "<group>"; };
 		F7789AE121FAF7C50052748D /* JJUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJUserManager.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJTool/JJUserManager.m; sourceTree = "<group>"; };
+		F7789AE421FAFB880052748D /* JJBaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseHeader.h; path = ../../../../../brain/Desktop/JJBaseHeader.h; sourceTree = "<group>"; };
 		F7D7FBE921F83DBA0033C4B0 /* JJTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D7FBEC21F83DBA0033C4B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -146,7 +147,6 @@
 		F7D7FC0C21F83DBC0033C4B0 /* JJToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JJToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D7FC1021F83DBC0033C4B0 /* JJToolsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJToolsUITests.m; sourceTree = "<group>"; };
 		F7D7FC1221F83DBC0033C4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7DC9CB221FA14F600D3BD6D /* JJBaseHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JJBaseHeader.h; path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseHeader.h; sourceTree = "<group>"; };
 		F88A122A776DC9F62468BFD0 /* Pods-JJTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJTools/Pods-JJTools.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -400,6 +400,7 @@
 		F7D7FC1E21F840290033C4B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7789AE421FAFB880052748D /* JJBaseHeader.h */,
 				F7789ADD21FAF7B00052748D /* JJTool */,
 				F7789ACA21FAF73B0052748D /* JJUILayout */,
 				F7789AC021FAF7170052748D /* JJCategory */,
@@ -412,7 +413,6 @@
 				F7789A8121FAF5B60052748D /* JJBaseViewController */,
 				F7789A8021FAF5750052748D /* JJFiles */,
 				F7789A7C21FAF18C0052748D /* JJSafe */,
-				F7DC9CB221FA14F600D3BD6D /* JJBaseHeader.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
