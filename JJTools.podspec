@@ -19,9 +19,7 @@ include some category based on masonry for create UI  and some others useful too
 
      s.source_files  = 'JJTools/JJTools/Classes/JJBaseHeader.h'
      s.public_header_files = 'JJTools/JJTools/Classes/JJBaseHeader.h'
-    #s.prefix_header_contents = '#import"<JJTools/JJBaseHeader.h>"'
     s.resource_bundle            = { 'JJTools' => ['JJTools/**/*.xcassets'] }
-   # s.resource                   = 'xxx/xxx.bundle'
 
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
@@ -53,9 +51,10 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
   
   end
 
-non_arc_files = 'JJTools/JJTools/Classes/MRC/*.{h,m}'
+
+non_arc_files = 'JJTools/JJTools/Classes/JJSafe/*'
 s.exclude_files = non_arc_files
- s.subspec 'MRC' do |ss|
+ s.subspec 'JJSafe' do |ss|
   ss.source_files = non_arc_files
   ss.requires_arc = false
 
