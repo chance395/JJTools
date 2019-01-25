@@ -8,35 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		934F0CE595FB53E686ECF1E1 /* libPods-JJTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */; };
-		F7789A7F21FAF1C20052748D /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A7E21FAF1C20052748D /* NSObjectSafe.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F7789A8C21FAF5C80052748D /* JJBaseLoginFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A8221FAF5C80052748D /* JJBaseLoginFirstViewController.m */; };
-		F7789A8D21FAF5C80052748D /* JJBaseLoginSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A8421FAF5C80052748D /* JJBaseLoginSecondViewController.m */; };
-		F7789A8E21FAF5C80052748D /* JJBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A8621FAF5C80052748D /* JJBaseNavigationViewController.m */; };
-		F7789A8F21FAF5C80052748D /* JJBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A8721FAF5C80052748D /* JJBaseVC.m */; };
-		F7789A9021FAF5C80052748D /* JJBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A8B21FAF5C80052748D /* JJBaseTabBarViewController.m */; };
-		F7789A9421FAF5F50052748D /* JJDispatch_queue.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A9321FAF5F50052748D /* JJDispatch_queue.m */; };
-		F7789A9821FAF63A0052748D /* JJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A9721FAF63A0052748D /* JJBaseModel.m */; };
-		F7789A9E21FAF65D0052748D /* JJBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A9B21FAF65D0052748D /* JJBaseRequest.m */; };
-		F7789A9F21FAF65D0052748D /* JJReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789A9D21FAF65D0052748D /* JJReachability.m */; };
-		F7789AA721FAF6970052748D /* JJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AA421FAF6970052748D /* JJConstants.m */; };
-		F7789AB621FAF6D30052748D /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AAA21FAF6D20052748D /* UIScrollView+EmptyDataSet.m */; };
-		F7789AB721FAF6D30052748D /* JJBaseComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AAD21FAF6D20052748D /* JJBaseComponent.m */; };
-		F7789AB821FAF6D30052748D /* JJBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AAF21FAF6D20052748D /* JJBaseTableViewCell.m */; };
-		F7789AB921FAF6D30052748D /* JJBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AB121FAF6D20052748D /* JJBaseTableView.m */; };
-		F7789ABA21FAF6D30052748D /* JJBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AB221FAF6D20052748D /* JJBaseCollectionViewCell.m */; };
-		F7789ABB21FAF6D30052748D /* JJBaseTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AB321FAF6D20052748D /* JJBaseTableViewHeaderFooterView.m */; };
-		F7789ABF21FAF6FF0052748D /* JJSystemCall.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789ABE21FAF6FF0052748D /* JJSystemCall.m */; };
-		F7789AC721FAF7260052748D /* NSString+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AC121FAF7250052748D /* NSString+JJTools.m */; };
-		F7789AC821FAF7260052748D /* UIDevice+JJDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AC521FAF7260052748D /* UIDevice+JJDevice.m */; };
-		F7789AC921FAF7260052748D /* UIColor+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AC621FAF7260052748D /* UIColor+JJTools.m */; };
-		F7789AD721FAF7530052748D /* UIButton+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789ACB21FAF7530052748D /* UIButton+MasonryLayout.m */; };
-		F7789AD821FAF7530052748D /* UILabel+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789ACC21FAF7530052748D /* UILabel+MasonryLayout.m */; };
-		F7789AD921FAF7530052748D /* UIView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AD121FAF7530052748D /* UIView+MasonryLayout.m */; };
-		F7789ADA21FAF7530052748D /* UIImage+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AD321FAF7530052748D /* UIImage+JJTools.m */; };
-		F7789ADB21FAF7530052748D /* UITextField+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AD421FAF7530052748D /* UITextField+MasonryLayout.m */; };
-		F7789ADC21FAF7530052748D /* UIImageView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7789AD521FAF7530052748D /* UIImageView+MasonryLayout.m */; };
-		F77FAC0C21FB078400EBC626 /* JJTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC0821FB078400EBC626 /* JJTool.m */; };
-		F77FAC0D21FB078400EBC626 /* JJUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC0921FB078400EBC626 /* JJUserManager.m */; };
+		F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1021FB083600EBC626 /* JJConstants.m */; };
+		F77FAC5D21FB083600EBC626 /* template.zip in Resources */ = {isa = PBXBuildFile; fileRef = F77FAC1721FB083600EBC626 /* template.zip */; };
+		F77FAC5E21FB083600EBC626 /* JJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1921FB083600EBC626 /* JJBaseModel.m */; };
+		F77FAC5F21FB083600EBC626 /* JJDispatch_queue.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1C21FB083600EBC626 /* JJDispatch_queue.m */; };
+		F77FAC6021FB083600EBC626 /* JJTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1F21FB083600EBC626 /* JJTool.m */; };
+		F77FAC6121FB083600EBC626 /* JJUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC2021FB083600EBC626 /* JJUserManager.m */; };
+		F77FAC6221FB083600EBC626 /* UIColor+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC2521FB083600EBC626 /* UIColor+JJTools.m */; };
+		F77FAC6321FB083600EBC626 /* NSString+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC2721FB083600EBC626 /* NSString+JJTools.m */; };
+		F77FAC6421FB083600EBC626 /* UIDevice+JJDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC2821FB083600EBC626 /* UIDevice+JJDevice.m */; };
+		F77FAC6521FB083600EBC626 /* JJBaseLoginSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC2B21FB083600EBC626 /* JJBaseLoginSecondViewController.m */; };
+		F77FAC6621FB083600EBC626 /* JJBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC2D21FB083600EBC626 /* JJBaseTabBarViewController.m */; };
+		F77FAC6721FB083600EBC626 /* JJBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC2E21FB083600EBC626 /* JJBaseNavigationViewController.m */; };
+		F77FAC6821FB083600EBC626 /* JJBaseLoginFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC2F21FB083600EBC626 /* JJBaseLoginFirstViewController.m */; };
+		F77FAC6921FB083600EBC626 /* JJBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC3021FB083600EBC626 /* JJBaseVC.m */; };
+		F77FAC6A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC3A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m */; };
+		F77FAC6B21FB083600EBC626 /* JJBaseComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC3B21FB083600EBC626 /* JJBaseComponent.m */; };
+		F77FAC6C21FB083600EBC626 /* JJBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC3D21FB083600EBC626 /* JJBaseTableViewCell.m */; };
+		F77FAC6D21FB083600EBC626 /* JJBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC3E21FB083600EBC626 /* JJBaseTableView.m */; };
+		F77FAC6E21FB083600EBC626 /* JJBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4021FB083600EBC626 /* JJBaseCollectionViewCell.m */; };
+		F77FAC6F21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4121FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m */; };
+		F77FAC7021FB083600EBC626 /* JJSystemCall.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4521FB083600EBC626 /* JJSystemCall.m */; };
+		F77FAC7121FB083600EBC626 /* JJReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4A21FB083600EBC626 /* JJReachability.m */; };
+		F77FAC7221FB083600EBC626 /* JJBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4B21FB083600EBC626 /* JJBaseRequest.m */; };
+		F77FAC7321FB083600EBC626 /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4D21FB083600EBC626 /* NSObjectSafe.m */; };
+		F77FAC7421FB083600EBC626 /* UIView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5121FB083600EBC626 /* UIView+MasonryLayout.m */; };
+		F77FAC7521FB083600EBC626 /* UILabel+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5221FB083600EBC626 /* UILabel+MasonryLayout.m */; };
+		F77FAC7621FB083600EBC626 /* UIButton+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5421FB083600EBC626 /* UIButton+MasonryLayout.m */; };
+		F77FAC7721FB083600EBC626 /* UIImageView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5521FB083600EBC626 /* UIImageView+MasonryLayout.m */; };
+		F77FAC7821FB083600EBC626 /* UITextField+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5721FB083600EBC626 /* UITextField+MasonryLayout.m */; };
+		F77FAC7921FB083600EBC626 /* UIImage+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5921FB083600EBC626 /* UIImage+JJTools.m */; };
 		F7D7FBEE21F83DBA0033C4B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */; };
 		F7D7FBF121F83DBA0033C4B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FBF021F83DBA0033C4B0 /* ViewController.m */; };
 		F7D7FBF421F83DBA0033C4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D7FBF221F83DBA0033C4B0 /* Main.storyboard */; };
@@ -67,70 +68,71 @@
 /* Begin PBXFileReference section */
 		1C20AC76ADF976D68B65DBB4 /* Pods-JJTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJTools/Pods-JJTools.debug.xcconfig"; sourceTree = "<group>"; };
 		CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7789A7D21FAF1C20052748D /* NSObjectSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSObjectSafe.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJSafe/NSObjectSafe.h; sourceTree = "<group>"; };
-		F7789A7E21FAF1C20052748D /* NSObjectSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSObjectSafe.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJSafe/NSObjectSafe.m; sourceTree = "<group>"; };
-		F7789A8221FAF5C80052748D /* JJBaseLoginFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseLoginFirstViewController.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseLoginFirstViewController.m; sourceTree = "<group>"; };
-		F7789A8321FAF5C80052748D /* JJBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseVC.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseVC.h; sourceTree = "<group>"; };
-		F7789A8421FAF5C80052748D /* JJBaseLoginSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseLoginSecondViewController.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseLoginSecondViewController.m; sourceTree = "<group>"; };
-		F7789A8521FAF5C80052748D /* JJBaseLoginSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseLoginSecondViewController.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseLoginSecondViewController.h; sourceTree = "<group>"; };
-		F7789A8621FAF5C80052748D /* JJBaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseNavigationViewController.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseNavigationViewController.m; sourceTree = "<group>"; };
-		F7789A8721FAF5C80052748D /* JJBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseVC.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseVC.m; sourceTree = "<group>"; };
-		F7789A8821FAF5C80052748D /* JJBaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseNavigationViewController.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseNavigationViewController.h; sourceTree = "<group>"; };
-		F7789A8921FAF5C80052748D /* JJBaseLoginFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseLoginFirstViewController.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseLoginFirstViewController.h; sourceTree = "<group>"; };
-		F7789A8A21FAF5C80052748D /* JJBaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseTabBarViewController.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseTabBarViewController.h; sourceTree = "<group>"; };
-		F7789A8B21FAF5C80052748D /* JJBaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseTabBarViewController.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseViewController/JJBaseTabBarViewController.m; sourceTree = "<group>"; };
-		F7789A9221FAF5F50052748D /* JJDispatch_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJDispatch_queue.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/Dispatch_Queue/JJDispatch_queue.h; sourceTree = "<group>"; };
-		F7789A9321FAF5F50052748D /* JJDispatch_queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJDispatch_queue.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/Dispatch_Queue/JJDispatch_queue.m; sourceTree = "<group>"; };
-		F7789A9621FAF63A0052748D /* JJBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseModel.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJModel/JJBaseModel.h; sourceTree = "<group>"; };
-		F7789A9721FAF63A0052748D /* JJBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseModel.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJModel/JJBaseModel.m; sourceTree = "<group>"; };
-		F7789A9A21FAF65D0052748D /* JJReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJReachability.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJNetWork/JJReachability.h; sourceTree = "<group>"; };
-		F7789A9B21FAF65D0052748D /* JJBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseRequest.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJNetWork/JJBaseRequest.m; sourceTree = "<group>"; };
-		F7789A9C21FAF65D0052748D /* JJBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseRequest.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJNetWork/JJBaseRequest.h; sourceTree = "<group>"; };
-		F7789A9D21FAF65D0052748D /* JJReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJReachability.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJNetWork/JJReachability.m; sourceTree = "<group>"; };
-		F7789AA121FAF6970052748D /* JJConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJConstants.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJDefine/JJConstants.h; sourceTree = "<group>"; };
-		F7789AA221FAF6970052748D /* JJMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJMacroDefine.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJDefine/JJMacroDefine.h; sourceTree = "<group>"; };
-		F7789AA321FAF6970052748D /* JJColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJColorDefine.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJDefine/JJColorDefine.h; sourceTree = "<group>"; };
-		F7789AA421FAF6970052748D /* JJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJConstants.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJDefine/JJConstants.m; sourceTree = "<group>"; };
-		F7789AA521FAF6970052748D /* JJFontDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJFontDefine.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJDefine/JJFontDefine.h; sourceTree = "<group>"; };
-		F7789AA621FAF6970052748D /* JJUrlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJUrlDefine.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJDefine/JJUrlDefine.h; sourceTree = "<group>"; };
-		F7789AA921FAF6D20052748D /* JJBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseTableViewCell.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseTableViewCell.h; sourceTree = "<group>"; };
-		F7789AAA21FAF6D20052748D /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
-		F7789AAB21FAF6D20052748D /* JJBaseComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseComponent.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseComponent.h; sourceTree = "<group>"; };
-		F7789AAC21FAF6D20052748D /* JJBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseTableView.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseTableView.h; sourceTree = "<group>"; };
-		F7789AAD21FAF6D20052748D /* JJBaseComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseComponent.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseComponent.m; sourceTree = "<group>"; };
-		F7789AAE21FAF6D20052748D /* JJBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseCollectionViewCell.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionViewCell.h; sourceTree = "<group>"; };
-		F7789AAF21FAF6D20052748D /* JJBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseTableViewCell.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseTableViewCell.m; sourceTree = "<group>"; };
-		F7789AB021FAF6D20052748D /* DZNEmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DZNEmptyDataSet.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/DZNEmptyDataSet.h; sourceTree = "<group>"; };
-		F7789AB121FAF6D20052748D /* JJBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseTableView.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseTableView.m; sourceTree = "<group>"; };
-		F7789AB221FAF6D20052748D /* JJBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseCollectionViewCell.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionViewCell.m; sourceTree = "<group>"; };
-		F7789AB321FAF6D20052748D /* JJBaseTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseTableViewHeaderFooterView.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseTableViewHeaderFooterView.m; sourceTree = "<group>"; };
-		F7789AB421FAF6D20052748D /* JJBaseTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseTableViewHeaderFooterView.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseTableViewHeaderFooterView.h; sourceTree = "<group>"; };
-		F7789AB521FAF6D30052748D /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
-		F7789ABD21FAF6FE0052748D /* JJSystemCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJSystemCall.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJSystem/JJSystemCall.h; sourceTree = "<group>"; };
-		F7789ABE21FAF6FF0052748D /* JJSystemCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJSystemCall.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJSystem/JJSystemCall.m; sourceTree = "<group>"; };
-		F7789AC121FAF7250052748D /* NSString+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JJTools.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJCategory/NSString+JJTools.m"; sourceTree = "<group>"; };
-		F7789AC221FAF7250052748D /* UIDevice+JJDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+JJDevice.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJCategory/UIDevice+JJDevice.h"; sourceTree = "<group>"; };
-		F7789AC321FAF7250052748D /* NSString+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JJTools.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJCategory/NSString+JJTools.h"; sourceTree = "<group>"; };
-		F7789AC421FAF7260052748D /* UIColor+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+JJTools.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJCategory/UIColor+JJTools.h"; sourceTree = "<group>"; };
-		F7789AC521FAF7260052748D /* UIDevice+JJDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+JJDevice.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJCategory/UIDevice+JJDevice.m"; sourceTree = "<group>"; };
-		F7789AC621FAF7260052748D /* UIColor+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+JJTools.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJCategory/UIColor+JJTools.m"; sourceTree = "<group>"; };
-		F7789ACB21FAF7530052748D /* UIButton+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+MasonryLayout.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UIButton+MasonryLayout.m"; sourceTree = "<group>"; };
-		F7789ACC21FAF7530052748D /* UILabel+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+MasonryLayout.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UILabel+MasonryLayout.m"; sourceTree = "<group>"; };
-		F7789ACD21FAF7530052748D /* UITextField+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+MasonryLayout.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UITextField+MasonryLayout.h"; sourceTree = "<group>"; };
-		F7789ACE21FAF7530052748D /* UILabel+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+MasonryLayout.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UILabel+MasonryLayout.h"; sourceTree = "<group>"; };
-		F7789ACF21FAF7530052748D /* UIImage+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+JJTools.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UIImage+JJTools.h"; sourceTree = "<group>"; };
-		F7789AD021FAF7530052748D /* UIView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MasonryLayout.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UIView+MasonryLayout.h"; sourceTree = "<group>"; };
-		F7789AD121FAF7530052748D /* UIView+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MasonryLayout.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UIView+MasonryLayout.m"; sourceTree = "<group>"; };
-		F7789AD221FAF7530052748D /* UIImageView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+MasonryLayout.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UIImageView+MasonryLayout.h"; sourceTree = "<group>"; };
-		F7789AD321FAF7530052748D /* UIImage+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+JJTools.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UIImage+JJTools.m"; sourceTree = "<group>"; };
-		F7789AD421FAF7530052748D /* UITextField+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+MasonryLayout.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UITextField+MasonryLayout.m"; sourceTree = "<group>"; };
-		F7789AD521FAF7530052748D /* UIImageView+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+MasonryLayout.m"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UIImageView+MasonryLayout.m"; sourceTree = "<group>"; };
-		F7789AD621FAF7530052748D /* UIButton+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+MasonryLayout.h"; path = "../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJUILayout/UIButton+MasonryLayout.h"; sourceTree = "<group>"; };
-		F7789AE421FAFB880052748D /* JJBaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseHeader.h; path = ../../../../../brain/Desktop/JJBaseHeader.h; sourceTree = "<group>"; };
-		F77FAC0821FB078400EBC626 /* JJTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTool.m; sourceTree = "<group>"; };
-		F77FAC0921FB078400EBC626 /* JJUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJUserManager.m; sourceTree = "<group>"; };
-		F77FAC0A21FB078400EBC626 /* JJTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTool.h; sourceTree = "<group>"; };
-		F77FAC0B21FB078400EBC626 /* JJUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJUserManager.h; sourceTree = "<group>"; };
+		F77FAC1021FB083600EBC626 /* JJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJConstants.m; sourceTree = "<group>"; };
+		F77FAC1121FB083600EBC626 /* JJUrlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJUrlDefine.h; sourceTree = "<group>"; };
+		F77FAC1221FB083600EBC626 /* JJColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJColorDefine.h; sourceTree = "<group>"; };
+		F77FAC1321FB083600EBC626 /* JJFontDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJFontDefine.h; sourceTree = "<group>"; };
+		F77FAC1421FB083600EBC626 /* JJMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMacroDefine.h; sourceTree = "<group>"; };
+		F77FAC1521FB083600EBC626 /* JJConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJConstants.h; sourceTree = "<group>"; };
+		F77FAC1721FB083600EBC626 /* template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = template.zip; sourceTree = "<group>"; };
+		F77FAC1921FB083600EBC626 /* JJBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseModel.m; sourceTree = "<group>"; };
+		F77FAC1A21FB083600EBC626 /* JJBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseModel.h; sourceTree = "<group>"; };
+		F77FAC1C21FB083600EBC626 /* JJDispatch_queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJDispatch_queue.m; sourceTree = "<group>"; };
+		F77FAC1D21FB083600EBC626 /* JJDispatch_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJDispatch_queue.h; sourceTree = "<group>"; };
+		F77FAC1F21FB083600EBC626 /* JJTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTool.m; sourceTree = "<group>"; };
+		F77FAC2021FB083600EBC626 /* JJUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJUserManager.m; sourceTree = "<group>"; };
+		F77FAC2121FB083600EBC626 /* JJTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTool.h; sourceTree = "<group>"; };
+		F77FAC2221FB083600EBC626 /* JJUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJUserManager.h; sourceTree = "<group>"; };
+		F77FAC2421FB083600EBC626 /* NSString+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JJTools.h"; sourceTree = "<group>"; };
+		F77FAC2521FB083600EBC626 /* UIColor+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJTools.m"; sourceTree = "<group>"; };
+		F77FAC2621FB083600EBC626 /* UIDevice+JJDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JJDevice.h"; sourceTree = "<group>"; };
+		F77FAC2721FB083600EBC626 /* NSString+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJTools.m"; sourceTree = "<group>"; };
+		F77FAC2821FB083600EBC626 /* UIDevice+JJDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JJDevice.m"; sourceTree = "<group>"; };
+		F77FAC2921FB083600EBC626 /* UIColor+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJTools.h"; sourceTree = "<group>"; };
+		F77FAC2B21FB083600EBC626 /* JJBaseLoginSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseLoginSecondViewController.m; sourceTree = "<group>"; };
+		F77FAC2C21FB083600EBC626 /* JJBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseVC.h; sourceTree = "<group>"; };
+		F77FAC2D21FB083600EBC626 /* JJBaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTabBarViewController.m; sourceTree = "<group>"; };
+		F77FAC2E21FB083600EBC626 /* JJBaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseNavigationViewController.m; sourceTree = "<group>"; };
+		F77FAC2F21FB083600EBC626 /* JJBaseLoginFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseLoginFirstViewController.m; sourceTree = "<group>"; };
+		F77FAC3021FB083600EBC626 /* JJBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseVC.m; sourceTree = "<group>"; };
+		F77FAC3121FB083600EBC626 /* JJBaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseTabBarViewController.h; sourceTree = "<group>"; };
+		F77FAC3221FB083600EBC626 /* JJBaseLoginSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseLoginSecondViewController.h; sourceTree = "<group>"; };
+		F77FAC3321FB083600EBC626 /* JJBaseLoginFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseLoginFirstViewController.h; sourceTree = "<group>"; };
+		F77FAC3421FB083600EBC626 /* JJBaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseNavigationViewController.h; sourceTree = "<group>"; };
+		F77FAC3621FB083600EBC626 /* JJBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseTableViewCell.h; sourceTree = "<group>"; };
+		F77FAC3721FB083600EBC626 /* DZNEmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZNEmptyDataSet.h; sourceTree = "<group>"; };
+		F77FAC3821FB083600EBC626 /* JJBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		F77FAC3921FB083600EBC626 /* JJBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseTableView.h; sourceTree = "<group>"; };
+		F77FAC3A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		F77FAC3B21FB083600EBC626 /* JJBaseComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseComponent.m; sourceTree = "<group>"; };
+		F77FAC3C21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseTableViewHeaderFooterView.h; sourceTree = "<group>"; };
+		F77FAC3D21FB083600EBC626 /* JJBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTableViewCell.m; sourceTree = "<group>"; };
+		F77FAC3E21FB083600EBC626 /* JJBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTableView.m; sourceTree = "<group>"; };
+		F77FAC3F21FB083600EBC626 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		F77FAC4021FB083600EBC626 /* JJBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		F77FAC4121FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		F77FAC4221FB083600EBC626 /* JJBaseComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseComponent.h; sourceTree = "<group>"; };
+		F77FAC4321FB083600EBC626 /* JJBaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseHeader.h; sourceTree = "<group>"; };
+		F77FAC4521FB083600EBC626 /* JJSystemCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSystemCall.m; sourceTree = "<group>"; };
+		F77FAC4621FB083600EBC626 /* JJSystemCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSystemCall.h; sourceTree = "<group>"; };
+		F77FAC4821FB083600EBC626 /* JJReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJReachability.h; sourceTree = "<group>"; };
+		F77FAC4921FB083600EBC626 /* JJBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseRequest.h; sourceTree = "<group>"; };
+		F77FAC4A21FB083600EBC626 /* JJReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJReachability.m; sourceTree = "<group>"; };
+		F77FAC4B21FB083600EBC626 /* JJBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseRequest.m; sourceTree = "<group>"; };
+		F77FAC4D21FB083600EBC626 /* NSObjectSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectSafe.m; sourceTree = "<group>"; };
+		F77FAC4E21FB083600EBC626 /* NSObjectSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectSafe.h; sourceTree = "<group>"; };
+		F77FAC5021FB083600EBC626 /* UITextField+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+MasonryLayout.h"; sourceTree = "<group>"; };
+		F77FAC5121FB083600EBC626 /* UIView+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MasonryLayout.m"; sourceTree = "<group>"; };
+		F77FAC5221FB083600EBC626 /* UILabel+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MasonryLayout.m"; sourceTree = "<group>"; };
+		F77FAC5321FB083600EBC626 /* UIImage+JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JJTools.h"; sourceTree = "<group>"; };
+		F77FAC5421FB083600EBC626 /* UIButton+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MasonryLayout.m"; sourceTree = "<group>"; };
+		F77FAC5521FB083600EBC626 /* UIImageView+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MasonryLayout.m"; sourceTree = "<group>"; };
+		F77FAC5621FB083600EBC626 /* UIView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MasonryLayout.h"; sourceTree = "<group>"; };
+		F77FAC5721FB083600EBC626 /* UITextField+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MasonryLayout.m"; sourceTree = "<group>"; };
+		F77FAC5821FB083600EBC626 /* UIButton+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MasonryLayout.h"; sourceTree = "<group>"; };
+		F77FAC5921FB083600EBC626 /* UIImage+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JJTools.m"; sourceTree = "<group>"; };
+		F77FAC5A21FB083600EBC626 /* UILabel+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MasonryLayout.h"; sourceTree = "<group>"; };
+		F77FAC5B21FB083600EBC626 /* UIImageView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MasonryLayout.h"; sourceTree = "<group>"; };
 		F7D7FBE921F83DBA0033C4B0 /* JJTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D7FBEC21F83DBA0033C4B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -193,151 +195,172 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F7789A7C21FAF18C0052748D /* JJSafe */ = {
+		F77FAC0E21FB083600EBC626 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F7789A7D21FAF1C20052748D /* NSObjectSafe.h */,
-				F7789A7E21FAF1C20052748D /* NSObjectSafe.m */,
+				F77FAC0F21FB083600EBC626 /* JJDefine */,
+				F77FAC1621FB083600EBC626 /* JJFiles */,
+				F77FAC1821FB083600EBC626 /* JJModel */,
+				F77FAC1B21FB083600EBC626 /* Dispatch_Queue */,
+				F77FAC1E21FB083600EBC626 /* JJTool */,
+				F77FAC2321FB083600EBC626 /* JJCategory */,
+				F77FAC2A21FB083600EBC626 /* JJBaseViewController */,
+				F77FAC3521FB083600EBC626 /* JJBaseView */,
+				F77FAC4321FB083600EBC626 /* JJBaseHeader.h */,
+				F77FAC4421FB083600EBC626 /* JJSystem */,
+				F77FAC4721FB083600EBC626 /* JJNetWork */,
+				F77FAC4C21FB083600EBC626 /* JJSafe */,
+				F77FAC4F21FB083600EBC626 /* JJUILayout */,
 			);
-			path = JJSafe;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		F7789A8021FAF5750052748D /* JJFiles */ = {
+		F77FAC0F21FB083600EBC626 /* JJDefine */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = JJFiles;
-			sourceTree = "<group>";
-		};
-		F7789A8121FAF5B60052748D /* JJBaseViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F7789A8921FAF5C80052748D /* JJBaseLoginFirstViewController.h */,
-				F7789A8221FAF5C80052748D /* JJBaseLoginFirstViewController.m */,
-				F7789A8521FAF5C80052748D /* JJBaseLoginSecondViewController.h */,
-				F7789A8421FAF5C80052748D /* JJBaseLoginSecondViewController.m */,
-				F7789A8821FAF5C80052748D /* JJBaseNavigationViewController.h */,
-				F7789A8621FAF5C80052748D /* JJBaseNavigationViewController.m */,
-				F7789A8A21FAF5C80052748D /* JJBaseTabBarViewController.h */,
-				F7789A8B21FAF5C80052748D /* JJBaseTabBarViewController.m */,
-				F7789A8321FAF5C80052748D /* JJBaseVC.h */,
-				F7789A8721FAF5C80052748D /* JJBaseVC.m */,
-			);
-			path = JJBaseViewController;
-			sourceTree = "<group>";
-		};
-		F7789A9121FAF5E30052748D /* Dispatch_Queue */ = {
-			isa = PBXGroup;
-			children = (
-				F7789A9221FAF5F50052748D /* JJDispatch_queue.h */,
-				F7789A9321FAF5F50052748D /* JJDispatch_queue.m */,
-			);
-			path = Dispatch_Queue;
-			sourceTree = "<group>";
-		};
-		F7789A9521FAF62A0052748D /* JJModel */ = {
-			isa = PBXGroup;
-			children = (
-				F7789A9621FAF63A0052748D /* JJBaseModel.h */,
-				F7789A9721FAF63A0052748D /* JJBaseModel.m */,
-			);
-			path = JJModel;
-			sourceTree = "<group>";
-		};
-		F7789A9921FAF64E0052748D /* JJNetWork */ = {
-			isa = PBXGroup;
-			children = (
-				F7789A9C21FAF65D0052748D /* JJBaseRequest.h */,
-				F7789A9B21FAF65D0052748D /* JJBaseRequest.m */,
-				F7789A9A21FAF65D0052748D /* JJReachability.h */,
-				F7789A9D21FAF65D0052748D /* JJReachability.m */,
-			);
-			path = JJNetWork;
-			sourceTree = "<group>";
-		};
-		F7789AA021FAF6840052748D /* JJDefine */ = {
-			isa = PBXGroup;
-			children = (
-				F7789AA321FAF6970052748D /* JJColorDefine.h */,
-				F7789AA121FAF6970052748D /* JJConstants.h */,
-				F7789AA421FAF6970052748D /* JJConstants.m */,
-				F7789AA521FAF6970052748D /* JJFontDefine.h */,
-				F7789AA221FAF6970052748D /* JJMacroDefine.h */,
-				F7789AA621FAF6970052748D /* JJUrlDefine.h */,
+				F77FAC1021FB083600EBC626 /* JJConstants.m */,
+				F77FAC1121FB083600EBC626 /* JJUrlDefine.h */,
+				F77FAC1221FB083600EBC626 /* JJColorDefine.h */,
+				F77FAC1321FB083600EBC626 /* JJFontDefine.h */,
+				F77FAC1421FB083600EBC626 /* JJMacroDefine.h */,
+				F77FAC1521FB083600EBC626 /* JJConstants.h */,
 			);
 			path = JJDefine;
 			sourceTree = "<group>";
 		};
-		F7789AA821FAF6B90052748D /* JJBaseView */ = {
+		F77FAC1621FB083600EBC626 /* JJFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F7789AB021FAF6D20052748D /* DZNEmptyDataSet.h */,
-				F7789AAE21FAF6D20052748D /* JJBaseCollectionViewCell.h */,
-				F7789AB221FAF6D20052748D /* JJBaseCollectionViewCell.m */,
-				F7789AAB21FAF6D20052748D /* JJBaseComponent.h */,
-				F7789AAD21FAF6D20052748D /* JJBaseComponent.m */,
-				F7789AAC21FAF6D20052748D /* JJBaseTableView.h */,
-				F7789AB121FAF6D20052748D /* JJBaseTableView.m */,
-				F7789AA921FAF6D20052748D /* JJBaseTableViewCell.h */,
-				F7789AAF21FAF6D20052748D /* JJBaseTableViewCell.m */,
-				F7789AB421FAF6D20052748D /* JJBaseTableViewHeaderFooterView.h */,
-				F7789AB321FAF6D20052748D /* JJBaseTableViewHeaderFooterView.m */,
-				F7789AB521FAF6D30052748D /* UIScrollView+EmptyDataSet.h */,
-				F7789AAA21FAF6D20052748D /* UIScrollView+EmptyDataSet.m */,
+				F77FAC1721FB083600EBC626 /* template.zip */,
 			);
-			path = JJBaseView;
+			path = JJFiles;
 			sourceTree = "<group>";
 		};
-		F7789ABC21FAF6EE0052748D /* JJSystem */ = {
+		F77FAC1821FB083600EBC626 /* JJModel */ = {
 			isa = PBXGroup;
 			children = (
-				F7789ABD21FAF6FE0052748D /* JJSystemCall.h */,
-				F7789ABE21FAF6FF0052748D /* JJSystemCall.m */,
+				F77FAC1921FB083600EBC626 /* JJBaseModel.m */,
+				F77FAC1A21FB083600EBC626 /* JJBaseModel.h */,
 			);
-			path = JJSystem;
+			path = JJModel;
 			sourceTree = "<group>";
 		};
-		F7789AC021FAF7170052748D /* JJCategory */ = {
+		F77FAC1B21FB083600EBC626 /* Dispatch_Queue */ = {
 			isa = PBXGroup;
 			children = (
-				F7789AC321FAF7250052748D /* NSString+JJTools.h */,
-				F7789AC121FAF7250052748D /* NSString+JJTools.m */,
-				F7789AC421FAF7260052748D /* UIColor+JJTools.h */,
-				F7789AC621FAF7260052748D /* UIColor+JJTools.m */,
-				F7789AC221FAF7250052748D /* UIDevice+JJDevice.h */,
-				F7789AC521FAF7260052748D /* UIDevice+JJDevice.m */,
+				F77FAC1C21FB083600EBC626 /* JJDispatch_queue.m */,
+				F77FAC1D21FB083600EBC626 /* JJDispatch_queue.h */,
+			);
+			path = Dispatch_Queue;
+			sourceTree = "<group>";
+		};
+		F77FAC1E21FB083600EBC626 /* JJTool */ = {
+			isa = PBXGroup;
+			children = (
+				F77FAC1F21FB083600EBC626 /* JJTool.m */,
+				F77FAC2021FB083600EBC626 /* JJUserManager.m */,
+				F77FAC2121FB083600EBC626 /* JJTool.h */,
+				F77FAC2221FB083600EBC626 /* JJUserManager.h */,
+			);
+			path = JJTool;
+			sourceTree = "<group>";
+		};
+		F77FAC2321FB083600EBC626 /* JJCategory */ = {
+			isa = PBXGroup;
+			children = (
+				F77FAC2421FB083600EBC626 /* NSString+JJTools.h */,
+				F77FAC2521FB083600EBC626 /* UIColor+JJTools.m */,
+				F77FAC2621FB083600EBC626 /* UIDevice+JJDevice.h */,
+				F77FAC2721FB083600EBC626 /* NSString+JJTools.m */,
+				F77FAC2821FB083600EBC626 /* UIDevice+JJDevice.m */,
+				F77FAC2921FB083600EBC626 /* UIColor+JJTools.h */,
 			);
 			path = JJCategory;
 			sourceTree = "<group>";
 		};
-		F7789ACA21FAF73B0052748D /* JJUILayout */ = {
+		F77FAC2A21FB083600EBC626 /* JJBaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F7789AD621FAF7530052748D /* UIButton+MasonryLayout.h */,
-				F7789ACB21FAF7530052748D /* UIButton+MasonryLayout.m */,
-				F7789ACF21FAF7530052748D /* UIImage+JJTools.h */,
-				F7789AD321FAF7530052748D /* UIImage+JJTools.m */,
-				F7789AD221FAF7530052748D /* UIImageView+MasonryLayout.h */,
-				F7789AD521FAF7530052748D /* UIImageView+MasonryLayout.m */,
-				F7789ACE21FAF7530052748D /* UILabel+MasonryLayout.h */,
-				F7789ACC21FAF7530052748D /* UILabel+MasonryLayout.m */,
-				F7789ACD21FAF7530052748D /* UITextField+MasonryLayout.h */,
-				F7789AD421FAF7530052748D /* UITextField+MasonryLayout.m */,
-				F7789AD021FAF7530052748D /* UIView+MasonryLayout.h */,
-				F7789AD121FAF7530052748D /* UIView+MasonryLayout.m */,
+				F77FAC2B21FB083600EBC626 /* JJBaseLoginSecondViewController.m */,
+				F77FAC2C21FB083600EBC626 /* JJBaseVC.h */,
+				F77FAC2D21FB083600EBC626 /* JJBaseTabBarViewController.m */,
+				F77FAC2E21FB083600EBC626 /* JJBaseNavigationViewController.m */,
+				F77FAC2F21FB083600EBC626 /* JJBaseLoginFirstViewController.m */,
+				F77FAC3021FB083600EBC626 /* JJBaseVC.m */,
+				F77FAC3121FB083600EBC626 /* JJBaseTabBarViewController.h */,
+				F77FAC3221FB083600EBC626 /* JJBaseLoginSecondViewController.h */,
+				F77FAC3321FB083600EBC626 /* JJBaseLoginFirstViewController.h */,
+				F77FAC3421FB083600EBC626 /* JJBaseNavigationViewController.h */,
 			);
-			path = JJUILayout;
+			path = JJBaseViewController;
 			sourceTree = "<group>";
 		};
-		F77FAC0721FB078400EBC626 /* JJTool */ = {
+		F77FAC3521FB083600EBC626 /* JJBaseView */ = {
 			isa = PBXGroup;
 			children = (
-				F77FAC0821FB078400EBC626 /* JJTool.m */,
-				F77FAC0921FB078400EBC626 /* JJUserManager.m */,
-				F77FAC0A21FB078400EBC626 /* JJTool.h */,
-				F77FAC0B21FB078400EBC626 /* JJUserManager.h */,
+				F77FAC3621FB083600EBC626 /* JJBaseTableViewCell.h */,
+				F77FAC3721FB083600EBC626 /* DZNEmptyDataSet.h */,
+				F77FAC3821FB083600EBC626 /* JJBaseCollectionViewCell.h */,
+				F77FAC3921FB083600EBC626 /* JJBaseTableView.h */,
+				F77FAC3A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m */,
+				F77FAC3B21FB083600EBC626 /* JJBaseComponent.m */,
+				F77FAC3C21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.h */,
+				F77FAC3D21FB083600EBC626 /* JJBaseTableViewCell.m */,
+				F77FAC3E21FB083600EBC626 /* JJBaseTableView.m */,
+				F77FAC3F21FB083600EBC626 /* UIScrollView+EmptyDataSet.h */,
+				F77FAC4021FB083600EBC626 /* JJBaseCollectionViewCell.m */,
+				F77FAC4121FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m */,
+				F77FAC4221FB083600EBC626 /* JJBaseComponent.h */,
 			);
-			path = JJTool;
+			path = JJBaseView;
+			sourceTree = "<group>";
+		};
+		F77FAC4421FB083600EBC626 /* JJSystem */ = {
+			isa = PBXGroup;
+			children = (
+				F77FAC4521FB083600EBC626 /* JJSystemCall.m */,
+				F77FAC4621FB083600EBC626 /* JJSystemCall.h */,
+			);
+			path = JJSystem;
+			sourceTree = "<group>";
+		};
+		F77FAC4721FB083600EBC626 /* JJNetWork */ = {
+			isa = PBXGroup;
+			children = (
+				F77FAC4821FB083600EBC626 /* JJReachability.h */,
+				F77FAC4921FB083600EBC626 /* JJBaseRequest.h */,
+				F77FAC4A21FB083600EBC626 /* JJReachability.m */,
+				F77FAC4B21FB083600EBC626 /* JJBaseRequest.m */,
+			);
+			path = JJNetWork;
+			sourceTree = "<group>";
+		};
+		F77FAC4C21FB083600EBC626 /* JJSafe */ = {
+			isa = PBXGroup;
+			children = (
+				F77FAC4D21FB083600EBC626 /* NSObjectSafe.m */,
+				F77FAC4E21FB083600EBC626 /* NSObjectSafe.h */,
+			);
+			path = JJSafe;
+			sourceTree = "<group>";
+		};
+		F77FAC4F21FB083600EBC626 /* JJUILayout */ = {
+			isa = PBXGroup;
+			children = (
+				F77FAC5021FB083600EBC626 /* UITextField+MasonryLayout.h */,
+				F77FAC5121FB083600EBC626 /* UIView+MasonryLayout.m */,
+				F77FAC5221FB083600EBC626 /* UILabel+MasonryLayout.m */,
+				F77FAC5321FB083600EBC626 /* UIImage+JJTools.h */,
+				F77FAC5421FB083600EBC626 /* UIButton+MasonryLayout.m */,
+				F77FAC5521FB083600EBC626 /* UIImageView+MasonryLayout.m */,
+				F77FAC5621FB083600EBC626 /* UIView+MasonryLayout.h */,
+				F77FAC5721FB083600EBC626 /* UITextField+MasonryLayout.m */,
+				F77FAC5821FB083600EBC626 /* UIButton+MasonryLayout.h */,
+				F77FAC5921FB083600EBC626 /* UIImage+JJTools.m */,
+				F77FAC5A21FB083600EBC626 /* UILabel+MasonryLayout.h */,
+				F77FAC5B21FB083600EBC626 /* UIImageView+MasonryLayout.h */,
+			);
+			path = JJUILayout;
 			sourceTree = "<group>";
 		};
 		F7D7FBE021F83DBA0033C4B0 = {
@@ -365,7 +388,7 @@
 		F7D7FBEB21F83DBA0033C4B0 /* JJTools */ = {
 			isa = PBXGroup;
 			children = (
-				F7D7FC1E21F840290033C4B0 /* Classes */,
+				F77FAC0E21FB083600EBC626 /* Classes */,
 				F7D7FBEC21F83DBA0033C4B0 /* AppDelegate.h */,
 				F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */,
 				F7D7FBEF21F83DBA0033C4B0 /* ViewController.h */,
@@ -395,26 +418,6 @@
 				F7D7FC1221F83DBC0033C4B0 /* Info.plist */,
 			);
 			path = JJToolsUITests;
-			sourceTree = "<group>";
-		};
-		F7D7FC1E21F840290033C4B0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F77FAC0721FB078400EBC626 /* JJTool */,
-				F7789AE421FAFB880052748D /* JJBaseHeader.h */,
-				F7789ACA21FAF73B0052748D /* JJUILayout */,
-				F7789AC021FAF7170052748D /* JJCategory */,
-				F7789ABC21FAF6EE0052748D /* JJSystem */,
-				F7789AA821FAF6B90052748D /* JJBaseView */,
-				F7789AA021FAF6840052748D /* JJDefine */,
-				F7789A9921FAF64E0052748D /* JJNetWork */,
-				F7789A9521FAF62A0052748D /* JJModel */,
-				F7789A9121FAF5E30052748D /* Dispatch_Queue */,
-				F7789A8121FAF5B60052748D /* JJBaseViewController */,
-				F7789A8021FAF5750052748D /* JJFiles */,
-				F7789A7C21FAF18C0052748D /* JJSafe */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7D7FBF921F83DBC0033C4B0 /* LaunchScreen.storyboard in Resources */,
+				F77FAC5D21FB083600EBC626 /* template.zip in Resources */,
 				F7D7FBF621F83DBC0033C4B0 /* Assets.xcassets in Resources */,
 				F7D7FBF421F83DBA0033C4B0 /* Main.storyboard in Resources */,
 			);
@@ -573,38 +577,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7789A7F21FAF1C20052748D /* NSObjectSafe.m in Sources */,
-				F7789AC821FAF7260052748D /* UIDevice+JJDevice.m in Sources */,
+				F77FAC6821FB083600EBC626 /* JJBaseLoginFirstViewController.m in Sources */,
+				F77FAC7821FB083600EBC626 /* UITextField+MasonryLayout.m in Sources */,
+				F77FAC6121FB083600EBC626 /* JJUserManager.m in Sources */,
+				F77FAC6321FB083600EBC626 /* NSString+JJTools.m in Sources */,
 				F7D7FBF121F83DBA0033C4B0 /* ViewController.m in Sources */,
-				F7789AB621FAF6D30052748D /* UIScrollView+EmptyDataSet.m in Sources */,
-				F7789AB921FAF6D30052748D /* JJBaseTableView.m in Sources */,
-				F7789ABA21FAF6D30052748D /* JJBaseCollectionViewCell.m in Sources */,
-				F7789A8D21FAF5C80052748D /* JJBaseLoginSecondViewController.m in Sources */,
-				F7789A8F21FAF5C80052748D /* JJBaseVC.m in Sources */,
+				F77FAC6221FB083600EBC626 /* UIColor+JJTools.m in Sources */,
+				F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */,
+				F77FAC7021FB083600EBC626 /* JJSystemCall.m in Sources */,
+				F77FAC6521FB083600EBC626 /* JJBaseLoginSecondViewController.m in Sources */,
+				F77FAC6721FB083600EBC626 /* JJBaseNavigationViewController.m in Sources */,
+				F77FAC6B21FB083600EBC626 /* JJBaseComponent.m in Sources */,
+				F77FAC7621FB083600EBC626 /* UIButton+MasonryLayout.m in Sources */,
+				F77FAC6021FB083600EBC626 /* JJTool.m in Sources */,
+				F77FAC7421FB083600EBC626 /* UIView+MasonryLayout.m in Sources */,
+				F77FAC6E21FB083600EBC626 /* JJBaseCollectionViewCell.m in Sources */,
+				F77FAC6F21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m in Sources */,
+				F77FAC6D21FB083600EBC626 /* JJBaseTableView.m in Sources */,
+				F77FAC6621FB083600EBC626 /* JJBaseTabBarViewController.m in Sources */,
+				F77FAC6421FB083600EBC626 /* UIDevice+JJDevice.m in Sources */,
+				F77FAC7121FB083600EBC626 /* JJReachability.m in Sources */,
+				F77FAC7521FB083600EBC626 /* UILabel+MasonryLayout.m in Sources */,
+				F77FAC5E21FB083600EBC626 /* JJBaseModel.m in Sources */,
+				F77FAC7321FB083600EBC626 /* NSObjectSafe.m in Sources */,
 				F7D7FBFC21F83DBC0033C4B0 /* main.m in Sources */,
-				F7789A9021FAF5C80052748D /* JJBaseTabBarViewController.m in Sources */,
-				F7789AD721FAF7530052748D /* UIButton+MasonryLayout.m in Sources */,
-				F7789AD921FAF7530052748D /* UIView+MasonryLayout.m in Sources */,
-				F7789A8C21FAF5C80052748D /* JJBaseLoginFirstViewController.m in Sources */,
-				F7789ABB21FAF6D30052748D /* JJBaseTableViewHeaderFooterView.m in Sources */,
-				F7789A9E21FAF65D0052748D /* JJBaseRequest.m in Sources */,
-				F7789AC921FAF7260052748D /* UIColor+JJTools.m in Sources */,
-				F7789A9421FAF5F50052748D /* JJDispatch_queue.m in Sources */,
-				F7789ADB21FAF7530052748D /* UITextField+MasonryLayout.m in Sources */,
-				F77FAC0C21FB078400EBC626 /* JJTool.m in Sources */,
-				F7789A8E21FAF5C80052748D /* JJBaseNavigationViewController.m in Sources */,
-				F7789A9821FAF63A0052748D /* JJBaseModel.m in Sources */,
-				F7789AD821FAF7530052748D /* UILabel+MasonryLayout.m in Sources */,
-				F7789AA721FAF6970052748D /* JJConstants.m in Sources */,
-				F7789AC721FAF7260052748D /* NSString+JJTools.m in Sources */,
-				F77FAC0D21FB078400EBC626 /* JJUserManager.m in Sources */,
+				F77FAC6A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m in Sources */,
+				F77FAC7221FB083600EBC626 /* JJBaseRequest.m in Sources */,
+				F77FAC6921FB083600EBC626 /* JJBaseVC.m in Sources */,
+				F77FAC7721FB083600EBC626 /* UIImageView+MasonryLayout.m in Sources */,
 				F7D7FBEE21F83DBA0033C4B0 /* AppDelegate.m in Sources */,
-				F7789ABF21FAF6FF0052748D /* JJSystemCall.m in Sources */,
-				F7789AB721FAF6D30052748D /* JJBaseComponent.m in Sources */,
-				F7789ADC21FAF7530052748D /* UIImageView+MasonryLayout.m in Sources */,
-				F7789ADA21FAF7530052748D /* UIImage+JJTools.m in Sources */,
-				F7789AB821FAF6D30052748D /* JJBaseTableViewCell.m in Sources */,
-				F7789A9F21FAF65D0052748D /* JJReachability.m in Sources */,
+				F77FAC7921FB083600EBC626 /* UIImage+JJTools.m in Sources */,
+				F77FAC5F21FB083600EBC626 /* JJDispatch_queue.m in Sources */,
+				F77FAC6C21FB083600EBC626 /* JJBaseTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
