@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		934F0CE595FB53E686ECF1E1 /* libPods-JJTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */; };
-		F745882721FAB07900E415B8 /* 修改模板.zip in Resources */ = {isa = PBXBuildFile; fileRef = F745882621FAB07900E415B8 /* 修改模板.zip */; };
 		F745882B21FAB0E300E415B8 /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F745882921FAB0E300E415B8 /* NSObjectSafe.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F745882D21FABADD00E415B8 /* template.zip in Resources */ = {isa = PBXBuildFile; fileRef = F745882C21FABADD00E415B8 /* template.zip */; };
 		F7D7FBEE21F83DBA0033C4B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */; };
 		F7D7FBF121F83DBA0033C4B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FBF021F83DBA0033C4B0 /* ViewController.m */; };
 		F7D7FBF421F83DBA0033C4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D7FBF221F83DBA0033C4B0 /* Main.storyboard */; };
@@ -68,9 +68,9 @@
 /* Begin PBXFileReference section */
 		1C20AC76ADF976D68B65DBB4 /* Pods-JJTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJTools/Pods-JJTools.debug.xcconfig"; sourceTree = "<group>"; };
 		CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F745882621FAB07900E415B8 /* 修改模板.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "修改模板.zip"; sourceTree = "<group>"; };
 		F745882921FAB0E300E415B8 /* NSObjectSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectSafe.m; sourceTree = "<group>"; };
 		F745882A21FAB0E300E415B8 /* NSObjectSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectSafe.h; sourceTree = "<group>"; };
+		F745882C21FABADD00E415B8 /* template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = template.zip; sourceTree = "<group>"; };
 		F7D7FBE921F83DBA0033C4B0 /* JJTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D7FBEC21F83DBA0033C4B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		F745882521FAB07900E415B8 /* JJFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F745882621FAB07900E415B8 /* 修改模板.zip */,
+				F745882C21FABADD00E415B8 /* template.zip */,
 			);
 			name = JJFiles;
 			path = ../../../../../brain/JJTools/JJTools/JJTools/Classes/JJFiles;
@@ -274,9 +274,9 @@
 		F7D7FC1E21F840290033C4B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7DC9CB221FA14F600D3BD6D /* JJBaseHeader.h */,
 				F745882821FAB0E300E415B8 /* MRC */,
 				F745882521FAB07900E415B8 /* JJFiles */,
-				F7DC9CB221FA14F600D3BD6D /* JJBaseHeader.h */,
 				F7DC9CB121FA07EE00D3BD6D /* JJBaseViewController */,
 				F7D7FD7821F86A540033C4B0 /* Dispatch_Queue */,
 				F7D7FD7421F86A2E0033C4B0 /* JJModel */,
@@ -536,8 +536,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F745882721FAB07900E415B8 /* 修改模板.zip in Resources */,
 				F7D7FBF921F83DBC0033C4B0 /* LaunchScreen.storyboard in Resources */,
+				F745882D21FABADD00E415B8 /* template.zip in Resources */,
 				F7D7FBF621F83DBC0033C4B0 /* Assets.xcassets in Resources */,
 				F7D7FBF421F83DBA0033C4B0 /* Main.storyboard in Resources */,
 			);
