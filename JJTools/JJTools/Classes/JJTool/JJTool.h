@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return return 当前显示的vc
  */
-+ (UIViewController *)obtainTopViewController;
++ (UIViewController *)getTopViewController;
 
 /**
  *  根据根vc获取最上层vc
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return 最上层vc
  */
-+ (UIViewController*)obtainTopViewControllerWithRootViewController:(UIViewController*)rootViewController;
++ (UIViewController*)getTopViewControllerWithRootViewController:(UIViewController*)rootViewController;
 
 
 /**
@@ -37,13 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString*)getCurrentTimestamp;
 
-/**
- *  根据时间戳生成图片名称（生成规则：时间戳md5）
- *
- *  @return 图片名称
- */
-+ (NSString*)generateImageName;
-
++ (NSDate *)getDateTimeFromMilliSeconds:(long long) miliSeconds;
++(long long)getDateTimeSince1970ToDate:(NSDate *)datetime;
 
 /**
  *  保存图片到沙盒

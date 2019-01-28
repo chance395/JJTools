@@ -17,8 +17,8 @@
 
 @implementation JJDispatch_queue
 
-static void *dispath_queueNoParaCompletionKey =&dispath_queueNoParaCompletionKey;
-static void *dispath_queueCompletionKey =&dispath_queueCompletionKey;
+static void *dispath_queueNoParaCompletionKey = &dispath_queueNoParaCompletionKey;
+static void *dispath_queueCompletionKey = &dispath_queueCompletionKey;
 
 +(void (^)(void))dispath_queueNoParaCompletion
 {
@@ -40,8 +40,7 @@ static void *dispath_queueCompletionKey =&dispath_queueCompletionKey;
   objc_setAssociatedObject(self, &dispath_queueCompletionKey, dispath_queueCompletion, OBJC_ASSOCIATION_COPY);
 }
 
-
-+(void)getMainQueueWithCompletionBlock:(void(^)(void))completionBlock
++(void)callMainQueueWithCompletionBlock:(void(^)(void))completionBlock
 {
     if (completionBlock) {
         self.dispath_queueNoParaCompletion = completionBlock;
@@ -52,7 +51,7 @@ static void *dispath_queueCompletionKey =&dispath_queueCompletionKey;
     
 }
 
-+(void)getGlobalQueueUsePriority_DefaultWithCompletionBlock:(void(^)(void))completionBlock
++(void)callGlobalQueueUsePriority_DefaultWithCompletionBlock:(void(^)(void))completionBlock
 {
     if (completionBlock) {
         self.dispath_queueNoParaCompletion = completionBlock;
@@ -63,7 +62,7 @@ static void *dispath_queueCompletionKey =&dispath_queueCompletionKey;
     });
 }
 
-+(void)getGlobalQueueUsePriority_HighWithCompletionBlock:(void(^)(void))completionBlock
++(void)callGlobalQueueUsePriority_HighWithCompletionBlock:(void(^)(void))completionBlock
 {
     if (completionBlock) {
         self.dispath_queueNoParaCompletion = completionBlock;
@@ -74,7 +73,7 @@ static void *dispath_queueCompletionKey =&dispath_queueCompletionKey;
     });
 }
 
-+(void)getAsyncQueueUseConcurrentStr:(char*)constChar WithCompletionBlock:(void(^)(void))completionBlock
++(void)callAsyncQueueUseConcurrentStr:(char*)constChar WithCompletionBlock:(void(^)(void))completionBlock
 {
     if (completionBlock) {
         self.dispath_queueNoParaCompletion = completionBlock;
@@ -86,7 +85,7 @@ static void *dispath_queueCompletionKey =&dispath_queueCompletionKey;
     });
 }
 
-+(void)getAfterQueueUseConcurrentStr:(int64_t)timeInterval WithCompletionBlock:(void(^)(void))completionBlock
++(void)callAfterQueueUseConcurrentStr:(int64_t)timeInterval WithCompletionBlock:(void(^)(void))completionBlock
 {
     if (completionBlock) {
         self.dispath_queueNoParaCompletion = completionBlock;
@@ -96,14 +95,14 @@ static void *dispath_queueCompletionKey =&dispath_queueCompletionKey;
     });
 }
 
-+(void)getSemaphoreSyncQueueUseConcurrentStr:(char*)constChar  WithCompletionBlock:(void(^)(dispatch_semaphore_t semaphore))completionBlock
++(void)callSemaphoreSyncQueueUseConcurrentStr:(char*)constChar  WithCompletionBlock:(void(^)(dispatch_semaphore_t semaphore))completionBlock
 {
     if (completionBlock) {
         self.dispath_queueCompletion = completionBlock;
     }
-    dispatch_queue_t  queue =dispatch_queue_create(constChar, DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t  queue = dispatch_queue_create(constChar, DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(queue, ^{
-        dispatch_semaphore_t semaphore =dispatch_semaphore_create(0);
+        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
         !self.dispath_queueCompletion ? :self.dispath_queueCompletion(semaphore);
     });
   

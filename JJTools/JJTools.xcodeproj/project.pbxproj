@@ -31,7 +31,7 @@
 		F77FAC7021FB083600EBC626 /* JJSystemCall.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4521FB083600EBC626 /* JJSystemCall.m */; };
 		F77FAC7121FB083600EBC626 /* JJReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4A21FB083600EBC626 /* JJReachability.m */; };
 		F77FAC7221FB083600EBC626 /* JJBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4B21FB083600EBC626 /* JJBaseRequest.m */; };
-		F77FAC7321FB083600EBC626 /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4D21FB083600EBC626 /* NSObjectSafe.m */; };
+		F77FAC7321FB083600EBC626 /* NSObjectSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC4D21FB083600EBC626 /* NSObjectSafe.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F77FAC7421FB083600EBC626 /* UIView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5121FB083600EBC626 /* UIView+MasonryLayout.m */; };
 		F77FAC7521FB083600EBC626 /* UILabel+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5221FB083600EBC626 /* UILabel+MasonryLayout.m */; };
 		F77FAC7621FB083600EBC626 /* UIButton+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5421FB083600EBC626 /* UIButton+MasonryLayout.m */; };
@@ -218,12 +218,12 @@
 		F77FAC0F21FB083600EBC626 /* JJDefine */ = {
 			isa = PBXGroup;
 			children = (
+				F77FAC1521FB083600EBC626 /* JJConstants.h */,
 				F77FAC1021FB083600EBC626 /* JJConstants.m */,
 				F77FAC1121FB083600EBC626 /* JJUrlDefine.h */,
 				F77FAC1221FB083600EBC626 /* JJColorDefine.h */,
 				F77FAC1321FB083600EBC626 /* JJFontDefine.h */,
 				F77FAC1421FB083600EBC626 /* JJMacroDefine.h */,
-				F77FAC1521FB083600EBC626 /* JJConstants.h */,
 			);
 			path = JJDefine;
 			sourceTree = "<group>";
@@ -257,9 +257,9 @@
 		F77FAC1E21FB083600EBC626 /* JJTool */ = {
 			isa = PBXGroup;
 			children = (
+				F77FAC2121FB083600EBC626 /* JJTool.h */,
 				F77FAC1F21FB083600EBC626 /* JJTool.m */,
 				F77FAC2021FB083600EBC626 /* JJUserManager.m */,
-				F77FAC2121FB083600EBC626 /* JJTool.h */,
 				F77FAC2221FB083600EBC626 /* JJUserManager.h */,
 			);
 			path = JJTool;
@@ -268,6 +268,8 @@
 		F77FAC2321FB083600EBC626 /* JJCategory */ = {
 			isa = PBXGroup;
 			children = (
+				F77FAC5321FB083600EBC626 /* UIImage+JJTools.h */,
+				F77FAC5921FB083600EBC626 /* UIImage+JJTools.m */,
 				F77FAC2421FB083600EBC626 /* NSString+JJTools.h */,
 				F77FAC2521FB083600EBC626 /* UIColor+JJTools.m */,
 				F77FAC2621FB083600EBC626 /* UIDevice+JJDevice.h */,
@@ -299,18 +301,18 @@
 			isa = PBXGroup;
 			children = (
 				F77FAC3621FB083600EBC626 /* JJBaseTableViewCell.h */,
+				F77FAC3D21FB083600EBC626 /* JJBaseTableViewCell.m */,
 				F77FAC3721FB083600EBC626 /* DZNEmptyDataSet.h */,
 				F77FAC3821FB083600EBC626 /* JJBaseCollectionViewCell.h */,
+				F77FAC4021FB083600EBC626 /* JJBaseCollectionViewCell.m */,
 				F77FAC3921FB083600EBC626 /* JJBaseTableView.h */,
-				F77FAC3A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m */,
-				F77FAC3B21FB083600EBC626 /* JJBaseComponent.m */,
-				F77FAC3C21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.h */,
-				F77FAC3D21FB083600EBC626 /* JJBaseTableViewCell.m */,
 				F77FAC3E21FB083600EBC626 /* JJBaseTableView.m */,
 				F77FAC3F21FB083600EBC626 /* UIScrollView+EmptyDataSet.h */,
-				F77FAC4021FB083600EBC626 /* JJBaseCollectionViewCell.m */,
-				F77FAC4121FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m */,
+				F77FAC3A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m */,
 				F77FAC4221FB083600EBC626 /* JJBaseComponent.h */,
+				F77FAC3B21FB083600EBC626 /* JJBaseComponent.m */,
+				F77FAC3C21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.h */,
+				F77FAC4121FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m */,
 			);
 			path = JJBaseView;
 			sourceTree = "<group>";
@@ -350,13 +352,11 @@
 				F77FAC5021FB083600EBC626 /* UITextField+MasonryLayout.h */,
 				F77FAC5121FB083600EBC626 /* UIView+MasonryLayout.m */,
 				F77FAC5221FB083600EBC626 /* UILabel+MasonryLayout.m */,
-				F77FAC5321FB083600EBC626 /* UIImage+JJTools.h */,
 				F77FAC5421FB083600EBC626 /* UIButton+MasonryLayout.m */,
 				F77FAC5521FB083600EBC626 /* UIImageView+MasonryLayout.m */,
 				F77FAC5621FB083600EBC626 /* UIView+MasonryLayout.h */,
 				F77FAC5721FB083600EBC626 /* UITextField+MasonryLayout.m */,
 				F77FAC5821FB083600EBC626 /* UIButton+MasonryLayout.h */,
-				F77FAC5921FB083600EBC626 /* UIImage+JJTools.m */,
 				F77FAC5A21FB083600EBC626 /* UILabel+MasonryLayout.h */,
 				F77FAC5B21FB083600EBC626 /* UIImageView+MasonryLayout.h */,
 			);

@@ -17,19 +17,19 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param completionBlock block
  */
-+(void)getMainQueueWithCompletionBlock:(void(^)(void))completionBlock;
++(void)callMainQueueWithCompletionBlock:(void(^)(void))completionBlock;
 /**
  异步串行全局队列优先级一般
  
  @param completionBlock block
  */
-+(void)getGlobalQueueUsePriority_DefaultWithCompletionBlock:(void(^)(void))completionBlock;
++(void)callGlobalQueueUsePriority_DefaultWithCompletionBlock:(void(^)(void))completionBlock;
 /**
  异步串行全局队列优先级高
  
  @param completionBlock block
  */
-+(void)getGlobalQueueUsePriority_HighWithCompletionBlock:(void(^)(void))completionBlock;
++(void)callGlobalQueueUsePriority_HighWithCompletionBlock:(void(^)(void))completionBlock;
 
 /**
  异步串行队列
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param constChar name
  @param completionBlock block
  */
-+(void)getAsyncQueueUseConcurrentStr:(char*)constChar WithCompletionBlock:(void(^)(void))completionBlock;
++(void)callAsyncQueueUseConcurrentStr:(char*)constChar WithCompletionBlock:(void(^)(void))completionBlock;
 
 /**
  延时多线程
@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param timeInterval timeInterval
  @param completionBlock block
  */
-+(void)getAfterQueueUseConcurrentStr:(int64_t)timeInterval WithCompletionBlock:(void(^)(void))completionBlock;
++(void)callAfterQueueUseConcurrentStr:(int64_t)timeInterval WithCompletionBlock:(void(^)(void))completionBlock;
 
 /**
  同步并发,用于有顺序的事件
@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param constChar name
  @param completionBlock block
  */
-+(void)getSemaphoreSyncQueueUseConcurrentStr:(char*)constChar  WithCompletionBlock:(void(^)(dispatch_semaphore_t semaphore))completionBlock;
++(void)callSemaphoreSyncQueueUseConcurrentStr:(char*)constChar  WithCompletionBlock:(void(^)(dispatch_semaphore_t semaphore))completionBlock;
 @end
 
 NS_ASSUME_NONNULL_END

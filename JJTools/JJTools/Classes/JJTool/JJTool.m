@@ -13,97 +13,59 @@
 
 @implementation JJTool
 
-+ (UIViewController *)obtainTopViewController{
-    return [JJTool obtainTopViewControllerWithRootViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
++ (UIViewController *)getTopViewController{
+    
+    return [JJTool getTopViewControllerWithRootViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
 }
 
-+ (UIViewController*)obtainTopViewControllerWithRootViewController:(UIViewController*)rootViewController {
-    if ([rootViewController isKindOfClass:[UITabBarController class]]) {
++ (UIViewController*)getTopViewControllerWithRootViewController:(UIViewController*)rootViewController
+{
+    if ([rootViewController isKindOfClass:[UITabBarController class]])
+    {
         UITabBarController* tabBarController = (UITabBarController*)rootViewController;
-        return [JJTool obtainTopViewControllerWithRootViewController:tabBarController.selectedViewController];
-    } else if ([rootViewController isKindOfClass:[UINavigationController class]]) {
+        return [JJTool getTopViewControllerWithRootViewController:tabBarController.selectedViewController];
+        
+    } else if ([rootViewController isKindOfClass:[UINavigationController class]])
+    {
         UINavigationController* navigationController = (UINavigationController*)rootViewController;
-        return [JJTool obtainTopViewControllerWithRootViewController:navigationController.visibleViewController];
-    } else if (rootViewController.presentedViewController) {
+        return [JJTool getTopViewControllerWithRootViewController:navigationController.visibleViewController];
+        
+    } else if (rootViewController.presentedViewController)
+    {
         UIViewController* presentedViewController = rootViewController.presentedViewController;
-        return [JJTool obtainTopViewControllerWithRootViewController:presentedViewController];
-    } else {
+        return [JJTool getTopViewControllerWithRootViewController:presentedViewController];
+        
+    } else
+    {
         return rootViewController;
     }
 }
 
-
-+ (NSString*)getCurrentTimestamp{
++ (NSString*)getCurrentTimestamp
+{
     NSDate *datenow = [NSDate date];
-    NSTimeZone *zone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
-    NSInteger interval = [zone secondsFromGMTForDate:datenow];
-    NSDate *localeDate = [datenow dateByAddingTimeInterval:interval];
-    NSString *timeSp = [NSString stringWithFormat:@"%f", [localeDate timeIntervalSince1970]];
-    return timeSp;
+    NSTimeInterval time=[datenow timeIntervalSince1970]*1000;// *1000 是精确到毫秒，不乘就是精确到秒
+    NSString *timeString = [NSString stringWithFormat:@"%.0f", time];
+    return timeString;
 }
 
-+(NSString *)getNowTimeTimestamp{
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
-    
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    
-    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss.SSS"]; // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
-    
-    //设置时区,这个对于时间的处理有时很重要
-    
-    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
-    
-    [formatter setTimeZone:timeZone];
-    
-    NSDate *datenow = [NSDate dateWithTimeIntervalSinceNow:8 * 60 * 60];//现在时间,你可以输出来看下是什么格式
-    long long time = [JJTool getDateTimeTOMilliSeconds:datenow];
-
-    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)time];
-    
-    return timeSp;
-}
-
-+ (NSDate *)getDateTimeFromMilliSeconds:(long long) miliSeconds
-
++ (NSString *)getDateTimeFromTimestamp:(NSString*) Timestamp
 {
-    NSTimeInterval tempMilli = miliSeconds;
-    
-    NSTimeInterval seconds = tempMilli/1000.0;//这里的.0一定要加上，不然除下来的数据会被截断导致时间不一致
-    
-    NSLog(@"传入的时间戳=%f",seconds);
-    
-    return [NSDate dateWithTimeIntervalSince1970:seconds];
-    
+    NSTimeInterval time=[Timestamp doubleValue]/1000;//传入的时间戳str如果是精确到毫秒的记得要/1000
+    NSDate *detailDate=[NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; //实例化一个NSDateFormatter对象
+    //设定时间格式,这里可以设置成自己需要的格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss SS"];
+    NSString *currentDateStr = [dateFormatter stringFromDate: detailDate];
+    return currentDateStr;
 }
 
-//将NSDate类型的时间转换为时间戳,从1970/1/1开始
-
-+(long long)getDateTimeTOMilliSeconds:(NSDate *)datetime
-
-{
-    
-    NSTimeInterval interval = [datetime timeIntervalSince1970];
-    
-    NSLog(@"转换的时间戳=%f",interval);
-    
-    long long totalMilliseconds = interval*1000 ;
-    
-    NSLog(@"totalMilliseconds=%llu",totalMilliseconds);
-    
-    return totalMilliseconds;
-    
-}
-
-
-
-
-+ (NSString*)generateImageName{
-    
-//    return [[JJTool getCurrentTimestamp] MD5FromatString];
-    return nil;
+- (NSString *)getTimeStrWithString:(NSString *)str{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];// 创建一个时间格式化对象
+    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"]; //设定时间的格式
+    NSDate *tempDate = [dateFormatter dateFromString:str];//将字符串转换为时间对象
+    NSString *timeStr = [NSString stringWithFormat:@"%ld", (long)[tempDate timeIntervalSince1970]*1000];//字符串转成时间戳,精确到毫秒*1000
+    return timeStr;
 }
 
 + (BOOL)saveImageWithName:(NSString*)imageName andImage:(UIImage*)image{
@@ -117,11 +79,13 @@
     return NO;
 }
 
+
 + (UIImage*)loadImageWithName:(NSString*)imageName{
     NSString *imagePath = [JJTool generateImagePathwithName:imageName];
     UIImage *reslutImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:imagePath]]];
     return reslutImage;
 }
+
 
 + (void)deleteImageWithName:(NSString*)imageName{
     NSString *imagePath = [JJTool generateImagePathwithName:imageName];

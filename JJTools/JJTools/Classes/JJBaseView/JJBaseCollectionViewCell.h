@@ -16,10 +16,7 @@
 
 @property (strong, nonatomic) UILabel *   veryfiedlabel;
 
-+ (JJBaseCollectionViewCell *)getCellWithCollectionView:(UICollectionView *)collectionView forIndexpath:(NSIndexPath*)indexpath;
-
-
-
+- (instancetype)initWithFrame:(CGRect)frame;
 
 - (void)configJJBaseCollectionViewCellWithDic:(NSDictionary *)dic arrdata:(NSMutableArray *)arrData indexPath:(NSIndexPath *)indexPath;
 
@@ -33,13 +30,9 @@
 
 @property (strong, nonatomic) UILabel *   veryfiedlabelInfo;
 
+- (instancetype)initWithFrame:(CGRect)frame;
 
-
-+ (JJMineInfoCollectionCell *)getcellMineInfoWithCollectionView:(UICollectionView *)collectionView forIndexpath:(NSIndexPath*)indexpath;
-
-- (void)configMineInfoJJBaseCollectionViewCellWithDic:(NSDictionary *)dic arrdata:(NSMutableArray *)arrData indexpath:(NSIndexPath*)index isLast:(BOOL)last;
-
-
+- (void)configMineInfoJJBaseCollectionViewCellWithDic:(NSDictionary *)dic arrdata:(NSMutableArray *)arrData indexpath:(NSIndexPath*)index ;
 
 @end
 

@@ -57,7 +57,7 @@
 - (BOOL)checkLogin:(UIViewController *)viewController{
     NSString *token = getStringValue([UserDefaults objectForKey:@"token"]);
     if (token.length == 0) {
-        if (![[JJTool obtainTopViewController] isKindOfClass:[JJBaseLoginFirstViewController   class]]){
+        if (![[JJTool getTopViewController] isKindOfClass:[JJBaseLoginFirstViewController   class]]){
             JJBaseLoginFirstViewController *vcLogin = [[JJBaseLoginFirstViewController alloc] init];
             JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
             [viewController presentViewController:vcNavigation animated:YES completion:nil];
@@ -76,7 +76,7 @@
 }
 
 - (void)showLoginPage:(UIViewController *)viewController{
-    if (![[JJTool obtainTopViewController] isKindOfClass:[JJBaseLoginFirstViewController   class]]){
+    if (![[JJTool getTopViewController] isKindOfClass:[JJBaseLoginFirstViewController   class]]){
         JJBaseLoginFirstViewController *vcLogin = [[JJBaseLoginFirstViewController alloc] init];
         JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
         [viewController presentViewController:vcNavigation animated:YES completion:nil];
@@ -85,7 +85,7 @@
 }
 
 - (void)showLoginSecondPage:(UIViewController *)viewController{
-    if (![[JJTool obtainTopViewController] isKindOfClass:[JJBaseLoginFirstViewController   class]]){
+    if (![[JJTool getTopViewController] isKindOfClass:[JJBaseLoginFirstViewController   class]]){
         JJBaseLoginSecondViewController*vcLogin = [[JJBaseLoginSecondViewController alloc] init];
         JJBaseNavigationViewController *vcNavigation = [[JJBaseNavigationViewController alloc] initWithRootViewController:vcLogin];
         [viewController presentViewController:vcNavigation animated:YES completion:nil];

@@ -206,4 +206,79 @@
     }
 }
 
+
+/**
+ 返回给定的图片想要尺寸，高清无码。
+ 
+ @param image 原image
+ @param size 想要的size
+ @return image
+ */
++(UIImage *)compressOriginalImage:(UIImage *)image toSize:(CGSize)size{
+    
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);//size 为CGSize类型，即你所需要的图片尺寸提高了清晰度
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return scaledImage;   //返回的就是已经改变的图片
+}
+
+//
++(void)addBlurEffect
+{
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    imageView.tag = 19999;
+    imageView.image = [self blurImage];
+    [[[UIApplication sharedApplication] keyWindow] addSubview:imageView];
+}
++(void)removeBlurEffect
+{
+    NSArray *subViews = [[UIApplication sharedApplication] keyWindow].subviews;
+    for (id object in subViews) {
+        if ([[object class] isSubclassOfClass:[UIImageView class]]) {
+            UIImageView *imageView = (UIImageView *)object;
+            if(imageView.tag == 19999)
+            {
+                [UIView animateWithDuration:0.2 animations:^{
+                    imageView.alpha = 0;
+                    [imageView removeFromSuperview];
+                }];
+                
+            }
+        }
+    }
+}
+
+
+//毛玻璃效果
++(UIImage *)blurImage
+{
+    UIImage *image = [[self screenShot] imgWithBlur];
+    //保存图片到照片库(test)
+    //    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    
+    return image;
+}
+//屏幕截屏
++(UIImage *)screenShot
+{
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake([UIScreen mainScreen].bounds.size.width*[UIScreen mainScreen].scale, [UIScreen mainScreen].bounds.size.height*[UIScreen mainScreen].scale), YES, 0);
+    //设置截屏大小
+    [[[[UIApplication sharedApplication] keyWindow] layer] renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    CGImageRef imageRef = viewImage.CGImage;
+    CGRect rect = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.height*[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height*[UIScreen mainScreen].scale);
+    
+    CGImageRef imageRefRect =CGImageCreateWithImageInRect(imageRef, rect);
+    UIImage *image = [[UIImage alloc] initWithCGImage:imageRefRect];
+    CFRelease(imageRefRect);
+    return image;
+}
+
+
 @end

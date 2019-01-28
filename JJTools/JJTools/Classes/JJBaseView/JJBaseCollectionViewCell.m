@@ -20,16 +20,14 @@
 
 @implementation JJBaseCollectionViewCell
 
-
-+ (JJBaseCollectionViewCell *)getCellWithCollectionView:(UICollectionView *)collectionView forIndexpath:(NSIndexPath*)indexpath
+-(instancetype)initWithFrame:(CGRect)frame
 {
-    static NSString * ID = @"JJBaseCollectionViewCell";
-    
-    JJBaseCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexpath];
-      [cell setupSubViews];
-    cell.backgroundColor =[UIColor whiteColor];
-    return cell;
-    
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        [self setupSubViews];
+    }
+    return self;
 }
 
 
@@ -79,53 +77,31 @@
 
 @implementation JJMineInfoCollectionCell
 
-
-
-
-+ (JJMineInfoCollectionCell *)getcellMineInfoWithCollectionView:(UICollectionView *)collectionView forIndexpath:(NSIndexPath*)indexpath
+-(instancetype)initWithFrame:(CGRect)frame
 {
-    static NSString * ID = @"JJMineInfoCollectionCell";
-    
-    JJMineInfoCollectionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexpath];
-    [cell setupSubViews];
-    cell.backgroundColor =[UIColor whiteColor];
-    return cell;
-    
-    
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        [self setupSubViews];
+    }
+    return self;
 }
+
 -(void)setupSubViews
 {
-    if (!self.topImageInfo) {
-        self.topImageInfo =[UIImageView MAGetImageViewWith:@"" superView:self.contentView masonrySet:^(UIImageView *currentImageView, MASConstraintMaker *make) {
-            make.top.mas_equalTo(32);
-            make.centerX.equalTo(self.contentView);
-            make.width.mas_equalTo(35);
-            make.height.mas_equalTo(35);
-            
-        }];
-    }
+    self.contentView.backgroundColor =[UIColor whiteColor];
+    self.topImageInfo =[UIImageView MAGetImageViewWith:@"" superView:self.contentView masonrySet:^(UIImageView *currentImageView, MASConstraintMaker *make) {
+        make.top.mas_equalTo(32);
+        make.centerX.equalTo(self.contentView);
+        make.width.mas_equalTo(35);
+        make.height.mas_equalTo(35);
+        
+    }];
     
-    
-    if (!self.veryfiedlabelInfo) {
-        self.veryfiedlabelInfo =[UILabel MAGetLabelWithFont:[UIFont systemFontOfSize:9] text:@"必填" textColor:[UIColor JJColorWithHexStr:@"#333333"] textAlignment:NSTextAlignmentCenter superView:self.contentView masonrySet:^(UILabel *currentLabel, MASConstraintMaker *make) {
-            make.height.mas_equalTo(14);
-            make.width.mas_equalTo(23);
-            make.bottom.equalTo(self.topImageInfo.mas_top).mas_offset(-10);
-            make.left.equalTo(self.topImageInfo.mas_right).mas_offset(-10);
-            currentLabel.layer.cornerRadius =7;
-            currentLabel.layer.masksToBounds =YES;
-            currentLabel.backgroundColor =[UIColor JJColorWithHexStr:@"#333333"];
-        }];
-    }
-    
-    if (!self.botlabelInfo) {
-        self.botlabelInfo =[UILabel MAGetLabelWithFont:[UIFont systemFontOfSize:15] text:@"" textColor:[UIColor JJColorWithHexStr:@"#333333"] textAlignment:NSTextAlignmentCenter superView:self.contentView masonrySet:^(UILabel *currentLabel, MASConstraintMaker *make) {
-            make.top.equalTo(self.topImageInfo.mas_bottom).mas_offset(16);
-            make.centerX.equalTo(self.contentView);
-        }];
-    }
-    
-    
+    self.botlabelInfo =[UILabel MAGetLabelWithFont:FONT(15) text:@"" textColor:[UIColor JJColorWithHexStr:@"#333333"] textAlignment:NSTextAlignmentCenter superView:self.contentView masonrySet:^(UILabel *currentLabel, MASConstraintMaker *make) {
+        make.top.equalTo(self.topImageInfo.mas_bottom).mas_offset(16);
+        make.centerX.equalTo(self.contentView);
+    }];
   
     
 }
