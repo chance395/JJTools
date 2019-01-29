@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "1.1.9"
+  s.version      = "1.2.0"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -29,7 +29,7 @@ include some category based on masonry for create UI  and some others useful too
    s.dependency 'Masonry'
    s.dependency 'AFNetworking'
    s.dependency 'MBProgressHUD'
-
+   s.dependency 'UICKeyChainStore'
 
 s.requires_arc = true
 

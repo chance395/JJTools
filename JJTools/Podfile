@@ -7,5 +7,6 @@ pod 'Masonry'
 
 pod 'MBProgressHUD'
 
+pod 'UICKeyChainStore'
 
 end

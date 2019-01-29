@@ -16,23 +16,27 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
+  - UICKeyChainStore (2.1.2)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
   - MBProgressHUD
+  - UICKeyChainStore
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Masonry
     - MBProgressHUD
+    - UICKeyChainStore
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
 
-PODFILE CHECKSUM: c337f2ada29630f9721356ab1452c03769a4d392
+PODFILE CHECKSUM: b34ab7a55735fc2fc94ef2634d74cf14941019b7
 
 COCOAPODS: 1.5.3

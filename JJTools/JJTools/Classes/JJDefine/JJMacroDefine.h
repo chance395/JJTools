@@ -14,6 +14,11 @@
 //获取屏幕 宽度、高度
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define ViewWidth(v)                                  v.frame.size.width
+#define ViewHeight(v)                                 v.frame.size.height
+#define ViewX(v)                                      v.frame.origin.x
+#define ViewY(v)                                      v.frame.origin.y
+#define WIDTHRADIUS                                   SCREEN_WIDTH/375.0
 #define WIDTHRADIUS SCREEN_WIDTH/375.0
 #define KEY_WINDOW [UIApplication sharedApplication].keyWindow
 #define NAVIGATIONBAR_HEIGHT 64.0f
@@ -21,6 +26,13 @@
 #define WIDTHRADIUS                                   SCREEN_WIDTH/375.0
 #define Tabbar_Height                                 49
 #define Nav_Height                                    64
+#define SCREEN_SCALE             SCREEN_WIDTH / 375.f//屏幕宽度比率
+//判断机型
+#define isIPhone4 CGSizeEqualToSize(CGSizeMake(320, 480), [[UIScreen mainScreen] bounds].size)
+#define isIPhone5 CGSizeEqualToSize(CGSizeMake(320, 568), [[UIScreen mainScreen] bounds].size)
+#define isIPhone6 CGSizeEqualToSize(CGSizeMake(375, 667), [[UIScreen mainScreen] bounds].size)
+#define isIPhone6p CGSizeEqualToSize(CGSizeMake(414, 736), [[UIScreen mainScreen] bounds].size)
+#define isIPhoneX CGSizeEqualToSize(CGSizeMake(375, 812), [[UIScreen mainScreen] bounds].size)
 
 //-------------------打印日志-------------------------
 //DEBUG  模式下打印日志,当前行
@@ -48,7 +60,9 @@
 #define FontSystem(f)                               [UIFont systemFontOfSize:f]
 #define FontBoldSystem(f)                           [UIFont boldSystemFontOfSize:f]
 //简体字体定义
-#define FONT(F)                                     [UIFont fontWithName:@"PingFangSC-Regular" size:F]
+#define FONT(F) [UIFont fontWithName:@"PingFangSC-Regular" size:F]
+#define normalFont(f) [UIFont systemFontOfSize:f]
+#define boldFont(f)  [UIFont boldSystemFontOfSize:f]
 //----------------------系统----------------------------
 //主要单例
 #define UserDefaults                                [NSUserDefaults standardUserDefaults]
@@ -97,6 +111,7 @@ NSCAssert(object != nil, @"object can not be nil");\
 
 //-------------------Weak & Strong----------------------
 
+#define weakSelf(VC) __weak typeof(VC)weakSelf
 #define Weak(obj) autoreleasepool{} __weak typeof(obj) w##obj = obj;
 #define Strong(obj) autoreleasepool{} __strong typeof(obj) obj = w##obj;//配套上面的方法使用
 

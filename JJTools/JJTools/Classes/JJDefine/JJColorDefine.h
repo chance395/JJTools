@@ -26,7 +26,7 @@
 #define Color_backgroudColor                     UIColorFromHex(0xffffff)
 //Navi
 #define Color_Navi_Bg                           UIColorFromHex(0xffffff)
-
+#define navigationBackColor                     UIColorFromHex(0xDE3030)//navigationBar背景色
 //Tabbar
 #define Color_Tabbar_Normal                     UIColorFromHex(0x888888)
 
@@ -144,7 +144,7 @@
 #define Color_Mine_Code                          UIColorFromHex(0xFB973B)
 
 #define Color_Mine_Blue                          UIColorFromHex(0xFB973B)
-
+#define Color_Mine_Red                          UIColorFromHex(0xFF7055)
 #define Color_Mine_UnderLine                    UIColorFromHex(0xEBEBEB)
 
 #define Color_Mine_SubTitle                     UIColorFromHex(0x999999)
@@ -186,5 +186,6 @@
 #define Color_DetailOrderDate                      UIColorFromHex(0xADADAD)
 
 #define Color_Alert_Red                               UIColorFromHex(0xFF7055)
+#define seperatorColor          UIColorFromRGB(0xe5e5e5)//分割线的颜色
 #endif /* JJColorDefine_h */
 

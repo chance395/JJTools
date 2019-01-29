@@ -11,7 +11,7 @@
 //#import <CommonCrypto/CommonHMAC.h>
 //#import <CommonCrypto/CommonDigest.h>
 #import "NSString+JJTools.h"
-
+#import "UICKeyChainStore.h"
 
 @implementation NSString (JJTools)
 
@@ -280,19 +280,19 @@
 
 + (NSString*)getUUIDString{
 
-//    UICKeyChainStore * keychain = [UICKeyChainStore keyChainStoreWithService:APP_NAME];
-//    NSString *currentDeviceUUIDStr =keychain[@"uuid"];
-//    
-//    if (currentDeviceUUIDStr == nil || [currentDeviceUUIDStr isEqualToString:@""])
-//    {
-//        NSUUID * currentDeviceUUID  = [UIDevice currentDevice].identifierForVendor;
-//        currentDeviceUUIDStr = currentDeviceUUID.UUIDString;
-//        currentDeviceUUIDStr = [currentDeviceUUIDStr stringByReplacingOccurrencesOfString:@"-" withString:@""];
-//        currentDeviceUUIDStr = [currentDeviceUUIDStr lowercaseString];
-//        [keychain setString:currentDeviceUUIDStr forKey:@"uuid"];
-//    }
-//    return currentDeviceUUIDStr;
-    return nil;
+    UICKeyChainStore * keychain = [UICKeyChainStore keyChainStoreWithService:@"JJKeyChainKey"];
+    NSString *currentDeviceUUIDStr =keychain[@"uuid"];
+    
+    if (currentDeviceUUIDStr == nil || [currentDeviceUUIDStr isEqualToString:@""])
+    {
+        NSUUID * currentDeviceUUID  = [UIDevice currentDevice].identifierForVendor;
+        currentDeviceUUIDStr = currentDeviceUUID.UUIDString;
+        currentDeviceUUIDStr = [currentDeviceUUIDStr stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        currentDeviceUUIDStr = [currentDeviceUUIDStr lowercaseString];
+        [keychain setString:currentDeviceUUIDStr forKey:@"uuid"];
+    }
+    return currentDeviceUUIDStr;
+
 }
 
 //加密
@@ -426,7 +426,6 @@
 //
 //
 //    return hash;
-    
     return nil;
 }
 

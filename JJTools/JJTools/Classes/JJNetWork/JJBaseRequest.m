@@ -99,8 +99,10 @@
     // 签名
     NSString *signature = [NSString stringWithFormat:@"%@%@%@",strUrlPadding,strDate,strRandom];
     
-    NSString *strDataSigntureNew = [NSString  HmacSha1:kSaltShA1Key data:signature];
-
+//    NSString *strDataSigntureNew = [NSString  HmacSha1:kSaltShA1Key data:signature];
+    
+    NSString *strDataSigntureNew =signature;
+    
     if (strDataSigntureNew && ![strDataSigntureNew isEmptyStr])
     {
         [manager.requestSerializer setValue:strDataSigntureNew forHTTPHeaderField:@"signature"];
@@ -261,7 +263,8 @@
     // 签名
     NSString *signature = [NSString stringWithFormat:@"%@%@%@",strUrlPadding,strDate,strRandom];
     
-    NSString *strDataSigntureNew = [NSString  HmacSha1:kSaltShA1Key data:signature];
+    NSString *strDataSigntureNew =signature;
+//    NSString *strDataSigntureNew = [NSString  HmacSha1:kSaltShA1Key data:signature];
 
     [manager.requestSerializer setValue:strDataSigntureNew forHTTPHeaderField:@"signature"];
 
