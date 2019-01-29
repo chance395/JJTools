@@ -30,9 +30,13 @@ CGFloat    const kTextFieldLeftViewWidth                = 45.0f;
 
 NSString * const kNotificationNeedLogin                 = @"NotificationNeedLogin";
 
+NSString * const kNotificationFindModuleAction           = @"kNotificationFindModuleAction";
+NSString * const kNotificationCloseFindModuleH5          = @"kNotificationCloseFindModuleH5";
+
 NSString * const kNotificationLoginSuccess              = @"NotificationLoginSuccess";
 NSString * const kNotificationLoginOut                  = @"NotificationLoginOut";
 NSString * const kNotificationPayPwdSetSuccess          = @"NotificationPayPwdSetSuccess";
+NSString * const kfindPsdSuccessFromChangePwd           = @"kfindPsdSuccessFromChangePwd";
 NSString * const kNotificationMailIdentifySuccess       = @"kNotificationMailIdentifyCommit" ;//邮箱认证提交
 
 NSString * const kNotificationPayPwdChangeSuccess          = @"kNotificationPayPwdChangeSuccess";//修改交易密码成功

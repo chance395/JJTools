@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JJConstants : NSObject
 
+
 //侧边距
 extern CGFloat    const kPaddingLeft;
 
@@ -39,13 +40,15 @@ extern CGFloat    const kTextFieldLeftViewWidth;
 extern CGFloat    const kTextFieldLeftMargin;
 
 //通知
-extern NSString * const kNotificationNeedLogin;     //需要用户登录
+extern NSString * const kNotificationNeedLogin;         //需要用户登录
+extern NSString * const kNotificationFindModuleAction;     //发现模块
+extern NSString * const kNotificationCloseFindModuleH5;
 
 extern NSString * const kNotificationLoginSuccess    ;//登录成功
 extern NSString * const kNotificationLoginOut;//登录失败
 extern NSString * const kNotificationMailIdentifySuccess;//邮箱认证提交
 extern NSString * const kNotificationPayPwdSetSuccess;//交易密码设置成功
-
+extern NSString * const kfindPsdSuccessFromChangePwd;
 extern NSString * const kNotificationPayPwdChangeSuccess ;
 //实名认证成功
 extern NSString * const kNotificationNameIdentifySuccess      ;//实名认证成功

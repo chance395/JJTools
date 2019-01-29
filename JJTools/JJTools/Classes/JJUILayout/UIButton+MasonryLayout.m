@@ -5,9 +5,14 @@
 //  Created by Brain on 2018/9/8.
 //  Copyright © 2018 In-next. All rights reserved.
 //
-
+#import <objc/runtime.h>
 #import "UIButton+MasonryLayout.h"
 #import "UIColor+JJTools.h"
+
+static char topEdgeKey;
+static char leftEdgeKey;
+static char bottomEdgeKey;
+static char rightEdgeKey;
 
 @implementation JJCustombutton
 
@@ -42,6 +47,57 @@
 
 
 @implementation UIButton (MasonryLayout)
+
+- (void)setEnlargedEdge:(CGFloat)enlargedEdge
+{
+    [self JJEnlargedEdgeWithTop:enlargedEdge left:enlargedEdge bottom:enlargedEdge right:enlargedEdge];
+}
+
+- (CGFloat)enlargedEdge
+{
+    return [(NSNumber *)objc_getAssociatedObject(self, &topEdgeKey) floatValue];
+}
+
+- (void)JJEnlargedEdgeWithTop:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right
+{
+    objc_setAssociatedObject(self, &topEdgeKey, [NSNumber numberWithFloat:top], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &leftEdgeKey, [NSNumber numberWithFloat:left], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &bottomEdgeKey, [NSNumber numberWithFloat:bottom], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &rightEdgeKey, [NSNumber numberWithFloat:right], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGRect)enlargedRect
+{
+    NSNumber * topEdge = objc_getAssociatedObject(self, &topEdgeKey);
+    NSNumber * leftEdge = objc_getAssociatedObject(self, &leftEdgeKey);
+    NSNumber * bottomEdge = objc_getAssociatedObject(self, &bottomEdgeKey);
+    NSNumber * rightEdge = objc_getAssociatedObject(self, &rightEdgeKey);
+    
+    if (topEdge && leftEdge && bottomEdge && rightEdge)
+    {
+        CGRect enlargeRect = CGRectMake(self.bounds.origin.x - leftEdge.floatValue,
+                                        self.bounds.origin.y - topEdge.floatValue,
+                                        self.bounds.size.width + leftEdge.floatValue + rightEdge.floatValue,
+                                        self.bounds.size.height + topEdge.floatValue + bottomEdge.floatValue);
+        
+        return enlargeRect;
+    }
+    else
+    {
+        return self.bounds;
+    }
+}
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    if (self.alpha <= 0.01 || !self.userInteractionEnabled || self.hidden)
+    {
+        return nil;
+    }
+    
+    CGRect enlargeRect = [self enlargedRect];
+    return CGRectContainsPoint(enlargeRect, point) ? self : nil;
+}
 
 + (UIButton*)MAGetButtonWithTitle:(NSString*)title font:(UIFont*)font textColor:(UIColor*)textColor backGroundColor:(UIColor*)backColor corners:(CGFloat)corners superView:(UIView*)superView target:(id)target action:(SEL)selector masonrySet:(void(^)(UIButton*currentBtn,MASConstraintMaker*make))block
 {

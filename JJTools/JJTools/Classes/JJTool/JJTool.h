@@ -37,8 +37,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString*)getCurrentTimestamp;
 
-+ (NSDate *)getDateTimeFromMilliSeconds:(long long) miliSeconds;
-+(long long)getDateTimeSince1970ToDate:(NSDate *)datetime;
++ (NSString *)getDateTimeFromTimestamp:(NSString*) Timestamp;
+
+- (NSString *)getTimeStrWithString:(NSString *)str;
 
 /**
  *  保存图片到沙盒

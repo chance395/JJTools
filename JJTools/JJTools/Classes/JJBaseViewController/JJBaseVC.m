@@ -721,8 +721,7 @@
         {
             [cancelAction setValue:Color_App_topic forKey:@"_titleTextColor"];
         }
-//        [cancelAction setValue:Color_App_topic forKey:@"_titleTextColor"];
-        
+
        [alerVC  addAction:cancelAction];
         
     }
@@ -798,7 +797,6 @@
         {
             [cancelAction setValue:Color_App_topic forKey:@"_titleTextColor"];
         }
-//        [cancelAction setValue:Color_Alert_Blue forKey:@"_titleTextColor"];
         
         [alerVC  addAction:cancelAction];
         
@@ -867,7 +865,6 @@
         {
             [okAction setValue:Color_App_topic forKey:@"_titleTextColor"];
         }
-//        [okAction setValue:Color_App_topic forKey:@"_titleTextColor"];
         [alerVC addAction:okAction];
         
     }
@@ -892,7 +889,6 @@
         {
             [cancelAction setValue:Color_Alert_Gray forKey:@"_titleTextColor"];
         }
-//        [cancelAction setValue:Color_Alert_Gray forKey:@"_titleTextColor"];
            [alerVC  addAction:cancelAction];
     }
     
@@ -945,7 +941,6 @@
         {
             [okAction setValue:Color_App_topic forKey:@"_titleTextColor"];
         }
-//        [okAction setValue:Color_Alert_Blue forKey:@"_titleTextColor"];
         [alerVC addAction:okAction];
         
     }
@@ -970,7 +965,6 @@
         {
             [cancelAction setValue:Color_Alert_Gray forKey:@"_titleTextColor"];
         }
-//        [cancelAction setValue:Color_Alert_Gray forKey:@"_titleTextColor"];
         [alerVC  addAction:cancelAction];
     }
     

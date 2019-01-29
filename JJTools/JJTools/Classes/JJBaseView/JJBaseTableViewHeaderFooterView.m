@@ -113,7 +113,7 @@
                    currentBtn.tag =120;
     }];
 
-    self.underLineView2 =[UIView MAGetUIViewWithBackgroundColor:Color_Button_DisabledColor superView:superView masonrySet:^(UIView *currentView, MASConstraintMaker *make) {
+    self.underLineView2 =[UIView MAGetUIViewWithBackgroundColor:Color_Button_Disabled superView:superView masonrySet:^(UIView *currentView, MASConstraintMaker *make) {
         make.top.equalTo(self.detailProcessLabel.mas_bottom).mas_offset(10);
         make.left.equalTo(self.headerLabel.mas_left);
         make.right.equalTo(self.mas_right).mas_offset(-15);

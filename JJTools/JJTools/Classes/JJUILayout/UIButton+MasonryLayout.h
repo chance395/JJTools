@@ -34,6 +34,9 @@ typedef void (^actionBtnClickBlock)(NSInteger tagIndex,UIButton * currentBtn);
 
 @interface UIButton (MasonryLayout)
 
+@property (nonatomic, assign) CGFloat enlargedEdge;
+
+- (void)JJEnlargedEdgeWithTop:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right;
 /**
  类方法返回UIButton title
 

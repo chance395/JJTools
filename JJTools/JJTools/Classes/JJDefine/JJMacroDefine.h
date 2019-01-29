@@ -9,6 +9,33 @@
 #ifndef JJMacroDefine_h
 #define JJMacroDefine_h
 
+//-------------------获取设备大小-------------------------
+
+//获取屏幕 宽度、高度
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define WIDTHRADIUS SCREEN_WIDTH/375.0
+#define KEY_WINDOW [UIApplication sharedApplication].keyWindow
+#define NAVIGATIONBAR_HEIGHT 64.0f
+#define TABBAR_HEIGHT 49.0f
+#define WIDTHRADIUS                                   SCREEN_WIDTH/375.0
+#define Tabbar_Height                                 49
+#define Nav_Height                                    64
+
+//-------------------打印日志-------------------------
+//DEBUG  模式下打印日志,当前行
+#ifdef DEBUG
+#   define JJLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define JJLog(...)
+#endif
+
+//获取当前语言
+#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+
+//获取沙盒 Document
+#define SandboxPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+
 //----------------------颜色类---------------------------
 // rgb颜色转换（16进制->10进制）
 #define UIColorFromHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
@@ -22,9 +49,6 @@
 #define FontBoldSystem(f)                           [UIFont boldSystemFontOfSize:f]
 //简体字体定义
 #define FONT(F)                                     [UIFont fontWithName:@"PingFangSC-Regular" size:F]
-
-
-
 //----------------------系统----------------------------
 //主要单例
 #define UserDefaults                                [NSUserDefaults standardUserDefaults]
@@ -75,6 +99,18 @@ NSCAssert(object != nil, @"object can not be nil");\
 
 #define Weak(obj) autoreleasepool{} __weak typeof(obj) w##obj = obj;
 #define Strong(obj) autoreleasepool{} __strong typeof(obj) obj = w##obj;//配套上面的方法使用
+
+//----------------------图片----------------------------
+
+//读取本地图片
+#define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:ext]]
+
+//定义UIImage对象
+#define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
+
+//定义UIImage对象
+
+#define ImageNamed(fileName) [UIImage imageNamed:fileName]
 
 
 #endif /* JJMacroDefine_h */

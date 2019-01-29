@@ -105,7 +105,7 @@
   
     
 }
-- (void)configMineInfoJJBaseCollectionViewCellWithDic:(NSDictionary *)dic arrdata:(NSMutableArray *)arrData indexpath:(NSIndexPath*)index isLast:(BOOL)last
+- (void)configMineInfoJJBaseCollectionViewCellWithDic:(NSDictionary *)dic arrdata:(NSMutableArray *)arrData indexpath:(NSIndexPath*)index
 {
     self.veryfiedlabelInfo.hidden =YES;
     
