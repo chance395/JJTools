@@ -10,22 +10,22 @@
 
 @implementation JJConstants
 
-CGFloat    const kPaddingLeft                           = 35.0f;
-
-CGFloat    const kmarginTextField                       = 35.0f;
-
-CGFloat    const kPaddingLeftForpersonal                = 22.0f;
-CGFloat    const kPaddingLeftForpersonalBetweenArrow    =8.0f;
-CGFloat    const kPaddingTop                            = 12.0f;
-CGFloat    const kTextFieldHeight                       = 50.0;
-
-CGFloat    const kTextFieldLeftMargin                   = 35.0f;
-CGFloat    const kButtonHeight                          = 50.0f;
-CGFloat    const kSeparatorHeight                       = 0.5f;
-CGFloat    const kViewTop                               = 15.0f;
-
-
-CGFloat    const kTextFieldLeftViewWidth                = 45.0f;
+//CGFloat    const kPaddingLeft                           = 35.0f;
+//
+//CGFloat    const kmarginTextField                       = 35.0f;
+//
+//CGFloat    const kPaddingLeftForpersonal                = 22.0f;
+//CGFloat    const kPaddingLeftForpersonalBetweenArrow    =8.0f;
+//CGFloat    const kPaddingTop                            = 12.0f;
+//CGFloat    const kTextFieldHeight                       = 50.0;
+//
+//CGFloat    const kTextFieldLeftMargin                   = 35.0f;
+//CGFloat    const kButtonHeight                          = 50.0f;
+//CGFloat    const kSeparatorHeight                       = 0.5f;
+//CGFloat    const kViewTop                               = 15.0f;
+//
+//
+//CGFloat    const kTextFieldLeftViewWidth                = 45.0f;
 
 
 NSString * const kNotificationNeedLogin                 = @"NotificationNeedLogin";

@@ -12,32 +12,31 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JJConstants : NSObject
 
-
-//侧边距
-extern CGFloat    const kPaddingLeft;
-
-//personalInfo的侧边距
-
-extern CGFloat    const kPaddingLeftForpersonal;
-
-extern CGFloat    const kPaddingLeftForpersonalBetweenArrow;
-
-//上边距
-extern CGFloat    const kPaddingTop;
-//textfield 高度
-extern CGFloat    const kTextFieldHeight;
-//按钮高度
-extern CGFloat    const kButtonHeight;
-//分割线高度
-extern CGFloat    const kSeparatorHeight;
-//view距顶部距离
-extern CGFloat    const kViewTop;
-
-//textfield 左view宽度
-extern CGFloat    const kTextFieldLeftViewWidth;
-
-//textfield 左间距
-extern CGFloat    const kTextFieldLeftMargin;
+////侧边距
+//extern CGFloat    const kPaddingLeft;
+//
+////personalInfo的侧边距
+//
+//extern CGFloat    const kPaddingLeftForpersonal;
+//
+//extern CGFloat    const kPaddingLeftForpersonalBetweenArrow;
+//
+////上边距
+//extern CGFloat    const kPaddingTop;
+////textfield 高度
+//extern CGFloat    const kTextFieldHeight;
+////按钮高度
+//extern CGFloat    const kButtonHeight;
+////分割线高度
+//extern CGFloat    const kSeparatorHeight;
+////view距顶部距离
+//extern CGFloat    const kViewTop;
+//
+////textfield 左view宽度
+//extern CGFloat    const kTextFieldLeftViewWidth;
+//
+////textfield 左间距
+//extern CGFloat    const kTextFieldLeftMargin;
 
 //通知
 extern NSString * const kNotificationNeedLogin;         //需要用户登录

@@ -121,6 +121,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable UIImage *)buttonBackgroundImageForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state;
 
 /**
+ set the backGroundColor for Button
+ 
+ @param scrollView the scroView
+ @param state state
+ @return color
+ */
+- (nullable UIColor *)buttonBackgroundColorForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state;
+
+/**
  Asks the data source for the background color of the dataset. Default is clear color.
  
  @param scrollView A scrollView subclass object informing the data source.

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class JJBaseTableView ;
+@protocol TableViewRefreshBtnDidClickDeleagate <NSObject>
+
+@required
+
+-(void)tabelViewRefreshBtnDidClicked:(JJBaseTableView*)tableView;
+
+@end
+
 @interface JJBaseTableView : UITableView
 
 @property(nonatomic,assign) CGFloat   verticalOffset;
@@ -16,8 +25,21 @@
 
 @property (nonatomic,copy  ) NSString    *emptyTitle;
 
-@property (nonatomic,copy  ) NSString    *emptyDescription;
+@property (nonatomic,copy  ) NSString    *emptySubtitle;
 
 @property (nonatomic,copy  ) NSString    *emptyImageName;
 
+@property (nonatomic,strong) NSString    *emptyButtonTitle;
+
+@property (nonatomic,strong) UIColor     *emptyButtonColor;
+
+@property (nonatomic,strong) NSString    *emptyButtonImageStr;
+
+@property (nonatomic,strong) UIView      *emptyCustomView;
+
+
+
+@property (nonatomic,weak) id <TableViewRefreshBtnDidClickDeleagate> refreshDelegate ;
+
 @end
+

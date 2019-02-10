@@ -33,8 +33,12 @@
         self.emptyDataSetSource = self;
         self.emptyDataSetDelegate = self;
         self.emptyImageName =@"";
-        self.emptyDescription =@"";
+        self.emptySubtitle =@"";
         self.emptyTitle =@"";
+        self.emptyButtonTitle =@"";
+        self.emptyButtonColor =nil;
+        self.emptyButtonImageStr =@"";
+        self.emptyCustomView =nil;
     }
     return self;
     
@@ -52,7 +56,7 @@
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = self.emptyTitle.length >0 ? nil :self.emptyTitle;
+    NSString *text = self.emptyTitle.length == 0 ? nil :self.emptyTitle;
     
     UIFont *font = nil;
     UIColor *textColor = nil;
@@ -61,7 +65,6 @@
     
     font = [UIFont systemFontOfSize:20.0];
     textColor = Color_TableViewEmpty_TitleColor;
-    
     
     if (!text) {
         return nil;
@@ -73,7 +76,7 @@
 }
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = self.emptyDescription.length >0? nil :self.emptyDescription;
+    NSString *text = self.emptySubtitle.length  == 0? nil :self.emptySubtitle;
     UIFont *font = nil;
     UIColor *textColor = nil;
     
@@ -83,13 +86,11 @@
     paragraph.lineBreakMode = NSLineBreakByWordWrapping;
     paragraph.alignment = NSTextAlignmentCenter;
     
-    
-    
-    if (![self checkIsHaveNet] && self.emptyDescription.length >0 ) {
+    if (![self checkIsHaveNet]) {
         
         text = @"请检查网络";
     }
-    if ([self checkIsHaveNet] && self.emptyDescription.length >0 )
+    if ([self checkIsHaveNet] && self.emptySubtitle.length == 0 )
     {
         
         text = @"当前暂无订单";
@@ -121,13 +122,13 @@
         return [UIImage imageNamed:@"" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
     }
     else {
-        NSString *imageName =self.emptyDescription.length >0 ?  @"nodata" : self.emptyImageName;
+        NSString *imageName =self.emptyImageName.length == 0 ?  @"nodata" : self.emptyImageName;
         
-        if (![self checkIsHaveNet] && self.emptyDescription.length >0) {
+        if (![self checkIsHaveNet] ) {
             
             imageName = @"nonet";
         }
-        if ([self checkIsHaveNet] && self.emptyDescription.length >0)
+        if ([self checkIsHaveNet] && self.emptyImageName.length == 0)
         {
             
             imageName = @"nodata";
@@ -137,6 +138,69 @@
         
         return image;
     }
+}
+
+
+/**
+ title for btn
+ 
+ @param scrollView scrollView
+ @param state state
+ @return atttitle
+ */
+- (nullable NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
+{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.emptyButtonTitle attributes:nil];
+    
+    return  self.emptyButtonTitle.length == 0? nil :attributedString ;
+}
+
+
+/**
+ the image For btn
+ 
+ @param scrollView scrollView
+ @param state controllstate
+ @return uiimage
+ */
+- (nullable UIImage *)buttonImageForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state;
+{
+    
+    return  self.emptyButtonImageStr.length == 0? nil :[UIImage imageNamed:self.emptyButtonImageStr] ;
+    
+}
+
+- (UIImage *)buttonBackgroundImageForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
+{
+    return nil;
+}
+
+
+/**
+ in here must use autolay ,tableView.customView =customView and then layout...
+ 
+ @param scrollView scroView or tablView
+ @return customView
+ */
+
+- (nullable UIView *)customViewForEmptyDataSet:(UIScrollView *)scrollView;
+{
+    
+    return self.emptyCustomView ? self.emptyCustomView :nil;
+    
+}
+
+
+/**
+ added based on the original
+ 
+ @param scrollView scrollView
+ @param state state
+ @return color
+ */
+-(UIColor *)buttonBackgroundColorForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
+{
+    return self.emptyButtonColor ? self.emptyButtonColor :nil;
 }
 
 #pragma mark - DZNEmptyDataSetDelegate Methods
@@ -172,40 +236,18 @@
 
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapButton:(UIButton *)button
 {
-    self.loading = YES;
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.loading = NO;
-    });
+    if (self.refreshDelegate && [self.refreshDelegate respondsToSelector:@selector(tabelViewRefreshBtnDidClicked:)])
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.refreshDelegate tabelViewRefreshBtnDidClicked:self];
+        });
+        
+    }
+    
 }
 
-- (UIImage *)buttonBackgroundImageForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
-{
-    
-    
-    NSString *imageName = self.emptyDescription.length >0 ? @"nodata" : self.emptyImageName;
-    
-    if (![self checkIsHaveNet] && self.emptyDescription.length >0) {
-        
-        imageName = @"nonet";
-    }
-    if([self checkIsHaveNet] && self.emptyDescription.length >0)
-    {
-        
-        imageName = @"nodata";
-    }
-    
-    
-    if (state == UIControlStateNormal) imageName = [imageName stringByAppendingString:@"_normal"];
-    if (state == UIControlStateHighlighted) imageName = [imageName stringByAppendingString:@"_highlight"];
-    
-    UIEdgeInsets capInsets = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0);
-    UIEdgeInsets rectInsets = UIEdgeInsetsZero;
-    
-    UIImage *image = [UIImage imageNamed:imageName inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
-    
-    return [[image resizableImageWithCapInsets:capInsets resizingMode:UIImageResizingModeStretch] imageWithAlignmentRectInsets:rectInsets];
-}
 - (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView{
     
     if (self.verticalOffset) {
@@ -218,8 +260,7 @@
 #pragma mark - 判断是否有网络
 - (BOOL)checkIsHaveNet{
     
-    
-    BOOL isExistenceNetwork = YES;
+    BOOL isExistenceNetwork = NO;
     
     JJReachability   *reach = [JJReachability reachabilityWithHostName:@"www.apple.com"];
     
@@ -227,19 +268,10 @@
     
     NetworkStatus stats = [reach currentReachabilityStatus];
     
-    if (stats == NotReachable)
+    if (stats == ReachableViaWiFi || stats == ReachableViaWWAN)
+    {
         //没有网络
-        isExistenceNetwork = NO;
-    else if (stats == ReachableViaWiFi)
         isExistenceNetwork = YES;
-    else if (stats == ReachableViaWWAN)
-        isExistenceNetwork = YES;
-    else if (stats == ReachableViaWiFi)
-        isExistenceNetwork = YES;
-    
-    if (!isExistenceNetwork) {
-        
-        return NO;
     }
     
     return isExistenceNetwork;

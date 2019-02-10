@@ -15,7 +15,7 @@
 
 #define Color_LeftBar_BtnColor                  UIColorFromHex(0x353030)
 
-#define Color_TableView_backGroundColor         UIColorFromHex(0xF6F6F9)
+#define Color_TableView_backGroundColor         UIColorFromHex(0xEEEEEE)
 
 #define SegementView_underLine_color            UIColorFromHex(0x222222)
 
@@ -50,7 +50,7 @@
 
 
 #define Color_White                             UIColorFromHex(0xffffff)
-#define Color_TableViewColor                    UIColorFromHex(0xF8F9FB)
+#define Color_TableViewColor                    UIColorFromHex(0xEEEEEE)
 #define Color_Button_Disabled                   UIColorFromHex(0xCCCCCC)
 
 #define Color_Button_BindBank                   UIColorFromHex(0xF7F7F7)
@@ -74,7 +74,7 @@
 
 //弹窗颜色
 #define Color_Red                               UIColorFromHex(0xFB973B)
-#define Color_Background                        UIColorFromHex(0xF8F9FB )
+#define Color_Background                        UIColorFromHex(0xEEEEEE )
 
 //背景颜色
 #define Color_Bg_Red                            UIColorFromHex(0xFF7055)
@@ -186,6 +186,6 @@
 #define Color_DetailOrderDate                      UIColorFromHex(0xADADAD)
 
 #define Color_Alert_Red                               UIColorFromHex(0xFF7055)
-#define seperatorColor          UIColorFromRGB(0xe5e5e5)//分割线的颜色
+#define seperatorColor                          UIColorFromHex(0xe5e5e5)//分割线的颜色
 #endif /* JJColorDefine_h */
 
