@@ -169,7 +169,7 @@
 //登陆注册
 #define Color_registerOrLogin_View              UIColorFromHex(0xFF575C)
 
-#define Color_registerOrLogin_BtnActive         UIColorFromHex(0xF05656)
+#define Color_registerOrLogin_BtnActive         UIColorFromHex(0xF63676)
 
 #define Color_registerOrLogin_BtnInActive       UIColorFromHex(0xDEDEDE)
 
