@@ -141,7 +141,15 @@
 
 -(void)setupSubViews
 {
+    UILabel *title =[UILabel MAGetLabelWithFont:FONT(13) text:@"加分认证" textColor:[UIColor JJColorWithHexStr:@"#444444"] textAlignment:NSTextAlignmentLeft superView:self.contentView masonrySet:^(UILabel *currentLabel, MASConstraintMaker *make) {
+        make.left.mas_equalTo(16);
+        make.centerY.equalTo(self.contentView);
+    }];
     
+    UILabel *subTitle =[UILabel MAGetLabelWithFont:FONT(13) text:@"选填,认证提高申请通过率" textColor:[UIColor JJColorWithHexStr:@"#808080"] textAlignment:NSTextAlignmentRight superView:self.contentView masonrySet:^(UILabel *currentLabel, MASConstraintMaker *make) {
+        make.left.equalTo(title.mas_right).mas_offset(23);
+        make.centerY.equalTo(title);
+    }];
 }
 
 

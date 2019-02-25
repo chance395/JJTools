@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface JJSystemCall()
-@property (strong, nonatomic) WKWebView *mainWebView;
+@property (strong, nonatomic) UIWebView *mainWebView;
 @property (nonatomic, strong) void (^noParameterCompletion)(void);
 @end
 
@@ -31,7 +31,7 @@
     static const NSInteger telTag = 19009527;
     NSString *str = [NSString stringWithFormat:@"tel:%@",telNumber];
     if (!_mainWebView) {
-        _mainWebView = [[WKWebView alloc] initWithFrame:CGRectZero];
+        _mainWebView = [[UIWebView alloc] initWithFrame:CGRectZero]];
         _mainWebView.tag = telTag;
     }
     [self.mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];

@@ -705,6 +705,8 @@
         
     }
    
+    knowTitle = (knowTitle && knowTitle.length >0)? knowTitle :@"知道了";
+    
     if (knowTitle && knowTitle.length >0)
     {
         // 2.创建并添加按钮
@@ -780,6 +782,8 @@
         [ alerVC setValue:Title forKey:@"attributedTitle"];
         
     }
+    
+    knowTitle = (knowTitle && knowTitle.length >0)? knowTitle :@"知道了";
     
     if (knowTitle && knowTitle.length>0)
     {

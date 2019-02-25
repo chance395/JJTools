@@ -11,13 +11,11 @@
 
 //topic color
 
-#define Color_App_topic                         UIColorFromHex(0xF05656)
+#define Color_App_topic                         UIColorFromHex(0xF63676)
 
 #define Color_LeftBar_BtnColor                  UIColorFromHex(0x353030)
 
 #define Color_TableView_backGroundColor         UIColorFromHex(0xEEEEEE)
-
-#define SegementView_underLine_color            UIColorFromHex(0x222222)
 
 #define Color_MarqueeView_backGroundColor       UIColorFromHex(0xFFEEEE)
 
