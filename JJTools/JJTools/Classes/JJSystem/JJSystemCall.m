@@ -31,7 +31,7 @@
     static const NSInteger telTag = 19009527;
     NSString *str = [NSString stringWithFormat:@"tel:%@",telNumber];
     if (!_mainWebView) {
-        _mainWebView = [[UIWebView alloc] initWithFrame:CGRectZero]];
+        _mainWebView = [[UIWebView alloc] initWithFrame:CGRectZero];
         _mainWebView.tag = telTag;
     }
     [self.mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
