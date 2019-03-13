@@ -19,7 +19,7 @@ include some category based on masonry for create UI  and some others useful too
 
      s.source_files  = 'JJTools/JJTools/Classes/JJBaseHeader.h'
      s.public_header_files = 'JJTools/JJTools/Classes/JJBaseHeader.h'
-     s.resources            = { 'JJTools' => ['JJTools/**/*.bundle'] }
+     s.resources            = "JJTools/**/*.bundle"
 
   s.frameworks = "UIKit", "Foundation","CoreLocation","Photos","SystemConfiguration","Security","CoreFoundation","WebKit"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto" }
