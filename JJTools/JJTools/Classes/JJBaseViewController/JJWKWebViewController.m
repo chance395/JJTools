@@ -222,39 +222,52 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     if (self.bottom_backBtn == nil) {
         
-        self.bottom_homeBtn =[UIButton MAGetButtonWithImage:@"wk_activeHome" superView:self.bottomView target:self action:@selector(toolBarItemHomeBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        UIImage *image ;
+          image = [UIImage imageNamed:@"wk_activeHome" inBundle:bundle compatibleWithTraitCollection:nil];
+        
+        self.bottom_homeBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemHomeBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
             make.left.mas_equalTo(wkwebViewMargin);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
             [currentBtn setEnlargedEdge:30];
+            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
-        
-        self.bottom_backBtn =[UIButton MAGetButtonWithImage:@"wk_activeBack" superView:self.bottomView target:self action:@selector(toolBarItemBackBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        image = [UIImage imageNamed:@"wk_activeBack" inBundle:bundle compatibleWithTraitCollection:nil];
+        self.bottom_backBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemBackBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
         make.left.equalTo(self.bottom_homeBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
             [currentBtn setEnlargedEdge:30];
+            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
-        self.bottom_forwardBtn =[UIButton MAGetButtonWithImage:@"wk_activeForward" superView:self.bottomView target:self action:@selector(toolBarItemForwardBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        image = [UIImage imageNamed:@"wk_activeForward" inBundle:bundle compatibleWithTraitCollection:nil];
+        self.bottom_forwardBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemForwardBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
         make.left.equalTo(self.bottom_backBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
             [currentBtn setEnlargedEdge:30];
+            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
-        self.bottom_refreshBtn =[UIButton MAGetButtonWithImage:@"wk_activeRefresh" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        image = [UIImage imageNamed:@"wk_activeRefresh" inBundle:bundle compatibleWithTraitCollection:nil];
+        self.bottom_refreshBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
             make.left.equalTo(self.bottom_forwardBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
             [currentBtn setEnlargedEdge:30];
+            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
-        self.bottom_clearcacheBtn =[UIButton MAGetButtonWithImage:@"wk_activeClear" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        image = [UIImage imageNamed:@"wk_activeClear" inBundle:bundle compatibleWithTraitCollection:nil];
+        self.bottom_clearcacheBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
             make.left.equalTo(self.bottom_refreshBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
+            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
     }
 }
@@ -309,12 +322,8 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         NSLog(@"%@", cookiesFolderPath);
         NSError *errors;
         [[NSFileManager defaultManager] removeItemAtPath:cookiesFolderPath error:&errors];
-        
     }
-    
-    
 }
-
 
 - (void)refreshButtonsStatus
 {
@@ -556,22 +565,26 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     else
     {
         if (visible) {
-            [self.wkWebView mas_updateConstraints:^(MASConstraintMaker *make) {
-                make.bottom.equalTo(self.view.mas_bottom).mas_offset(-wkwebViewBottomViewHeight);
+            
+            [UIView animateWithDuration:1.5 animations:^{
+                [self.wkWebView mas_updateConstraints:^(MASConstraintMaker *make) {
+                    make.bottom.equalTo(self.view.mas_bottom).mas_offset(-wkwebViewBottomViewHeight);
+                }];
+                self.bottomView.hidden =NO;
             }];
-            self.bottomView.hidden =NO;
+            
         }
         else
         {
-            [self.wkWebView mas_updateConstraints:^(MASConstraintMaker *make) {
-                make.bottom.equalTo(self.view.mas_bottom);
+            [UIView animateWithDuration:1.5 animations:^{
+                [self.wkWebView mas_updateConstraints:^(MASConstraintMaker *make) {
+                    make.bottom.equalTo(self.view.mas_bottom);
+                }];
+                self.bottomView.hidden =YES;
             }];
-            self.bottomView.hidden =YES;
+            
         }
-
-        [UIView animateWithDuration:0.4f delay:0.0f usingSpringWithDamping:0.75f initialSpringVelocity:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            [self.view layoutIfNeeded];
-        } completion:nil];
+        
     }
 }
 
