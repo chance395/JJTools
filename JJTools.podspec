@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJTools"
-  s.version      = "1.2.4"
+  s.version      = "1.2.5"
   s.summary      = "some others useful tools "
   s.description  = <<-DESC 
 include some category based on masonry for create UI  and some others useful tools
@@ -63,7 +63,7 @@ s.exclude_files = non_arc_files
  s.subspec 'JJBaseViewController' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJBaseViewController/*'
    ss.dependency 'JJTools/JJDefine'
-   #ss.dependency 'JJTools/JJBaseView'
+   ss.dependency 'JJTools/JJUILayout'
 
   end
 

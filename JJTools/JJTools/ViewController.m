@@ -7,9 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "JJDispatch_queue.h"
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
@@ -17,7 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor redColor];
+    NSLog(@"test");
+   
 }
-
 
 @end

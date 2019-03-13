@@ -38,6 +38,7 @@
 		F77FAC7721FB083600EBC626 /* UIImageView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5521FB083600EBC626 /* UIImageView+MasonryLayout.m */; };
 		F77FAC7821FB083600EBC626 /* UITextField+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5721FB083600EBC626 /* UITextField+MasonryLayout.m */; };
 		F77FAC7921FB083600EBC626 /* UIImage+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5921FB083600EBC626 /* UIImage+JJTools.m */; };
+		F7BBBD4D223907F2008BF2BC /* JJWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BBBD4B223907F1008BF2BC /* JJWKWebViewController.m */; };
 		F7CAD4E721FFF4B600AE08D7 /* JJBaseCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD4E621FFF4B600AE08D7 /* JJBaseCollectionReusableView.m */; };
 		F7D7FBEE21F83DBA0033C4B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */; };
 		F7D7FBF121F83DBA0033C4B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FBF021F83DBA0033C4B0 /* ViewController.m */; };
@@ -134,6 +135,8 @@
 		F77FAC5921FB083600EBC626 /* UIImage+JJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JJTools.m"; sourceTree = "<group>"; };
 		F77FAC5A21FB083600EBC626 /* UILabel+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MasonryLayout.h"; sourceTree = "<group>"; };
 		F77FAC5B21FB083600EBC626 /* UIImageView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MasonryLayout.h"; sourceTree = "<group>"; };
+		F7BBBD4B223907F1008BF2BC /* JJWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJWKWebViewController.m; sourceTree = "<group>"; };
+		F7BBBD4C223907F2008BF2BC /* JJWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJWKWebViewController.h; sourceTree = "<group>"; };
 		F7CAD4E521FFF4B600AE08D7 /* JJBaseCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JJBaseCollectionReusableView.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.h; sourceTree = "<group>"; };
 		F7CAD4E621FFF4B600AE08D7 /* JJBaseCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JJBaseCollectionReusableView.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.m; sourceTree = "<group>"; };
 		F7D7FBE921F83DBA0033C4B0 /* JJTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,16 +289,18 @@
 		F77FAC2A21FB083600EBC626 /* JJBaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F77FAC2B21FB083600EBC626 /* JJBaseLoginSecondViewController.m */,
+				F7BBBD4C223907F2008BF2BC /* JJWKWebViewController.h */,
+				F7BBBD4B223907F1008BF2BC /* JJWKWebViewController.m */,
 				F77FAC2C21FB083600EBC626 /* JJBaseVC.h */,
-				F77FAC2D21FB083600EBC626 /* JJBaseTabBarViewController.m */,
-				F77FAC2E21FB083600EBC626 /* JJBaseNavigationViewController.m */,
-				F77FAC2F21FB083600EBC626 /* JJBaseLoginFirstViewController.m */,
 				F77FAC3021FB083600EBC626 /* JJBaseVC.m */,
 				F77FAC3121FB083600EBC626 /* JJBaseTabBarViewController.h */,
-				F77FAC3221FB083600EBC626 /* JJBaseLoginSecondViewController.h */,
-				F77FAC3321FB083600EBC626 /* JJBaseLoginFirstViewController.h */,
+				F77FAC2D21FB083600EBC626 /* JJBaseTabBarViewController.m */,
 				F77FAC3421FB083600EBC626 /* JJBaseNavigationViewController.h */,
+				F77FAC2E21FB083600EBC626 /* JJBaseNavigationViewController.m */,
+				F77FAC3321FB083600EBC626 /* JJBaseLoginFirstViewController.h */,
+				F77FAC2F21FB083600EBC626 /* JJBaseLoginFirstViewController.m */,
+				F77FAC3221FB083600EBC626 /* JJBaseLoginSecondViewController.h */,
+				F77FAC2B21FB083600EBC626 /* JJBaseLoginSecondViewController.m */,
 			);
 			path = JJBaseViewController;
 			sourceTree = "<group>";
@@ -587,6 +592,7 @@
 				F77FAC6121FB083600EBC626 /* JJUserManager.m in Sources */,
 				F77FAC6321FB083600EBC626 /* NSString+JJTools.m in Sources */,
 				F7D7FBF121F83DBA0033C4B0 /* ViewController.m in Sources */,
+				F7BBBD4D223907F2008BF2BC /* JJWKWebViewController.m in Sources */,
 				F77FAC6221FB083600EBC626 /* UIColor+JJTools.m in Sources */,
 				F7CAD4E721FFF4B600AE08D7 /* JJBaseCollectionReusableView.m in Sources */,
 				F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */,
