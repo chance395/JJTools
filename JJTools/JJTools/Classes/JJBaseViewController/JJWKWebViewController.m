@@ -222,52 +222,38 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     if (self.bottom_backBtn == nil) {
         
-        
-        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        UIImage *image ;
-          image = [UIImage imageNamed:@"wk_activeHome" inBundle:bundle compatibleWithTraitCollection:nil];
-        
-        self.bottom_homeBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemHomeBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        self.bottom_homeBtn =[UIButton MAGetButtonWithImage:@"wk_activeHome" superView:self.bottomView target:self action:@selector(toolBarItemHomeBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
             make.left.mas_equalTo(wkwebViewMargin);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
             [currentBtn setEnlargedEdge:30];
-            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
-        image = [UIImage imageNamed:@"wk_activeBack" inBundle:bundle compatibleWithTraitCollection:nil];
-        self.bottom_backBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemBackBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        self.bottom_backBtn =[UIButton MAGetButtonWithImage:@"wk_activeBack" superView:self.bottomView target:self action:@selector(toolBarItemBackBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
         make.left.equalTo(self.bottom_homeBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
             [currentBtn setEnlargedEdge:30];
-            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
-        image = [UIImage imageNamed:@"wk_activeForward" inBundle:bundle compatibleWithTraitCollection:nil];
-        self.bottom_forwardBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemForwardBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        self.bottom_forwardBtn =[UIButton MAGetButtonWithImage:@"wk_activeForward" superView:self.bottomView target:self action:@selector(toolBarItemForwardBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
         make.left.equalTo(self.bottom_backBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
             [currentBtn setEnlargedEdge:30];
-            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
-        image = [UIImage imageNamed:@"wk_activeRefresh" inBundle:bundle compatibleWithTraitCollection:nil];
-        self.bottom_refreshBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        self.bottom_refreshBtn =[UIButton MAGetButtonWithImage:@"wk_activeRefresh" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
             make.left.equalTo(self.bottom_forwardBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
             [currentBtn setEnlargedEdge:30];
-            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
-        image = [UIImage imageNamed:@"wk_activeClear" inBundle:bundle compatibleWithTraitCollection:nil];
-        self.bottom_clearcacheBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        self.bottom_clearcacheBtn =[UIButton MAGetButtonWithImage:@"wk_activeClear" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
             make.left.equalTo(self.bottom_refreshBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
-            [currentBtn setImage:image forState:UIControlStateNormal];
         }];
     }
 }
