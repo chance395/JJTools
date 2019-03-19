@@ -22,7 +22,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 @property (strong,nonatomic) UIProgressView  *progressView;
 @property (strong,nonatomic) UIBarButtonItem *customBackBarItem;
 @property (strong,nonatomic) UIBarButtonItem *closeButtonItem;
-@property (strong,nonatomic) NSMutableArray  *snapShotsArray;
+//@property (strong,nonatomic) NSMutableArray  *snapShotsArray;
 @property (nonatomic,strong) UIButton        *bottom_homeBtn;
 @property (nonatomic,strong) UIButton        *bottom_backBtn;
 @property (nonatomic,strong) UIButton        *bottom_forwardBtn;
@@ -159,12 +159,12 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     return _closeButtonItem;
 }
 
--(NSMutableArray*)snapShotsArray{
-    if (!_snapShotsArray) {
-        _snapShotsArray = [NSMutableArray array];
-    }
-    return _snapShotsArray;
-}
+//-(NSMutableArray*)snapShotsArray{
+//    if (!_snapShotsArray) {
+//        _snapShotsArray = [NSMutableArray array];
+//    }
+//    return _snapShotsArray;
+//}
 
 -(void)viewWillDisappear:(BOOL)animated{
     [self.wkWebView.configuration.userContentController removeScriptMessageHandlerForName:@"WXPay"];
@@ -346,21 +346,13 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 //请求链接处理
 -(void)pushCurrentSnapshotViewWithRequest:(NSURLRequest*)request{
-    //    NSLog(@"push with request %@",request);
-    NSURLRequest* lastRequest = (NSURLRequest*)[[self.snapShotsArray lastObject] objectForKey:@"request"];
     
     //如果url是很奇怪的就不push
     if ([request.URL.absoluteString isEqualToString:@"about:blank"]) {
         //        NSLog(@"about blank!! return");
         return;
     }
-    //如果url一样就不进行push
-    if ([lastRequest.URL.absoluteString isEqualToString:request.URL.absoluteString]) {
-        return;
-    }
-    UIView* currentSnapShotView = [self.wkWebView snapshotViewAfterScreenUpdates:YES];
-    [self.snapShotsArray addObject:
-     @{@"request":request,@"snapShotView":currentSnapShotView}];
+
 }
 
 #pragma mark ================ WKNavigationDelegate ================
@@ -368,16 +360,12 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 //这个是网页加载完成，导航的变化
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
     
-    dispatch_queue_t global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-    dispatch_async(global, ^{
-        
-        [self refreshButtonsStatus];
-    });
-    
+    [self refreshButtonsStatus];
     self.title = self.wkWebView.title;// 获取加载网页的标题
+    !self.isShowNav  ? :[self updateNavigationItems];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    !self.isShowNav  ? :[self updateNavigationItems];
+    
     [webView evaluateJavaScript:@"document.documentElement.style.webkitUserSelect='none'" completionHandler:nil];
     
     [webView evaluateJavaScript:@"document.documentElement.style.webkitTouchCallout='none'" completionHandler:nil];
@@ -404,40 +392,16 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 //服务器开始请求的时候调用
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
-    switch (navigationAction.navigationType) {
-        case WKNavigationTypeLinkActivated: {
-            [self pushCurrentSnapshotViewWithRequest:navigationAction.request];
-            break;
-        }
-        case WKNavigationTypeFormSubmitted: {
-            [self pushCurrentSnapshotViewWithRequest:navigationAction.request];
-            break;
-        }
-        case WKNavigationTypeBackForward: {
-            break;
-        }
-        case WKNavigationTypeReload: {
-            break;
-        }
-        case WKNavigationTypeFormResubmitted: {
-            break;
-        }
-        case WKNavigationTypeOther: {
-            [self pushCurrentSnapshotViewWithRequest:navigationAction.request];
-            break;
-        }
-        default: {
-            break;
-        }
-    }
-    !self.isShowNav  ? :[self updateNavigationItems];
+   [self pushCurrentSnapshotViewWithRequest:navigationAction.request];
     decisionHandler(WKNavigationActionPolicyAllow);
+    NSLog(@"navigationAction.request.URL--------->>>>>%@",navigationAction.request.URL);
 }
 
 
 -(void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
 {
     decisionHandler(WKNavigationResponsePolicyAllow);
+//    NSLog(@"navigationResponse.response.URL--------->>>>>%@",navigationResponse.response.URL);
     
 }
 
@@ -541,19 +505,6 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSBundle *bundle =[NSBundle bundleForClass:[self class]];
-        NSURL *url =[bundle URLForResource:@"JJToolsSource" withExtension:@"bundle"];
-        bundle =[NSBundle bundleWithURL:url];
-        UIImage *image;
-        image = self.wkWebView.canGoBack ? [UIImage imageNamed:@"wk_activeBack" inBundle:bundle compatibleWithTraitCollection:nil] :[UIImage imageNamed:@"wk_inactiveBack" inBundle:bundle compatibleWithTraitCollection:nil];
-        [self.bottom_backBtn setImage:image forState:UIControlStateNormal];
-        
-        image = self.wkWebView.canGoForward ? [UIImage imageNamed:@"wk_activeForward" inBundle:bundle compatibleWithTraitCollection:nil] :[UIImage imageNamed:@"wk_inactiveForward" inBundle:bundle compatibleWithTraitCollection:nil];
-        [self.bottom_forwardBtn setImage:image forState:UIControlStateNormal];
-    });
-    
     if (self.isSuspension)
     {
         CGFloat translation = [scrollView.panGestureRecognizer translationInView:scrollView.superview].y;
@@ -581,6 +532,15 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
                 self.bottomView.hidden =NO;
             }];
             
+            NSBundle *bundle =[NSBundle bundleForClass:[self class]];
+            NSURL *url =[bundle URLForResource:@"JJToolsSource" withExtension:@"bundle"];
+            bundle =[NSBundle bundleWithURL:url];
+            UIImage *image;
+            image = self.wkWebView.canGoBack ? [UIImage imageNamed:@"wk_activeBack" inBundle:bundle compatibleWithTraitCollection:nil] :[UIImage imageNamed:@"wk_inactiveBack" inBundle:bundle compatibleWithTraitCollection:nil];
+            [self.bottom_backBtn setImage:image forState:UIControlStateNormal];
+            
+            image = self.wkWebView.canGoForward ? [UIImage imageNamed:@"wk_activeForward" inBundle:bundle compatibleWithTraitCollection:nil] :[UIImage imageNamed:@"wk_inactiveForward" inBundle:bundle compatibleWithTraitCollection:nil];
+            [self.bottom_forwardBtn setImage:image forState:UIControlStateNormal];
         }
         else
         {

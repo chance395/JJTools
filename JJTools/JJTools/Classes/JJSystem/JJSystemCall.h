@@ -40,6 +40,18 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion block
  */
 - (void)judgePhotoPermissionWithCompletion:(void (^)(void))completion;
+
+
+/**
+ 添加号码到通讯录
+
+ @param contactName 联系人名字
+ @param phoneArr 手机号码
+ @param note 备注
+ @param completion block
+ */
+- (void)addContactsToAddressWithName:(NSString*)contactName PhonetArr:(NSArray*)phoneArr noteStr:(NSString*)note completion:(void (^)(void))completion ;
+
 /**
  *  跳转到系统设置页面，iOS8之后可用
  */

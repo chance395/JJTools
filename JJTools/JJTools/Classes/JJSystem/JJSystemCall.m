@@ -9,6 +9,8 @@
 #import <Photos/Photos.h>
 #import "JJSystemCall.h"
 #import <CoreLocation/CoreLocation.h>
+#import <AddressBookUI/ABNewPersonViewController.h>
+
 
 @interface JJSystemCall()
 @property (strong, nonatomic) UIWebView *mainWebView;
@@ -124,5 +126,98 @@ if (completion) {
     }
 }
 
+
+// 判断通讯录是否存在某个联系人
+-(void)handleExistContactNameByName:(NSString *)contactName
+{
+        ABAddressBookRef addBook = nil;
+        CFErrorRef error = nil;
+        addBook = ABAddressBookCreateWithOptions(NULL, &error);
+    
+        // 申请权限
+        ABAddressBookRequestAccessWithCompletion(addBook, ^(bool granted, CFErrorRef error) {
+            if (granted) {
+                CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(addBook);
+                CFIndex number = ABAddressBookGetPersonCount(addBook);
+                for (NSInteger index = 0; index < number; index++) {
+                    //获取联系人对象的引用
+                    ABRecordRef  people = CFArrayGetValueAtIndex(allPeople, index);
+                    //获取当前联系人名字
+                    NSString*firstName=(__bridge NSString *)(ABRecordCopyValue(people, kABPersonFirstNameProperty));
+                    
+                    if ([firstName isEqualToString:contactName]) {
+                        ABAddressBookRemoveRecord(addBook, people, nil);
+                        ABAddressBookSave(addBook, &error);
+                        CFRelease(addBook);
+                    }
+                }
+            }
+           
+        });
+        //等待信号触发
+    
+    }
+
+
+//添加到通讯录
+- (void)addContactsToAddressWithName:(NSString*)contactName PhonetArr:(NSArray*)phoneArr noteStr:(NSString*)note completion:(void (^)(void))completion {
+
+        if (
+            ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized) {
+            
+            [self createAddBookRecordByPhoneArr:phoneArr contactName:contactName andNote:note];
+            if (completion) {
+                _noParameterCompletion = completion;
+            }
+            self.noParameterCompletion();
+            
+        }
+        else
+        {
+            [self gotoSettings];
+            
+        }
+    }
+
+//想了哈,还是不用ios9后面的框架就用这个.反正要适配ios9以前的警告就警告
+- (void)createAddBookRecordByPhoneArr:(NSArray *)phoneArr contactName:(NSString *)contactNameStr andNote:(NSString *)note
+{
+        CFErrorRef error = NULL;
+        if (!phoneArr || !contactNameStr) {return;}
+        [self handleExistContactNameByName:contactNameStr];
+        ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, &error);
+        ABRecordRef newRecord = ABPersonCreate();
+        
+        ABRecordSetValue(newRecord, kABPersonFirstNameProperty, (__bridge CFTypeRef)contactNameStr, &error);
+        
+        //创建一个多值属性(电话)
+        ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABMultiStringPropertyType);
+        
+        [phoneArr enumerateObjectsUsingBlock:^(NSString *phone, NSUInteger idx, BOOL * _Nonnull stop) {
+            // 添加手机号码
+            ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)phone, kABPersonPhoneMobileLabel, NULL);
+        }];
+        
+        ABRecordSetValue(newRecord, kABPersonPhoneProperty, multi, &error);
+        
+        //添加email
+        //    ABMutableMultiValueRef multiEmail = ABMultiValueCreateMutable(kABMultiStringPropertyType);
+        //    ABMultiValueAddValueAndLabel(multiEmail, (__bridge CFTypeRef)([self.infoDic objectForKey:@"email"]), kABWorkLabel, NULL);
+        //    ABRecordSetValue(newRecord, kABPersonEmailProperty, multiEmail, &error);
+        
+        // 添加备注
+        ABRecordSetValue(newRecord, kABPersonNoteProperty, (__bridge CFTypeRef)note, &error);
+        
+        //添加记录到通讯录操作对象
+        ABAddressBookAddRecord(addressBook, newRecord, &error);
+        
+        //保存通讯录操作对象
+        ABAddressBookSave(addressBook, &error);
+        
+        CFRelease(multi);
+        CFRelease(newRecord);
+        CFRelease(addressBook);
+
+}
 
 @end
