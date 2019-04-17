@@ -58,6 +58,7 @@
 #import "JJBaseLoginSecondViewController.h"
 #import "JJBaseNavigationViewController.h"
 #import "JJBaseTabBarViewController.h"
+#import "JJWKWebViewController.h"
 
 //dependency
 #import "Masonry.h"

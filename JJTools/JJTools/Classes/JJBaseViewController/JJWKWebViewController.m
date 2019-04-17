@@ -40,13 +40,13 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     [self.view addSubview:self.progressView];
     [self.wkWebView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.left.and.right.equalTo(self.view);
-        make.bottom.equalTo(self.view.mas_bottom).mas_offset(self.isShowBottom ? -wkwebViewBottomViewHeight :0);
+        make.bottom.equalTo(self.view.mas_bottom).mas_offset(!self.isHideBottom ? -wkwebViewBottomViewHeight :0);
     }];
     [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.left.and.right.equalTo(self.view);
         make.height.mas_equalTo(2);
     }];
-    if (self.isShowBottom)
+    if (!self.isHideBottom)
     {
         [self.view addSubview:self.bottomView];
         [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -60,7 +60,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = self.isShowNav ? NO :YES;
+    self.navigationController.navigationBarHidden = !self.isHideNav ? NO :YES;
     
     if (@available(iOS 9.0, *)) {
         [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.absUrlStr stringByRemovingPercentEncoding]]]];
@@ -77,10 +77,10 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         //设置网页的配置文件
         WKWebViewConfiguration * Configuration = [[WKWebViewConfiguration alloc]init];
         //允许视频播
-            if (@available(iOS 9.0, *))
-            {
-                Configuration.allowsAirPlayForMediaPlayback = YES;
-            }
+        if (@available(iOS 9.0, *))
+        {
+            Configuration.allowsAirPlayForMediaPlayback = YES;
+        }
         
         // 允许在线播放
         Configuration.allowsInlineMediaPlayback = YES;
@@ -118,7 +118,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     if (!_progressView) {
         _progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
-        if (self.isShowNav == NO) {
+        if (!self.isHideNav == NO) {
             _progressView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 3);
         }else{
             _progressView.frame = CGRectMake(0, 64, self.view.bounds.size.width, 3);
@@ -146,7 +146,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         
         _customBackBarItem =[[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(customBackItemClicked)];
         [_customBackBarItem setTintColor:[UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]];
-       
+        
     }
     return _customBackBarItem;
 }
@@ -201,20 +201,20 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 #pragma mark --layout
 -(void)updateNavigationItems
 {
-   if (self.isShowLeftItems)
-   {
-       if (self.wkWebView.canGoBack)
-       {
-           UIBarButtonItem *spaceButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-           spaceButtonItem.width = -6.5;
-           
-           [self.navigationItem setLeftBarButtonItems:@[spaceButtonItem,self.customBackBarItem,self.closeButtonItem] animated:NO];
-       }else
-       {
-           self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-           [self.navigationItem setLeftBarButtonItems:@[self.customBackBarItem]];
-       }
-   }
+    if (!self.isHideLeftItems)
+    {
+        if (self.wkWebView.canGoBack)
+        {
+            UIBarButtonItem *spaceButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+            spaceButtonItem.width = -6.5;
+            
+            [self.navigationItem setLeftBarButtonItems:@[spaceButtonItem,self.customBackBarItem,self.closeButtonItem] animated:NO];
+        }else
+        {
+            self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+            [self.navigationItem setLeftBarButtonItems:@[self.customBackBarItem]];
+        }
+    }
     
 }
 
@@ -352,7 +352,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         //        NSLog(@"about blank!! return");
         return;
     }
-
+    
 }
 
 #pragma mark ================ WKNavigationDelegate ================
@@ -362,7 +362,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     
     [self refreshButtonsStatus];
     self.title = self.wkWebView.title;// 获取加载网页的标题
-    !self.isShowNav  ? :[self updateNavigationItems];
+    self.isHideNav  ? :[self updateNavigationItems];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
@@ -392,7 +392,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 //服务器开始请求的时候调用
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
-   [self pushCurrentSnapshotViewWithRequest:navigationAction.request];
+    [self pushCurrentSnapshotViewWithRequest:navigationAction.request];
     decisionHandler(WKNavigationActionPolicyAllow);
     NSLog(@"navigationAction.request.URL--------->>>>>%@",navigationAction.request.URL);
 }
@@ -401,7 +401,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 -(void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
 {
     decisionHandler(WKNavigationResponsePolicyAllow);
-//    NSLog(@"navigationResponse.response.URL--------->>>>>%@",navigationResponse.response.URL);
+    //    NSLog(@"navigationResponse.response.URL--------->>>>>%@",navigationResponse.response.URL);
     
 }
 
@@ -505,7 +505,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (self.isSuspension)
+    if (!self.isCancelSuspension)
     {
         CGFloat translation = [scrollView.panGestureRecognizer translationInView:scrollView.superview].y;
         BOOL scrollingUp = (translation > 0.0f);
@@ -518,7 +518,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 - (void)setToolbarVisible:(BOOL)visible
 {
-    if (!self.isShowBottom) {
+    if (self.isHideBottom) {
         return;
     }
     else
