@@ -7,15 +7,19 @@
 //
 
 #import "UIView+MasonryLayout.h"
-
+#import "UIColor+JJTools.h"
 
 @implementation UIView (MasonryLayout)
 
-+ (UIView*)MAGetUIViewWithBackgroundColor:(UIColor*)viewColor superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block
++ (UIView*)MAGetUIViewWithBackgroundColor:(UIColor*)viewColor cornerRadius:(CGFloat)Corners superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block
 {
     UIView *view =[[UIView alloc]init];
     if (viewColor) {
         view.backgroundColor =viewColor;
+    }
+    if (Corners>0) {
+        view.layer.cornerRadius =Corners;
+        view.layer.masksToBounds =YES;
     }
     view.translatesAutoresizingMaskIntoConstraints =NO;
     [superView addSubview:view];
@@ -27,4 +31,26 @@
     }];
     return view;
 }
+
++ (UIView*)MAGetUIViewWithHexBackgroundColor:(NSString*)hexStr cornerRadius:(CGFloat)Corners superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block
+{
+    UIView *view =[[UIView alloc]init];
+    if (hexStr) {
+        view.backgroundColor =[UIColor JJColorWithHexStr:hexStr];
+    }
+    if (Corners>0) {
+        view.layer.cornerRadius =Corners;
+        view.layer.masksToBounds =YES;
+    }
+    view.translatesAutoresizingMaskIntoConstraints =NO;
+    [superView addSubview:view];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        if (block) {
+            block(view,make);
+        }
+    }];
+    return view;
+}
+
 @end

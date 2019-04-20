@@ -1,5 +1,5 @@
 //
-//  JJBaseHeader.h
+//  JJTools.h
 //  qhg_ios
 //
 //  Created by Brain on 2018/9/10.

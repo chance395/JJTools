@@ -43,6 +43,25 @@
     return self;
     
 }
+/** for xib
+ */
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self =[super initWithCoder:aDecoder];
+    if (self) {
+        self.emptyDataSetSource = self;
+        self.emptyDataSetDelegate = self;
+        self.emptyImageName =@"";
+        self.emptySubtitle =@"";
+        self.emptyTitle =@"";
+        self.emptyButtonTitle =@"";
+        self.emptyButtonColor =nil;
+        self.emptyButtonImageStr =@"";
+        self.emptyCustomView =nil;
+    }
+    return self;
+}
+
 - (void)setLoading:(BOOL)loading
 {
     if (self.isLoading == loading) {

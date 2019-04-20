@@ -9,17 +9,22 @@
 #import <UIKit/UIKit.h>
 #import"Masonry.h"
 
-@interface UIView (MasonryLayout)
 
+@interface UIView (MasonryLayout)
 
 /**
  return View
-
+ 
  @param viewColor viewColor
+ @param Corners radius
  @param superView superView
  @param block block
  @return UIView
  */
-+ (UIView*)MAGetUIViewWithBackgroundColor:(UIColor*)viewColor superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block;
++ (UIView*)MAGetUIViewWithBackgroundColor:(UIColor*)viewColor cornerRadius:(CGFloat)Corners superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block;
+
+
++ (UIView*)MAGetUIViewWithHexBackgroundColor:(NSString*)hexStr cornerRadius:(CGFloat)Corners superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block;
+
 
 @end

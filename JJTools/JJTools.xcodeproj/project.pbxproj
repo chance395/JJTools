@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84382AF12268D9BC00048ED9 /* JJBaseCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84382AF02268D9BC00048ED9 /* JJBaseCollectionReusableView.m */; };
 		934F0CE595FB53E686ECF1E1 /* libPods-JJTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */; };
 		F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1021FB083600EBC626 /* JJConstants.m */; };
 		F77FAC5D21FB083600EBC626 /* template.zip in Resources */ = {isa = PBXBuildFile; fileRef = F77FAC1721FB083600EBC626 /* template.zip */; };
@@ -39,7 +40,6 @@
 		F77FAC7821FB083600EBC626 /* UITextField+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5721FB083600EBC626 /* UITextField+MasonryLayout.m */; };
 		F77FAC7921FB083600EBC626 /* UIImage+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC5921FB083600EBC626 /* UIImage+JJTools.m */; };
 		F7BBBD4D223907F2008BF2BC /* JJWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BBBD4B223907F1008BF2BC /* JJWKWebViewController.m */; };
-		F7CAD4E721FFF4B600AE08D7 /* JJBaseCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD4E621FFF4B600AE08D7 /* JJBaseCollectionReusableView.m */; };
 		F7CF5B6B223965FB0069897C /* JJToolsSource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F7CF5B6A223965FB0069897C /* JJToolsSource.bundle */; };
 		F7D7FBEE21F83DBA0033C4B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FBED21F83DBA0033C4B0 /* AppDelegate.m */; };
 		F7D7FBF121F83DBA0033C4B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FBF021F83DBA0033C4B0 /* ViewController.m */; };
@@ -70,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		1C20AC76ADF976D68B65DBB4 /* Pods-JJTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJTools/Pods-JJTools.debug.xcconfig"; sourceTree = "<group>"; };
+		84382AEF2268D9BC00048ED9 /* JJBaseCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseCollectionReusableView.h; path = ../../../../../marsPlan/Pods/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.h; sourceTree = "<group>"; };
+		84382AF02268D9BC00048ED9 /* JJBaseCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseCollectionReusableView.m; path = ../../../../../marsPlan/Pods/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.m; sourceTree = "<group>"; };
 		CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77FAC1021FB083600EBC626 /* JJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJConstants.m; sourceTree = "<group>"; };
 		F77FAC1121FB083600EBC626 /* JJUrlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJUrlDefine.h; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 		F77FAC4021FB083600EBC626 /* JJBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		F77FAC4121FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTableViewHeaderFooterView.m; sourceTree = "<group>"; };
 		F77FAC4221FB083600EBC626 /* JJBaseComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseComponent.h; sourceTree = "<group>"; };
-		F77FAC4321FB083600EBC626 /* JJBaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseHeader.h; sourceTree = "<group>"; };
+		F77FAC4321FB083600EBC626 /* JJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTools.h; sourceTree = "<group>"; };
 		F77FAC4521FB083600EBC626 /* JJSystemCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSystemCall.m; sourceTree = "<group>"; };
 		F77FAC4621FB083600EBC626 /* JJSystemCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSystemCall.h; sourceTree = "<group>"; };
 		F77FAC4821FB083600EBC626 /* JJReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJReachability.h; sourceTree = "<group>"; };
@@ -138,8 +140,6 @@
 		F77FAC5B21FB083600EBC626 /* UIImageView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MasonryLayout.h"; sourceTree = "<group>"; };
 		F7BBBD4B223907F1008BF2BC /* JJWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJWKWebViewController.m; sourceTree = "<group>"; };
 		F7BBBD4C223907F2008BF2BC /* JJWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJWKWebViewController.h; sourceTree = "<group>"; };
-		F7CAD4E521FFF4B600AE08D7 /* JJBaseCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JJBaseCollectionReusableView.h; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.h; sourceTree = "<group>"; };
-		F7CAD4E621FFF4B600AE08D7 /* JJBaseCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JJBaseCollectionReusableView.m; path = ../../../../../../brain/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.m; sourceTree = "<group>"; };
 		F7CF5B6A223965FB0069897C /* JJToolsSource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JJToolsSource.bundle; sourceTree = "<group>"; };
 		F7D7FBE921F83DBA0033C4B0 /* JJTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D7FBEC21F83DBA0033C4B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 				F77FAC2321FB083600EBC626 /* JJCategory */,
 				F77FAC2A21FB083600EBC626 /* JJBaseViewController */,
 				F77FAC3521FB083600EBC626 /* JJBaseView */,
-				F77FAC4321FB083600EBC626 /* JJBaseHeader.h */,
+				F77FAC4321FB083600EBC626 /* JJTools.h */,
 				F77FAC4421FB083600EBC626 /* JJSystem */,
 				F77FAC4721FB083600EBC626 /* JJNetWork */,
 				F77FAC4C21FB083600EBC626 /* JJSafe */,
@@ -310,6 +310,8 @@
 		F77FAC3521FB083600EBC626 /* JJBaseView */ = {
 			isa = PBXGroup;
 			children = (
+				84382AEF2268D9BC00048ED9 /* JJBaseCollectionReusableView.h */,
+				84382AF02268D9BC00048ED9 /* JJBaseCollectionReusableView.m */,
 				F77FAC3621FB083600EBC626 /* JJBaseTableViewCell.h */,
 				F77FAC3D21FB083600EBC626 /* JJBaseTableViewCell.m */,
 				F77FAC3721FB083600EBC626 /* DZNEmptyDataSet.h */,
@@ -323,8 +325,6 @@
 				F77FAC3B21FB083600EBC626 /* JJBaseComponent.m */,
 				F77FAC3C21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.h */,
 				F77FAC4121FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m */,
-				F7CAD4E521FFF4B600AE08D7 /* JJBaseCollectionReusableView.h */,
-				F7CAD4E621FFF4B600AE08D7 /* JJBaseCollectionReusableView.m */,
 			);
 			path = JJBaseView;
 			sourceTree = "<group>";
@@ -598,7 +598,6 @@
 				F7D7FBF121F83DBA0033C4B0 /* ViewController.m in Sources */,
 				F7BBBD4D223907F2008BF2BC /* JJWKWebViewController.m in Sources */,
 				F77FAC6221FB083600EBC626 /* UIColor+JJTools.m in Sources */,
-				F7CAD4E721FFF4B600AE08D7 /* JJBaseCollectionReusableView.m in Sources */,
 				F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */,
 				F77FAC7021FB083600EBC626 /* JJSystemCall.m in Sources */,
 				F77FAC6521FB083600EBC626 /* JJBaseLoginSecondViewController.m in Sources */,
@@ -618,6 +617,7 @@
 				F77FAC7321FB083600EBC626 /* NSObjectSafe.m in Sources */,
 				F7D7FBFC21F83DBC0033C4B0 /* main.m in Sources */,
 				F77FAC6A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m in Sources */,
+				84382AF12268D9BC00048ED9 /* JJBaseCollectionReusableView.m in Sources */,
 				F77FAC7221FB083600EBC626 /* JJBaseRequest.m in Sources */,
 				F77FAC6921FB083600EBC626 /* JJBaseVC.m in Sources */,
 				F77FAC7721FB083600EBC626 /* UIImageView+MasonryLayout.m in Sources */,
