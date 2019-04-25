@@ -20,7 +20,9 @@
         label.textColor =textColor;
     }
     label.textAlignment =textAlignment;
-    label.font =font;
+    if (font) {
+       label.font =font;
+    }
     label.translatesAutoresizingMaskIntoConstraints =NO;
     [superView addSubview:label];
     

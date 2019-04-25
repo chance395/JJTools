@@ -43,6 +43,38 @@ static char rightEdgeKey;
     return CGRectMake(self.titleEdge.left, self.titleEdge.top, self.frame.size.width - self.titleEdge.left - self.titleEdge.right, self.frame.size.height - self.titleEdge.top - self.titleEdge.bottom);
 }
 
++(UIButton *)MAGetCustomButtonWithTitleEdge:(UIEdgeInsets)titleEdge imageEdge:(UIEdgeInsets)imageEdge imageDirection:(SAImageEdgeDirection)imageDirection imageName:(NSString*)imageNameStr Font:(UIFont*)font TextColor:(UIColor*)textColor backGroundColor:(UIColor*)backColor corners:(CGFloat)corners superView:(UIView *)superView target:(id)target action:(SEL)selector masonrySet:(void (^)(UIButton *currentBtn,MASConstraintMaker *make))block
+{
+    JJCustombutton *btn = [JJCustombutton buttonWithType:UIButtonTypeCustom];
+    btn.titleLabel.font = font;
+    btn.titleEdge = titleEdge;
+    btn.imageEdge = imageEdge;
+    btn.imageDirection = imageDirection;
+    if (textColor) {
+        [btn setTitleColor:textColor forState:UIControlStateNormal];
+    }
+    [btn setBackgroundColor:backColor];
+    if (imageNameStr && ![imageNameStr isEqualToString:@""] ) {
+        [btn setImage:[UIImage imageNamed:imageNameStr] forState:UIControlStateNormal];
+    }
+    if (corners>0) {
+        btn.layer.cornerRadius =corners;
+        btn.layer.masksToBounds =YES;
+    }
+    if (target && selector) {
+        [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    }
+    [superView addSubview:btn];
+    btn.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        if (block) {
+            block(btn,make);
+        }
+    }];
+    return btn;
+}
+
 @end
 
 
@@ -146,17 +178,18 @@ static char rightEdgeKey;
     }
     btn.translatesAutoresizingMaskIntoConstraints = NO;
     [superView addSubview:btn];
-    
+
     if (target && selector) {
         [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     }
-    
+
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         if (block) {
             block(btn,make);
         }
     }];
     return btn;
+    
 }
 
 + (UIButton*)MAGetButtonWithBackgroundImage:(NSString*)imageName superView:(UIView*)superView target:(id)target action:(SEL)selector masonrySet:(void(^)(UIButton*currentBtn,MASConstraintMaker*make))block
@@ -181,35 +214,7 @@ static char rightEdgeKey;
     return btn;
 }
 
-+(UIButton *)MAGetCustomButtonWithTitleEdge:(UIEdgeInsets)titleEdge imageEdge:(UIEdgeInsets)imageEdge imageDirection:(SAImageEdgeDirection)imageDirection Font:(UIFont*)font TextColor:(UIColor*)textColor backGroundColor:(UIColor*)backColor corners:(CGFloat)corners superView:(UIView *)superView target:(id)target action:(SEL)selector masonrySet:(void (^)(UIButton *currentBtn,MASConstraintMaker *make))block
-{
-    JJCustombutton *btn = [JJCustombutton buttonWithType:UIButtonTypeCustom];
-    btn.titleLabel.font = font;
-    btn.titleEdge = titleEdge;
-    btn.imageEdge = imageEdge;
-    btn.imageDirection = imageDirection;
-    if (textColor) {
-        [btn setTitleColor:textColor forState:UIControlStateNormal];
-    }
-    [btn setBackgroundColor:backColor];
-    
-    if (corners>0) {
-        btn.layer.cornerRadius =corners;
-        btn.layer.masksToBounds =YES;
-    }
-    if (target && selector) {
-        [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
-    }
-    [superView addSubview:btn];
-    btn.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (block) {
-            block(btn,make);
-        }
-    }];
-    return btn;
-}
+
 
 -(void)JJStartRunSecond:(UIButton *)btn titleColor:(UIColor*)titleColor stringFormat:(NSString *)str finishBlock:(dispatch_block_t)finish
 {

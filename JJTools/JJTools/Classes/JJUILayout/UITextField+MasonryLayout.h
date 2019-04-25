@@ -17,12 +17,28 @@
  @param font font
  @param textColor textColor
  @param placeHolder place
+ @param corners corners
  @param keyboardType type
  @param security   security
  @param superView superView
  @param block block
  @return UITextField
  */
-+(UITextField*)MAGetTextFieldWithFont:(UIFont*)font textColor:(UIColor*)textColor placeHolder:(NSString*)placeHolder keybordType:(UIKeyboardType)keyboardType isSecurity:(BOOL)security superView:(UIView*)superView masonrySet:(void(^)(UITextField*currentTextField,MASConstraintMaker*make))block;
+
++(UITextField*)MAGetTextFieldWithFont:(UIFont*)font textColor:(UIColor*)textColor placeHolder:(NSString*)placeHolder corner:(CGFloat)corners keybordType:(UIKeyboardType)keyboardType isSecurity:(BOOL)security superView:(UIView*)superView masonrySet:(void(^)(UITextField*currentTextField,MASConstraintMaker*make))block;
+
+/**
+ textField
+ 
+ @param font font
+ @param textColor textColor
+ @param placeHolder place
+ @param keyboardType type
+ @param security   security
+ @param superView superView
+ @param block block
+ @return UITextField
+ */
++(UITextField*)MAGetTextFieldWithFont:(UIFont*)font textColor:(UIColor*)textColor placeHolder:(NSString*)placeHolder keybordType:(UIKeyboardType)keyboardType isSecurity:(BOOL)security superView:(UIView*)superView masonrySet:(void(^)(UITextField*currentTextField,MASConstraintMaker*make))block DEPRECATED_MSG_ATTRIBUTE("please use another method with corners");
 
 @end

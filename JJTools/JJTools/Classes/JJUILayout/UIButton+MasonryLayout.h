@@ -26,9 +26,28 @@ typedef void (^actionBtnClickBlock)(NSInteger tagIndex,UIButton * currentBtn);
 /**
  *  默认是UIEdgeInsetsZero,必须指定ImageEdgeDirection，指定前两个参数代表的方向，默认为前两个参数分别代表距上、左的距离，后两个参数为宽和高
  */
-@property (nonatomic, assign) UIEdgeInsets imageEdge;                //默认是UIEdgeInsetsZero,分别传上、左、宽、高
+@property (nonatomic, assign) UIEdgeInsets imageEdge;                //默认是UIEdgeInsetsZero,分别传上、左、下、右
 @property (nonatomic, assign) SAImageEdgeDirection imageDirection;
 @property (nonatomic, assign) UIEdgeInsets titleEdge;                //默认是UIEdgeInsetsZero，分别传上、左、下、右，四个参数都为距button的距离
+
+/**
+ 返回一个图片和文字并列的btn
+ 
+ @param titleEdge title frame
+ @param imageEdge image frame
+ @param imageDirection 设置image的frame的方向
+ @param imageNameStr imageNameStr
+ @param font font
+ @param textColor textColor RGB
+ @param backColor color RGB
+ @param corners corners
+ @param superView superView
+ @param target target
+ @param selector sel
+ @param block block
+ @return btn
+ */
++(JJCustombutton *)MAGetCustomButtonWithTitleEdge:(UIEdgeInsets)titleEdge imageEdge:(UIEdgeInsets)imageEdge imageDirection:(SAImageEdgeDirection)imageDirection imageName:(NSString*)imageNameStr Font:(UIFont*)font TextColor:(UIColor*)textColor backGroundColor:(UIColor*)backColor corners:(CGFloat)corners superView:(UIView *)superView target:(id)target action:(SEL)selector masonrySet:(void (^)(UIButton *currentBtn,MASConstraintMaker *make))block;
 
 @end
 
@@ -66,23 +85,7 @@ typedef void (^actionBtnClickBlock)(NSInteger tagIndex,UIButton * currentBtn);
 
 + (UIButton*)MAGetButtonWithBackgroundImage:(NSString*)imageName superView:(UIView*)superView target:(id)target action:(SEL)selector masonrySet:(void(^)(UIButton*currentBtn,MASConstraintMaker*make))block;
 
-/**
- 返回一个图片和文字并列的btn
 
- @param titleEdge title frame
- @param imageEdge image frame
- @param imageDirection 设置image的frame的方向
- @param font font
- @param textColor textColor RGB
- @param backColor color RGB
- @param corners corners
- @param superView superView
- @param target target
- @param selector sel
- @param block block
- @return btn
- */
-+(UIButton *)MAGetCustomButtonWithTitleEdge:(UIEdgeInsets)titleEdge imageEdge:(UIEdgeInsets)imageEdge imageDirection:(SAImageEdgeDirection)imageDirection Font:(UIFont*)font TextColor:(UIColor*)textColor backGroundColor:(UIColor*)backColor corners:(CGFloat)corners superView:(UIView *)superView target:(id)target action:(SEL)selector masonrySet:(void (^)(UIButton *currentBtn,MASConstraintMaker *make))block;
 
 
 /**

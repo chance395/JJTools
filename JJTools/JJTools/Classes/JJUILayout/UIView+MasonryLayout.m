@@ -11,15 +11,11 @@
 
 @implementation UIView (MasonryLayout)
 
-+ (UIView*)MAGetUIViewWithBackgroundColor:(UIColor*)viewColor cornerRadius:(CGFloat)Corners superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block
++ (UIView*)MAGetUIViewWithBackgroundColor:(UIColor*)viewColor superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block
 {
     UIView *view =[[UIView alloc]init];
     if (viewColor) {
         view.backgroundColor =viewColor;
-    }
-    if (Corners>0) {
-        view.layer.cornerRadius =Corners;
-        view.layer.masksToBounds =YES;
     }
     view.translatesAutoresizingMaskIntoConstraints =NO;
     [superView addSubview:view];
@@ -32,25 +28,26 @@
     return view;
 }
 
-+ (UIView*)MAGetUIViewWithHexBackgroundColor:(NSString*)hexStr cornerRadius:(CGFloat)Corners superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block
++ (UIView*)MAGetUIViewWithHexBackgroundColor:(NSString*)hexStr superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block
 {
-    UIView *view =[[UIView alloc]init];
-    if (hexStr) {
-        view.backgroundColor =[UIColor JJColorWithHexStr:hexStr];
-    }
-    if (Corners>0) {
-        view.layer.cornerRadius =Corners;
-        view.layer.masksToBounds =YES;
-    }
-    view.translatesAutoresizingMaskIntoConstraints =NO;
-    [superView addSubview:view];
-    
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (block) {
-            block(view,make);
-        }
-    }];
-    return view;
+   return   [UIView MAGetUIViewWithBackgroundColor:[UIColor JJColorWithHexStr:hexStr] superView:superView masonrySet:block];
 }
+
++ (UIView*)MAGetUIViewWithBackgroundColor:(UIColor*)viewColor corner:(CGFloat)corners superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block
+{
+    UIView *View =[UITextView MAGetUIViewWithBackgroundColor:viewColor superView:superView masonrySet:block];
+    if (corners) {
+        View.layer.cornerRadius =corners;
+        View.layer.masksToBounds =YES;
+    }
+    return View;
+}
+
++ (UIView*)MAGetUIViewWithHexBackgroundColor:(NSString*)viewColorStr corner:(CGFloat)corners superView:(UIView*)superView masonrySet:(void(^)(UIView*currentView,MASConstraintMaker*make))block;
+
+{
+    return [UIView MAGetUIViewWithBackgroundColor:[UIColor JJColorWithHexStr:viewColorStr] corner:corners superView:superView masonrySet:block];
+}
+
 
 @end
