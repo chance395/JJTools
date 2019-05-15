@@ -15,6 +15,7 @@
 #import "UIView+MasonryLayout.h"
 #import "UITextField+MasonryLayout.h"
 #import "UIImage+JJTools.h"
+#import "UITextView+MasonryLayout.h"
 
 //baseView
 #import "JJBaseTableViewCell.h"

@@ -10,7 +10,7 @@ include some category based on masonry for create UI  and some others useful too
   s.homepage     = "https://github.com/chance395/JJTools"
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
-  s.author             = { "Brain" => "895176298@qq.com" }
+  s.author             = { "Brian" => "895176298@qq.com" }
   s.ios.deployment_target = "8.0"
 
 
@@ -30,6 +30,14 @@ include some category based on masonry for create UI  and some others useful too
    s.dependency 'AFNetworking'
    s.dependency 'MBProgressHUD'
    s.dependency 'UICKeyChainStore'
+   s.dependency 'SDWebImage'
+   s.dependency 'MJRefresh'
+   s.dependency 'IQKeyboardManager'
+   s.dependency 'ReactiveObjC'
+   s.dependency 'MJExtension'
+   s.dependency 'Bugly'
+   s.dependency 'HXPhotoPicker'
+   s.dependency 'GKCover'
 
 s.requires_arc = true
 
@@ -45,6 +53,12 @@ s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULE
   ss.source_files = 'JJTools/JJTools/Classes/JJModel/*'
   
   end
+
+ s.subspec 'JJEncryptions' do |ss|
+  ss.source_files = 'JJTools/JJTools/Classes/JJEncryptions/*'
+  
+  end
+
 
  s.subspec 'JJFiles' do |ss|
   ss.source_files = 'JJTools/JJTools/Classes/JJFiles/*'

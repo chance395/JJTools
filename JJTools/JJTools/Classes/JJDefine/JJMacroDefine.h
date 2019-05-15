@@ -64,20 +64,7 @@
 #define normalFont(f) [UIFont systemFontOfSize:f]
 #define boldFont(f)  [UIFont boldSystemFontOfSize:f]
 //----------------------系统----------------------------
-//主要单例
-#define UserDefaults                                [NSUserDefaults standardUserDefaults]
-//will return a object
-#define UserDefaultsGetter(key)\
-^(){\
-return [UserDefaults   objectForKey:key];\
-}()
 
-#define UserDefaultsSetter(object,key)\
-^(){\
-NSCAssert(object != nil, @"object can not be nil");\
-[UserDefaults  setObject:object forKey:key];\
-[UserDefaults synchronize];\
-}()
 
 #define NotificationCenter                          [NSNotificationCenter defaultCenter]
 #define SharedApplication                           [UIApplication sharedApplication]
@@ -103,18 +90,6 @@ NSCAssert(object != nil, @"object can not be nil");\
 //获取应用名称
 #define APP_NAME                          [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 
-
-
-//防止崩溃
-#define getStringValue(x)                    x==nil?@"":[NSString stringWithFormat:@"%@",x]
-
-
-//-------------------Weak & Strong----------------------
-
-#define weakSelf(VC) __weak typeof(VC)weakSelf
-#define Weak(obj) autoreleasepool{} __weak typeof(obj) w##obj = obj;
-#define Strong(obj) autoreleasepool{} __strong typeof(obj) obj = w##obj;//配套上面的方法使用
-
 //----------------------图片----------------------------
 
 //读取本地图片
@@ -127,5 +102,33 @@ NSCAssert(object != nil, @"object can not be nil");\
 
 #define ImageNamed(fileName) [UIImage imageNamed:fileName]
 
+
+
+//防止崩溃
+#define getStringValue(x)                    x==nil?@"":[NSString stringWithFormat:@"%@",x]
+
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+
+//数组是否为空
+#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+
+//字典是否为空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+
+//主要单例
+#define UserDefaults                                [NSUserDefaults standardUserDefaults]
+//will return a object
+#define UserDefaultsGetter(key)\
+^(){\
+return [UserDefaults   objectForKey:key];\
+}()
+
+#define UserDefaultsSetter(object,key)\
+^(){\
+NSCAssert(object != nil, @"object can not be nil");\
+[UserDefaults  setObject:object forKey:key];\
+[UserDefaults synchronize];\
+}()
 
 #endif /* JJMacroDefine_h */

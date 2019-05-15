@@ -14,9 +14,14 @@
 		847857F9226EA7CD003AA9D5 /* UILabel+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 847857F4226EA7CD003AA9D5 /* UILabel+MasonryLayout.m */; };
 		847857FA226EA7CD003AA9D5 /* UIButton+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 847857F5226EA7CD003AA9D5 /* UIButton+MasonryLayout.m */; };
 		847857FD226EA7DF003AA9D5 /* UITextView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 847857FB226EA7DE003AA9D5 /* UITextView+MasonryLayout.m */; };
+		848FBB92228C731200590168 /* JJTemplates.zip in Resources */ = {isa = PBXBuildFile; fileRef = 848FBB91228C731200590168 /* JJTemplates.zip */; };
+		848FBB9E228C74B400590168 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FBB94228C74B400590168 /* NSString+Hash.m */; };
+		848FBB9F228C74B400590168 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FBB96228C74B400590168 /* RSA.m */; };
+		848FBBA0228C74B400590168 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FBB97228C74B400590168 /* NSString+Encryption.m */; };
+		848FBBA1228C74B400590168 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FBB9A228C74B400590168 /* Base64.m */; };
+		848FBBA2228C74B400590168 /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FBB9B228C74B400590168 /* CocoaSecurity.m */; };
 		934F0CE595FB53E686ECF1E1 /* libPods-JJTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */; };
 		F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1021FB083600EBC626 /* JJConstants.m */; };
-		F77FAC5D21FB083600EBC626 /* template.zip in Resources */ = {isa = PBXBuildFile; fileRef = F77FAC1721FB083600EBC626 /* template.zip */; };
 		F77FAC5E21FB083600EBC626 /* JJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1921FB083600EBC626 /* JJBaseModel.m */; };
 		F77FAC5F21FB083600EBC626 /* JJDispatch_queue.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1C21FB083600EBC626 /* JJDispatch_queue.m */; };
 		F77FAC6021FB083600EBC626 /* JJTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1F21FB083600EBC626 /* JJTool.m */; };
@@ -85,6 +90,17 @@
 		847857F5226EA7CD003AA9D5 /* UIButton+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MasonryLayout.m"; sourceTree = "<group>"; };
 		847857FB226EA7DE003AA9D5 /* UITextView+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+MasonryLayout.m"; sourceTree = "<group>"; };
 		847857FC226EA7DE003AA9D5 /* UITextView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+MasonryLayout.h"; sourceTree = "<group>"; };
+		848FBB91228C731200590168 /* JJTemplates.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = JJTemplates.zip; sourceTree = "<group>"; };
+		848FBB94228C74B400590168 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		848FBB95228C74B400590168 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		848FBB96228C74B400590168 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		848FBB97228C74B400590168 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
+		848FBB98228C74B400590168 /* CocoaSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaSecurity.h; sourceTree = "<group>"; };
+		848FBB99228C74B400590168 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		848FBB9A228C74B400590168 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		848FBB9B228C74B400590168 /* CocoaSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaSecurity.m; sourceTree = "<group>"; };
+		848FBB9C228C74B400590168 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
+		848FBB9D228C74B400590168 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
 		CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77FAC1021FB083600EBC626 /* JJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJConstants.m; sourceTree = "<group>"; };
 		F77FAC1121FB083600EBC626 /* JJUrlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJUrlDefine.h; sourceTree = "<group>"; };
@@ -92,7 +108,6 @@
 		F77FAC1321FB083600EBC626 /* JJFontDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJFontDefine.h; sourceTree = "<group>"; };
 		F77FAC1421FB083600EBC626 /* JJMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMacroDefine.h; sourceTree = "<group>"; };
 		F77FAC1521FB083600EBC626 /* JJConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJConstants.h; sourceTree = "<group>"; };
-		F77FAC1721FB083600EBC626 /* template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = template.zip; sourceTree = "<group>"; };
 		F77FAC1921FB083600EBC626 /* JJBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseModel.m; sourceTree = "<group>"; };
 		F77FAC1A21FB083600EBC626 /* JJBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseModel.h; sourceTree = "<group>"; };
 		F77FAC1C21FB083600EBC626 /* JJDispatch_queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJDispatch_queue.m; sourceTree = "<group>"; };
@@ -198,6 +213,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		848FBB93228C74B400590168 /* JJEncryptions */ = {
+			isa = PBXGroup;
+			children = (
+				848FBB94228C74B400590168 /* NSString+Hash.m */,
+				848FBB95228C74B400590168 /* Base64.h */,
+				848FBB96228C74B400590168 /* RSA.m */,
+				848FBB97228C74B400590168 /* NSString+Encryption.m */,
+				848FBB98228C74B400590168 /* CocoaSecurity.h */,
+				848FBB99228C74B400590168 /* NSString+Hash.h */,
+				848FBB9A228C74B400590168 /* Base64.m */,
+				848FBB9B228C74B400590168 /* CocoaSecurity.m */,
+				848FBB9C228C74B400590168 /* NSString+Encryption.h */,
+				848FBB9D228C74B400590168 /* RSA.h */,
+			);
+			path = JJEncryptions;
+			sourceTree = "<group>";
+		};
 		BDF4F7C41309E02459B19664 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +241,7 @@
 		F77FAC0E21FB083600EBC626 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				848FBB93228C74B400590168 /* JJEncryptions */,
 				F77FAC0F21FB083600EBC626 /* JJDefine */,
 				F77FAC1621FB083600EBC626 /* JJFiles */,
 				F77FAC1821FB083600EBC626 /* JJModel */,
@@ -242,7 +275,7 @@
 		F77FAC1621FB083600EBC626 /* JJFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F77FAC1721FB083600EBC626 /* template.zip */,
+				848FBB91228C731200590168 /* JJTemplates.zip */,
 			);
 			path = JJFiles;
 			sourceTree = "<group>";
@@ -542,9 +575,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848FBB92228C731200590168 /* JJTemplates.zip in Resources */,
 				F7D7FBF921F83DBC0033C4B0 /* LaunchScreen.storyboard in Resources */,
 				F7CF5B6B223965FB0069897C /* JJToolsSource.bundle in Resources */,
-				F77FAC5D21FB083600EBC626 /* template.zip in Resources */,
 				F7D7FBF621F83DBC0033C4B0 /* Assets.xcassets in Resources */,
 				F7D7FBF421F83DBA0033C4B0 /* Main.storyboard in Resources */,
 			);
@@ -604,11 +637,14 @@
 				F77FAC6321FB083600EBC626 /* NSString+JJTools.m in Sources */,
 				847857F8226EA7CD003AA9D5 /* UIImageView+MasonryLayout.m in Sources */,
 				F7D7FBF121F83DBA0033C4B0 /* ViewController.m in Sources */,
+				848FBBA0228C74B400590168 /* NSString+Encryption.m in Sources */,
 				F7BBBD4D223907F2008BF2BC /* JJWKWebViewController.m in Sources */,
 				F77FAC6221FB083600EBC626 /* UIColor+JJTools.m in Sources */,
 				F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */,
 				F77FAC7021FB083600EBC626 /* JJSystemCall.m in Sources */,
+				848FBBA1228C74B400590168 /* Base64.m in Sources */,
 				F77FAC6521FB083600EBC626 /* JJBaseLoginSecondViewController.m in Sources */,
+				848FBB9E228C74B400590168 /* NSString+Hash.m in Sources */,
 				F77FAC6721FB083600EBC626 /* JJBaseNavigationViewController.m in Sources */,
 				F77FAC6B21FB083600EBC626 /* JJBaseComponent.m in Sources */,
 				847857F6226EA7CD003AA9D5 /* UITextField+MasonryLayout.m in Sources */,
@@ -622,6 +658,7 @@
 				F77FAC5E21FB083600EBC626 /* JJBaseModel.m in Sources */,
 				F77FAC7321FB083600EBC626 /* NSObjectSafe.m in Sources */,
 				F7D7FBFC21F83DBC0033C4B0 /* main.m in Sources */,
+				848FBB9F228C74B400590168 /* RSA.m in Sources */,
 				F77FAC6A21FB083600EBC626 /* UIScrollView+EmptyDataSet.m in Sources */,
 				84382AF12268D9BC00048ED9 /* JJBaseCollectionReusableView.m in Sources */,
 				F77FAC7221FB083600EBC626 /* JJBaseRequest.m in Sources */,
@@ -631,6 +668,7 @@
 				F77FAC5F21FB083600EBC626 /* JJDispatch_queue.m in Sources */,
 				847857F9226EA7CD003AA9D5 /* UILabel+MasonryLayout.m in Sources */,
 				F77FAC6C21FB083600EBC626 /* JJBaseTableViewCell.m in Sources */,
+				848FBBA2228C74B400590168 /* CocoaSecurity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
