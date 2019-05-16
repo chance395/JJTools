@@ -38,6 +38,7 @@ include some category based on masonry for create UI  and some others useful too
    s.dependency 'Bugly'
    s.dependency 'HXPhotoPicker'
    s.dependency 'GKCover'
+   s.dependency 'zhPopupController'
 
 s.requires_arc = true
 

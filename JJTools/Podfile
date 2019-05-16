@@ -1,12 +1,18 @@
 platform :ios,'8.0'
 target 'JJTools' do
-
+  
 pod 'AFNetworking'
-
 pod 'Masonry'
-
 pod 'MBProgressHUD'
-
 pod 'UICKeyChainStore'
+pod 'SDWebImage'
+pod 'MJRefresh'
+pod 'IQKeyboardManager'
+pod 'ReactiveObjC'
+pod 'MJExtension'
+pod 'Bugly'
+pod 'HXPhotoPicker'
+pod 'GKCover'
+pod 'zhPopupController'
 
 end
