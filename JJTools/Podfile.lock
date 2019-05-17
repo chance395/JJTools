@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Bugly (2.5.0)
   - GKCover (2.5.4)
   - HXPhotoPicker (2.2.9):
     - SDWebImage (~> 4.4.6)
@@ -40,7 +39,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - Bugly
   - GKCover
   - HXPhotoPicker
   - IQKeyboardManager
@@ -56,7 +54,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
-    - Bugly
     - GKCover
     - HXPhotoPicker
     - IQKeyboardManager
@@ -74,7 +71,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   GKCover: 5340b5d73adf127a72a4a7649fe3bc6f734f7d23
   HXPhotoPicker: 9ddb80fba3b591c4b5c3b80b0498ee3893d80b5a
   IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
@@ -90,6 +86,6 @@ SPEC CHECKSUMS:
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   zhPopupController: 4e6bd734062cb9c7ebe8113568550bade168bed7
 
-PODFILE CHECKSUM: 8c0f1c329f8aa422e8100eeeb0535d5f76b78944
+PODFILE CHECKSUM: 19ffe4075437b68ca7b2b75607abb94618145277
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.5.3

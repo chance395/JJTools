@@ -609,7 +609,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JJTools/Pods-JJTools-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-JJTools/Pods-JJTools-resources.sh",
 				"${PODS_ROOT}/HXPhotoPicker/照片选择器/HXPhotoPicker/Resource/HXPhotoPicker.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
@@ -624,7 +624,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JJTools/Pods-JJTools-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JJTools/Pods-JJTools-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D24A9225BE4F00FDEE17DB7 /* [CP] Check Pods Manifest.lock */ = {

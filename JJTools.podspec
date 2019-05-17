@@ -35,7 +35,6 @@ include some category based on masonry for create UI  and some others useful too
    s.dependency 'IQKeyboardManager'
    s.dependency 'ReactiveObjC'
    s.dependency 'MJExtension'
-   s.dependency 'Bugly'
    s.dependency 'HXPhotoPicker'
    s.dependency 'GKCover'
    s.dependency 'zhPopupController'
