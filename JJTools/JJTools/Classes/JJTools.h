@@ -25,6 +25,7 @@
 #import "JJBaseTabBarViewController.h"
 #import "JJBaseTableViewHeaderFooterView.h"
 #import "JJBaseCollectionViewCell.h"
+#import "JJBaseCollectionReusableView.h"
 
 //category
 #import "NSString+JJTools.h"
