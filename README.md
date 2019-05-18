@@ -27,3 +27,13 @@ include some category based on masonry for create UI  and some others useful too
 12.MRC
 项目中用到的MRC文件，在safekit中使用runtime交换方法，当点击Home键进入后台时键盘这里会返回一个数组，使用ARC会直接崩溃;
 
+You want to add pod 'JJTools', '~> 1.2' similar to the following to your Podfile:
+
+target 'MyApp' do
+  pod 'JJTools'
+end
+Then run a pod install inside your terminal, or from CocoaPods.app.
+
+Alternatively to give it a test run, run the command:
+
+pod try JJTools
