@@ -79,15 +79,31 @@ if (completion) {
  */
 - (void)gotoSettings{
     
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]]) {
-        
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]];
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    if ([app canOpenURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]]) {
+        if (@available(iOS 10.0, *)) {
+            [app openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString] options:@{} completionHandler:^(BOOL success) {
+            }];
+        } else {
+            [app openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]];
+            
+        }
     }
 }
 
 - (void)goItunesToUpdateApp {
     
+    UIApplication *app = [UIApplication sharedApplication];
+    if (@available(iOS 10.0, *)) {
+        [app openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/app/id%@?mt=8", @"1156341826"]]options:@{} completionHandler:^(BOOL success) {
+        }];
+    } else {
+        [app openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/app/id%@?mt=8", @"1156341826"]]];
+        
+    }
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://itunes.apple.com/app/id%@?mt=8", @"1156341826"]]];
+    
 }
 
 - (void)judgePhotoPermissionWithCompletion:(void (^)(void))completion

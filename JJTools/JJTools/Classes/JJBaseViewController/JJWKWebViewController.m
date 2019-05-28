@@ -392,9 +392,45 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 //服务器开始请求的时候调用
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
-    [self pushCurrentSnapshotViewWithRequest:navigationAction.request];
+    if(webView != self.wkWebView) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+        return;
+    }
+    NSURL  * url = navigationAction.request.URL;
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    //    appstorte
+    if ([url.absoluteString containsString:@"itunes.apple.com"])
+    {
+        if ([app canOpenURL:url])
+        {
+            if (@available(iOS 10.0, *)) {
+                [app openURL:url options:@{} completionHandler:^(BOOL success) {
+                    
+                }];
+            } else {
+                [app openURL:url];
+            }
+            decisionHandler(WKNavigationActionPolicyCancel);
+            return;
+        }
+    }
+    if (!navigationAction.targetFrame.isMainFrame) {
+        [self.wkWebView loadRequest:navigationAction.request];
+    }
+    //    appstore的外的包
+    if ([url.absoluteString containsString:@"itms-services://"]) {
+        if (@available(iOS 10.0, *)) {
+            [app openURL:url options:@{} completionHandler:^(BOOL success) {
+                
+            }];
+        } else {
+            [app openURL:url];
+        }
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
+    }
     decisionHandler(WKNavigationActionPolicyAllow);
-    NSLog(@"navigationAction.request.URL--------->>>>>%@",navigationAction.request.URL);
 }
 
 
