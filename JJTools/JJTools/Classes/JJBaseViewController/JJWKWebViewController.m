@@ -69,6 +69,9 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     {
         [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.absUrlStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]];
     }
+    if (self.resetBottom) {
+        [self resetBottomView];
+    }
 }
 
 #pragma mark-- Lazy loading
@@ -135,7 +138,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     if (!_bottomView) {
         _bottomView =[[UIView alloc]initWithFrame:CGRectZero];
-        _bottomView.backgroundColor =Color_TableViewColor;
+        _bottomView.backgroundColor =Color_White;
     }
     return _bottomView;
 }
@@ -267,7 +270,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         
         image =[UIImage imageNamed:@"wk_activeClear" inBundle:bundle compatibleWithTraitCollection:nil];
         
-        self.bottom_clearcacheBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+        self.bottom_clearcacheBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemClearBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
             make.left.equalTo(self.bottom_refreshBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
@@ -312,21 +315,34 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 -(void)toolBarItemClearBtnClick:(UIButton*)sender
 {
-    //清理缓存技术
-    if (@available(iOS 9.0, *)) {
-        NSArray * types =@[WKWebsiteDataTypeMemoryCache,WKWebsiteDataTypeDiskCache]; // 9.0之后才有的
-        NSSet *websiteDataTypes = [NSSet setWithArray:types];
-        NSDate *dateFrom = [NSDate dateWithTimeIntervalSince1970:0];
-        [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes modifiedSince:dateFrom completionHandler:^{
-            
-        }];
-    }else{
-        NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) objectAtIndex:0];
-        NSString *cookiesFolderPath = [libraryPath stringByAppendingString:@"/Cookies"];
-        NSLog(@"%@", cookiesFolderPath);
-        NSError *errors;
-        [[NSFileManager defaultManager] removeItemAtPath:cookiesFolderPath error:&errors];
-    }
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"警告" message:@"将清除缓存数据" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        //清理缓存技术
+        if (@available(iOS 9.0, *)) {
+            NSArray * types =@[WKWebsiteDataTypeMemoryCache,WKWebsiteDataTypeDiskCache]; // 9.0之后才有的
+            NSSet *websiteDataTypes = [NSSet setWithArray:types];
+            NSDate *dateFrom = [NSDate dateWithTimeIntervalSince1970:0];
+            [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes modifiedSince:dateFrom completionHandler:^{
+                
+            }];
+        }else{
+            NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+            NSString *cookiesFolderPath = [libraryPath stringByAppendingString:@"/Cookies"];
+            NSLog(@"%@", cookiesFolderPath);
+            NSError *errors;
+            [[NSFileManager defaultManager] removeItemAtPath:cookiesFolderPath error:&errors];
+        }
+        
+    }]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSLog(@"点击取消");
+        
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)refreshButtonsStatus
@@ -444,7 +460,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 // 内容加载失败时候调用
 -(void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
-    NSLog(@"页面加载超时");
+    NSLog(@"页面加载失败");
 }
 
 //跳转失败的时候调用
@@ -592,5 +608,26 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     }
 }
 
+-(void)resetBottomView
+{
+    [self.wkWebView mas_updateConstraints:^(MASConstraintMaker *make) {
+        
+        make.bottom.equalTo(self.view.mas_bottom).mas_offset(!self.isHideBottom ? -wkwebViewBottomViewHeight :0);
+    }];
+    
+    if (!self.isHideBottom)
+    {
+        [self.view addSubview:self.bottomView];
+        [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.and.right.bottom.equalTo(self.view);
+            make.height.mas_equalTo(wkwebViewBottomViewHeight);
+        }];
+        [self settupBottomView];
+    }
+    else
+    {
+        [self.bottomView removeFromSuperview];
+    }
+}
 
 @end

@@ -12,17 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JJWKWebViewController :UIViewController
 
-@property (nonatomic,assign,getter=isHideNav) BOOL    HideNav;
-
 @property (nonatomic,strong) NSString *absUrlStr;
-
 @property (nonatomic,strong) UIColor *progressTintColor;
 
+@property (nonatomic,assign,getter=isHideNav) BOOL    HideNav;
 @property (nonatomic,assign,getter=isHideBottom) BOOL  HideBottom;
-
 @property (nonatomic,assign,getter=isHideLeftItems) BOOL  HideLeftItems;
-
 @property (nonatomic,assign,getter=isCancelSuspension) BOOL CancelSuspension;
+@property (nonatomic, assign)                            BOOL resetBottom;
 
 @end
 
