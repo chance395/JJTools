@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843319FA22A96FFA006DA25F /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 843319F922A96FFA006DA25F /* GTMBase64.m */; };
+		843319FD22A97010006DA25F /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 843319FC22A97010006DA25F /* NSData+AES.m */; };
+		8434915322AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8434915222AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.m */; };
 		84382AF12268D9BC00048ED9 /* JJBaseCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84382AF02268D9BC00048ED9 /* JJBaseCollectionReusableView.m */; };
 		847857F6226EA7CD003AA9D5 /* UITextField+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 847857EC226EA7CC003AA9D5 /* UITextField+MasonryLayout.m */; };
 		847857F7226EA7CD003AA9D5 /* UIView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 847857EF226EA7CC003AA9D5 /* UIView+MasonryLayout.m */; };
@@ -76,6 +79,13 @@
 
 /* Begin PBXFileReference section */
 		1C20AC76ADF976D68B65DBB4 /* Pods-JJTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJTools/Pods-JJTools.debug.xcconfig"; sourceTree = "<group>"; };
+		843319F722A96FF9006DA25F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		843319F822A96FF9006DA25F /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		843319F922A96FFA006DA25F /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		843319FB22A97010006DA25F /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		843319FC22A97010006DA25F /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		8434915122AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJBaseTableView+MasonryLayout.h"; sourceTree = "<group>"; };
+		8434915222AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJBaseTableView+MasonryLayout.m"; sourceTree = "<group>"; };
 		84382AEF2268D9BC00048ED9 /* JJBaseCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseCollectionReusableView.h; path = ../../../../../marsPlan/Pods/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.h; sourceTree = "<group>"; };
 		84382AF02268D9BC00048ED9 /* JJBaseCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseCollectionReusableView.m; path = ../../../../../marsPlan/Pods/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.m; sourceTree = "<group>"; };
 		847857EC226EA7CC003AA9D5 /* UITextField+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MasonryLayout.m"; sourceTree = "<group>"; };
@@ -216,6 +226,11 @@
 		848FBB93228C74B400590168 /* JJEncryptions */ = {
 			isa = PBXGroup;
 			children = (
+				843319FB22A97010006DA25F /* NSData+AES.h */,
+				843319FC22A97010006DA25F /* NSData+AES.m */,
+				843319F822A96FF9006DA25F /* GTMBase64.h */,
+				843319F922A96FFA006DA25F /* GTMBase64.m */,
+				843319F722A96FF9006DA25F /* GTMDefines.h */,
 				848FBB94228C74B400590168 /* NSString+Hash.m */,
 				848FBB95228C74B400590168 /* Base64.h */,
 				848FBB96228C74B400590168 /* RSA.m */,
@@ -397,6 +412,8 @@
 		F77FAC4F21FB083600EBC626 /* JJUILayout */ = {
 			isa = PBXGroup;
 			children = (
+				8434915122AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.h */,
+				8434915222AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.m */,
 				847857FC226EA7DE003AA9D5 /* UITextView+MasonryLayout.h */,
 				847857FB226EA7DE003AA9D5 /* UITextView+MasonryLayout.m */,
 				847857F0226EA7CC003AA9D5 /* UIButton+MasonryLayout.h */,
@@ -670,6 +687,7 @@
 				F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */,
 				F77FAC7021FB083600EBC626 /* JJSystemCall.m in Sources */,
 				848FBBA1228C74B400590168 /* Base64.m in Sources */,
+				843319FD22A97010006DA25F /* NSData+AES.m in Sources */,
 				F77FAC6521FB083600EBC626 /* JJBaseLoginSecondViewController.m in Sources */,
 				848FBB9E228C74B400590168 /* NSString+Hash.m in Sources */,
 				F77FAC6721FB083600EBC626 /* JJBaseNavigationViewController.m in Sources */,
@@ -680,6 +698,7 @@
 				F77FAC6F21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m in Sources */,
 				F77FAC6D21FB083600EBC626 /* JJBaseTableView.m in Sources */,
 				F77FAC6621FB083600EBC626 /* JJBaseTabBarViewController.m in Sources */,
+				8434915322AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.m in Sources */,
 				F77FAC6421FB083600EBC626 /* UIDevice+JJDevice.m in Sources */,
 				F77FAC7121FB083600EBC626 /* JJReachability.m in Sources */,
 				F77FAC5E21FB083600EBC626 /* JJBaseModel.m in Sources */,
@@ -693,6 +712,7 @@
 				F7D7FBEE21F83DBA0033C4B0 /* AppDelegate.m in Sources */,
 				F77FAC7921FB083600EBC626 /* UIImage+JJTools.m in Sources */,
 				F77FAC5F21FB083600EBC626 /* JJDispatch_queue.m in Sources */,
+				843319FA22A96FFA006DA25F /* GTMBase64.m in Sources */,
 				847857F9226EA7CD003AA9D5 /* UILabel+MasonryLayout.m in Sources */,
 				F77FAC6C21FB083600EBC626 /* JJBaseTableViewCell.m in Sources */,
 				848FBBA2228C74B400590168 /* CocoaSecurity.m in Sources */,
