@@ -12,7 +12,7 @@
 #import "JJColorDefine.h"
 #import "UIButton+MasonryLayout.h"
 #define  wkwebViewBottomViewHeight  44
-#define  wkwebViewMargin 32
+#define  wkwebViewMargin 26
 #define  wkwebViewBtnWidth 23
 
 static void *WkwebBrowserContext = &WkwebBrowserContext;
@@ -28,7 +28,9 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 @property (nonatomic,strong) UIButton        *bottom_forwardBtn;
 @property (nonatomic,strong) UIButton        *bottom_refreshBtn;
 @property (nonatomic,strong) UIButton        *bottom_clearcacheBtn;
+@property (nonatomic,strong) UIButton        *bottom_safariBtn;
 @property (nonatomic,strong) UIView          *bottomView;
+@property (nonatomic,strong) NSURL           *currentUrl;
 @end
 
 @implementation JJWKWebViewController
@@ -235,7 +237,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
             make.centerY.equalTo(self.bottomView);
             make.left.mas_equalTo(wkwebViewMargin);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
-            [currentBtn setEnlargedEdge:30];
+            [currentBtn setEnlargedEdge:10];
             [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
@@ -243,9 +245,9 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         
         self.bottom_backBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemBackBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
-            make.left.equalTo(self.bottom_homeBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
+            make.left.equalTo(self.bottom_homeBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-6*wkwebViewBtnWidth)/5);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
-            [currentBtn setEnlargedEdge:30];
+            [currentBtn setEnlargedEdge:10];
             [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
@@ -253,18 +255,18 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         
         self.bottom_forwardBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemForwardBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
-            make.left.equalTo(self.bottom_backBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
+            make.left.equalTo(self.bottom_backBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-6*wkwebViewBtnWidth)/5);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
-            [currentBtn setEnlargedEdge:30];
+            [currentBtn setEnlargedEdge:10];
             [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
         image =[UIImage imageNamed:@"wk_activeRefresh" inBundle:bundle compatibleWithTraitCollection:nil];
         self.bottom_refreshBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemRefreshBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
-            make.left.equalTo(self.bottom_forwardBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
+            make.left.equalTo(self.bottom_forwardBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-6*wkwebViewBtnWidth)/5);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
-            [currentBtn setEnlargedEdge:30];
+            [currentBtn setEnlargedEdge:10];
             [currentBtn setImage:image forState:UIControlStateNormal];
         }];
         
@@ -272,10 +274,21 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         
         self.bottom_clearcacheBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemClearBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
             make.centerY.equalTo(self.bottomView);
-            make.left.equalTo(self.bottom_refreshBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-5*wkwebViewBtnWidth)/4);
+            make.left.equalTo(self.bottom_refreshBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-6*wkwebViewBtnWidth)/5);
             make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
+            [currentBtn setEnlargedEdge:10];
             [currentBtn setImage:image forState:UIControlStateNormal];
         }];
+        
+        image =[UIImage imageNamed:@"wk_safari" inBundle:bundle compatibleWithTraitCollection:nil];
+        self.bottom_safariBtn =[UIButton MAGetButtonWithImage:@"" superView:self.bottomView target:self action:@selector(toolBarItemSafariBtnClick:) masonrySet:^(UIButton *currentBtn, MASConstraintMaker *make) {
+            make.centerY.equalTo(self.bottomView);
+            make.left.equalTo(self.bottom_clearcacheBtn.mas_right).mas_offset((SCREEN_WIDTH-2*wkwebViewMargin-6*wkwebViewBtnWidth)/5);
+            make.width.with.height.mas_equalTo(wkwebViewBtnWidth);
+            [currentBtn setEnlargedEdge:10];
+            [currentBtn setImage:image forState:UIControlStateNormal];
+        }];
+        
     }
 }
 
@@ -311,6 +324,21 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     [self.wkWebView reload];
     [self refreshButtonsStatus];
+}
+
+-(void)toolBarItemSafariBtnClick:(UIButton*)sender
+{
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    if ([app canOpenURL:self.currentUrl]) {
+        if (@available(iOS 10.0, *)) {
+            [app openURL:self.currentUrl options:@{} completionHandler:^(BOOL success) {
+            }];
+        } else {
+            [app openURL:self.currentUrl];
+            
+        }
+    }
 }
 
 -(void)toolBarItemClearBtnClick:(UIButton*)sender
@@ -413,6 +441,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         return;
     }
     NSURL  * url = navigationAction.request.URL;
+    self.currentUrl =url;
     UIApplication *app = [UIApplication sharedApplication];
     
     //    appstorte
