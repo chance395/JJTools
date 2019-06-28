@@ -21,11 +21,11 @@
     }
     label.textAlignment =textAlignment;
     if (font) {
-       label.font =font;
+        label.font =font;
     }
     label.translatesAutoresizingMaskIntoConstraints =NO;
     [superView addSubview:label];
-    
+    [label configLongPressGestureRecognizer];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         if (block) {
             block(label,make);
@@ -63,5 +63,37 @@
     size =[self.text boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:dic context:nil].size;
     return size.width;
 }
+
+#pragma mark--configLongPress
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+-(void)configLongPressGestureRecognizer
+{
+    self.userInteractionEnabled = YES;
+    [self addGestureRecognizer:[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress)]];
+}
+
+- (void)longPress {
+    [self becomeFirstResponder];
+    UIMenuController * menu = [UIMenuController sharedMenuController];
+    UIMenuItem * item1 = [[UIMenuItem alloc]initWithTitle:@"Copy" action:@selector(copyText:)];
+    menu.menuItems = @[item1];
+    [menu setTargetRect:self.bounds inView:self];
+    [menu setMenuVisible:YES animated:YES];
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    if(action == @selector(copyText:)) return YES;
+    return NO;
+}
+
+- (void)copyText:(UIMenuController *)menu {
+    if (!self.text) return;
+    UIPasteboard * paste = [UIPasteboard generalPasteboard];
+    paste.string = self.text;
+}
+
 
 @end

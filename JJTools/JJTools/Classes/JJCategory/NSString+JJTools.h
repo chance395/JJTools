@@ -204,4 +204,8 @@
 +(NSString *)HmacSha1:(NSString *)key data:(NSString *)data;
 
 
+/**
+ 打印支持的字体
+ */
++(void)printFontFamily;
 @end
