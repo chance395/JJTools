@@ -40,8 +40,13 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     [super viewDidLoad];
     [self.view addSubview:self.wkWebView];
     [self.view addSubview:self.progressView];
+    CGFloat height =NAVIGATIONBAR_HEIGHT;
+    if (self.navigationController.viewControllers.count == 0) {
+        height =20;
+    }
     [self.wkWebView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.and.left.and.right.equalTo(self.view);
+        make.left.and.right.equalTo(self.view);
+        make.top.equalTo(self.view).mas_offset(height);
         make.bottom.equalTo(self.view.mas_bottom).mas_offset(!self.isHideBottom ? -wkwebViewBottomViewHeight :0);
     }];
     [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -107,7 +112,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         // 设置代理
         _wkWebView.navigationDelegate = self;
         _wkWebView.UIDelegate = self;
-        _wkWebView.scrollView.delegate =self;
+//        _wkWebView.scrollView.delegate =self;
         //kvo 添加进度监控
         [_wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:0 context:WkwebBrowserContext];
         //开启手势触摸

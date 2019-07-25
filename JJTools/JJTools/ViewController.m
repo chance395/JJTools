@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "JJDispatch_queue.h"
+#import "JJTools.h"
 @interface ViewController ()
 @end
 
@@ -17,7 +18,10 @@
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor redColor];
 //    NSLog(@"test");
-   
+//    JJWKWebViewController *wk =[JJWKWebViewController new];
 }
+
+
+
 
 @end
