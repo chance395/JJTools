@@ -11,18 +11,19 @@
 #import "JJMacroDefine.h"
 #import "JJColorDefine.h"
 #import "UIButton+MasonryLayout.h"
-#define  wkwebViewBottomViewHeight  44
 #define  wkwebViewMargin 26
 #define  wkwebViewBtnWidth 23
-
+#define  isIPhonexUp [UIScreen mainScreen].bounds.size.height >= 812
 static void *WkwebBrowserContext = &WkwebBrowserContext;
 @interface JJWKWebViewController ()<WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler,UIScrollViewDelegate>
+{
+    CGFloat wkwebViewBottomViewHeight;
+}
 
 @property (strong,nonatomic) WKWebView       *wkWebView;
 @property (strong,nonatomic) UIProgressView  *progressView;
 @property (strong,nonatomic) UIBarButtonItem *customBackBarItem;
 @property (strong,nonatomic) UIBarButtonItem *closeButtonItem;
-//@property (strong,nonatomic) NSMutableArray  *snapShotsArray;
 @property (nonatomic,strong) UIButton        *bottom_homeBtn;
 @property (nonatomic,strong) UIButton        *bottom_backBtn;
 @property (nonatomic,strong) UIButton        *bottom_forwardBtn;
@@ -40,14 +41,21 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     [super viewDidLoad];
     [self.view addSubview:self.wkWebView];
     [self.view addSubview:self.progressView];
+    wkwebViewBottomViewHeight = [UIScreen mainScreen].bounds.size.height >= 812 ? 55 :40;
     CGFloat height =NAVIGATIONBAR_HEIGHT;
-    if (self.navigationController.viewControllers.count == 0) {
-        height =20;
+    if (self.navigationController.viewControllers.count == 0)
+    {
+        if (self.statuBarMargin) {
+            height =isIPhonexUp ? 35 :20;
+        }
+        else{
+            height =0;
+        }
     }
     [self.wkWebView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.and.right.equalTo(self.view);
         make.top.equalTo(self.view).mas_offset(height);
-        make.bottom.equalTo(self.view.mas_bottom).mas_offset(!self.isHideBottom ? -wkwebViewBottomViewHeight :0);
+        make.bottom.equalTo(self.view.mas_bottom).mas_offset(!self.isHideBottom ? -self->wkwebViewBottomViewHeight :0);
     }];
     [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.left.and.right.equalTo(self.view);
@@ -58,7 +66,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         [self.view addSubview:self.bottomView];
         [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.and.right.bottom.equalTo(self.view);
-            make.height.mas_equalTo(wkwebViewBottomViewHeight);
+            make.height.mas_equalTo(self->wkwebViewBottomViewHeight);
         }];
         [self settupBottomView];
     }
@@ -101,18 +109,18 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         //自定义配置,一般用于 js调用oc方法(OC拦截URL中的数据做自定义操作)
         WKUserContentController * UserContentController = [[WKUserContentController alloc]init];
         // 添加消息处理，注意：self指代的对象需要遵守WKScriptMessageHandler协议，结束时需要移除
-        [UserContentController addScriptMessageHandler:self name:@"WXPay"];
+        //        [UserContentController addScriptMessageHandler:self name:@"WXPay"];
         // 是否支持记忆读取
         Configuration.suppressesIncrementalRendering = YES;
         // 允许用户更改网页的设置
         Configuration.userContentController = UserContentController;
-        _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:Configuration];
+        _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0,20, SCREEN_WIDTH, SCREEN_HEIGHT-20) configuration:Configuration];
         _wkWebView.backgroundColor =[UIColor redColor];
         _wkWebView.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1.0];
         // 设置代理
         _wkWebView.navigationDelegate = self;
         _wkWebView.UIDelegate = self;
-//        _wkWebView.scrollView.delegate =self;
+        _wkWebView.scrollView.delegate =self;
         //kvo 添加进度监控
         [_wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:0 context:WkwebBrowserContext];
         //开启手势触摸
@@ -128,13 +136,13 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     if (!_progressView) {
         _progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
-        if (!self.isHideNav == NO) {
+        if (self.isHideNav) {
             _progressView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 3);
         }else{
             _progressView.frame = CGRectMake(0, 64, self.view.bounds.size.width, 3);
         }
         // 设置进度条的色彩
-        [_progressView setTrackTintColor:[UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1.0]];
+        [_progressView setTrackTintColor:[UIColor colorWithRed:76.0/255 green:128.0/255 blue:243.0/255 alpha:1.0]];
         
         _progressView.progressTintColor = self.progressTintColor ? self.progressTintColor: [UIColor greenColor];
     }
@@ -168,13 +176,6 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     }
     return _closeButtonItem;
 }
-
-//-(NSMutableArray*)snapShotsArray{
-//    if (!_snapShotsArray) {
-//        _snapShotsArray = [NSMutableArray array];
-//    }
-//    return _snapShotsArray;
-//}
 
 -(void)viewWillDisappear:(BOOL)animated{
     [self.wkWebView.configuration.userContentController removeScriptMessageHandlerForName:@"WXPay"];
@@ -393,16 +394,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     });
 }
 
-//请求链接处理
--(void)pushCurrentSnapshotViewWithRequest:(NSURLRequest*)request{
-    
-    //如果url是很奇怪的就不push
-    if ([request.URL.absoluteString isEqualToString:@"about:blank"]) {
-        //        NSLog(@"about blank!! return");
-        return;
-    }
-    
-}
+
 
 #pragma mark ================ WKNavigationDelegate ================
 
@@ -449,8 +441,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     self.currentUrl =url;
     UIApplication *app = [UIApplication sharedApplication];
     
-    //    appstorte
-    if ([url.absoluteString containsString:@"itunes.apple.com"])
+    if ([url.absoluteString containsString:@"itunes.apple.com"]||[url.absoluteString containsString:@"ad-ma"])
     {
         if ([app canOpenURL:url])
         {
@@ -468,18 +459,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     if (!navigationAction.targetFrame.isMainFrame) {
         [self.wkWebView loadRequest:navigationAction.request];
     }
-    //    appstore的外的包
-    if ([url.absoluteString containsString:@"itms-services://"]) {
-        if (@available(iOS 10.0, *)) {
-            [app openURL:url options:@{} completionHandler:^(BOOL success) {
-                
-            }];
-        } else {
-            [app openURL:url];
-        }
-        decisionHandler(WKNavigationActionPolicyCancel);
-        return;
-    }
+    
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
@@ -580,11 +560,11 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     
     //服务器固定格式写法 window.webkit.messageHandlers.名字.postMessage(内容);
     //客户端写法 message.name isEqualToString:@"名字"]
-    if ([message.name isEqualToString:@"WXPay"]) {
-        NSLog(@"%@", message.body);
-        //调用微信支付方法
-        //        [self WXPayWithParam:message.body];
-    }
+    //    if ([message.name isEqualToString:@"WXPay"]) {
+    //        NSLog(@"%@", message.body);
+    //调用微信支付方法
+    //        [self WXPayWithParam:message.body];
+    //    }
 }
 
 #pragma  mark --uiscrollView delegate
@@ -613,7 +593,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
             
             [UIView animateWithDuration:1.5 animations:^{
                 [self.wkWebView mas_updateConstraints:^(MASConstraintMaker *make) {
-                    make.bottom.equalTo(self.view.mas_bottom).mas_offset(-wkwebViewBottomViewHeight);
+                    make.bottom.equalTo(self.view.mas_bottom).mas_offset(-self->wkwebViewBottomViewHeight);
                 }];
                 self.bottomView.hidden =NO;
             }];
@@ -646,7 +626,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     [self.wkWebView mas_updateConstraints:^(MASConstraintMaker *make) {
         
-        make.bottom.equalTo(self.view.mas_bottom).mas_offset(!self.isHideBottom ? -wkwebViewBottomViewHeight :0);
+        make.bottom.equalTo(self.view.mas_bottom).mas_offset(!self.isHideBottom ? -self->wkwebViewBottomViewHeight :0);
     }];
     
     if (!self.isHideBottom)
@@ -654,7 +634,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         [self.view addSubview:self.bottomView];
         [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.and.right.bottom.equalTo(self.view);
-            make.height.mas_equalTo(wkwebViewBottomViewHeight);
+            make.height.mas_equalTo(self->wkwebViewBottomViewHeight);
         }];
         [self settupBottomView];
     }

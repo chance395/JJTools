@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign,getter=isHideLeftItems) BOOL  HideLeftItems;
 @property (nonatomic,assign,getter=isCancelSuspension) BOOL CancelSuspension;
 @property (nonatomic, assign)                            BOOL resetBottom;
+@property (nonatomic, assign)                            BOOL statuBarMargin;
 
 @end
 

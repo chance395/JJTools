@@ -23,6 +23,7 @@
 		848FBBA0228C74B400590168 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FBB97228C74B400590168 /* NSString+Encryption.m */; };
 		848FBBA1228C74B400590168 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FBB9A228C74B400590168 /* Base64.m */; };
 		848FBBA2228C74B400590168 /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FBB9B228C74B400590168 /* CocoaSecurity.m */; };
+		84CB9E1D22F01AB800B63E81 /* JJUIWebIViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CB9E1B22F01AB800B63E81 /* JJUIWebIViewViewController.m */; };
 		934F0CE595FB53E686ECF1E1 /* libPods-JJTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */; };
 		F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1021FB083600EBC626 /* JJConstants.m */; };
 		F77FAC5E21FB083600EBC626 /* JJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FAC1921FB083600EBC626 /* JJBaseModel.m */; };
@@ -111,6 +112,8 @@
 		848FBB9B228C74B400590168 /* CocoaSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaSecurity.m; sourceTree = "<group>"; };
 		848FBB9C228C74B400590168 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
 		848FBB9D228C74B400590168 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		84CB9E1B22F01AB800B63E81 /* JJUIWebIViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJUIWebIViewViewController.m; sourceTree = "<group>"; };
+		84CB9E1C22F01AB800B63E81 /* JJUIWebIViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJUIWebIViewViewController.h; sourceTree = "<group>"; };
 		CE54E6AD2E43DD73EE2A79A6 /* libPods-JJTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77FAC1021FB083600EBC626 /* JJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJConstants.m; sourceTree = "<group>"; };
 		F77FAC1121FB083600EBC626 /* JJUrlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJUrlDefine.h; sourceTree = "<group>"; };
@@ -342,6 +345,8 @@
 		F77FAC2A21FB083600EBC626 /* JJBaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84CB9E1C22F01AB800B63E81 /* JJUIWebIViewViewController.h */,
+				84CB9E1B22F01AB800B63E81 /* JJUIWebIViewViewController.m */,
 				F7BBBD4C223907F2008BF2BC /* JJWKWebViewController.h */,
 				F7BBBD4B223907F1008BF2BC /* JJWKWebViewController.m */,
 				F77FAC2C21FB083600EBC626 /* JJBaseVC.h */,
@@ -687,6 +692,7 @@
 				F77FAC5C21FB083600EBC626 /* JJConstants.m in Sources */,
 				F77FAC7021FB083600EBC626 /* JJSystemCall.m in Sources */,
 				848FBBA1228C74B400590168 /* Base64.m in Sources */,
+				84CB9E1D22F01AB800B63E81 /* JJUIWebIViewViewController.m in Sources */,
 				843319FD22A97010006DA25F /* NSData+AES.m in Sources */,
 				F77FAC6521FB083600EBC626 /* JJBaseLoginSecondViewController.m in Sources */,
 				848FBB9E228C74B400590168 /* NSString+Hash.m in Sources */,
