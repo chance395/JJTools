@@ -11,6 +11,8 @@
 		843319FD22A97010006DA25F /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 843319FC22A97010006DA25F /* NSData+AES.m */; };
 		8434915322AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8434915222AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.m */; };
 		84382AF12268D9BC00048ED9 /* JJBaseCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84382AF02268D9BC00048ED9 /* JJBaseCollectionReusableView.m */; };
+		847043AE23D5F37F005C75B0 /* NSArray+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 847043AD23D5F37F005C75B0 /* NSArray+JJTools.m */; };
+		847043B123D5F3F4005C75B0 /* NSMutableArray+JJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 847043B023D5F3F4005C75B0 /* NSMutableArray+JJTools.m */; };
 		847857F6226EA7CD003AA9D5 /* UITextField+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 847857EC226EA7CC003AA9D5 /* UITextField+MasonryLayout.m */; };
 		847857F7226EA7CD003AA9D5 /* UIView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 847857EF226EA7CC003AA9D5 /* UIView+MasonryLayout.m */; };
 		847857F8226EA7CD003AA9D5 /* UIImageView+MasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 847857F1226EA7CC003AA9D5 /* UIImageView+MasonryLayout.m */; };
@@ -89,6 +91,10 @@
 		8434915222AA0CCB002F5057 /* JJBaseTableView+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJBaseTableView+MasonryLayout.m"; sourceTree = "<group>"; };
 		84382AEF2268D9BC00048ED9 /* JJBaseCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJBaseCollectionReusableView.h; path = ../../../../../marsPlan/Pods/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.h; sourceTree = "<group>"; };
 		84382AF02268D9BC00048ED9 /* JJBaseCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJBaseCollectionReusableView.m; path = ../../../../../marsPlan/Pods/JJTools/JJTools/JJTools/Classes/JJBaseView/JJBaseCollectionReusableView.m; sourceTree = "<group>"; };
+		847043AC23D5F37F005C75B0 /* NSArray+JJTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JJTools.h"; sourceTree = "<group>"; };
+		847043AD23D5F37F005C75B0 /* NSArray+JJTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JJTools.m"; sourceTree = "<group>"; };
+		847043AF23D5F3F4005C75B0 /* NSMutableArray+JJTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JJTools.h"; sourceTree = "<group>"; };
+		847043B023D5F3F4005C75B0 /* NSMutableArray+JJTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JJTools.m"; sourceTree = "<group>"; };
 		847857EC226EA7CC003AA9D5 /* UITextField+MasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MasonryLayout.m"; sourceTree = "<group>"; };
 		847857ED226EA7CC003AA9D5 /* UIImageView+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MasonryLayout.h"; sourceTree = "<group>"; };
 		847857EE226EA7CC003AA9D5 /* UILabel+MasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MasonryLayout.h"; sourceTree = "<group>"; };
@@ -335,6 +341,10 @@
 				F77FAC2421FB083600EBC626 /* NSString+JJTools.h */,
 				F77FAC2521FB083600EBC626 /* UIColor+JJTools.m */,
 				F77FAC2621FB083600EBC626 /* UIDevice+JJDevice.h */,
+				847043AC23D5F37F005C75B0 /* NSArray+JJTools.h */,
+				847043AF23D5F3F4005C75B0 /* NSMutableArray+JJTools.h */,
+				847043B023D5F3F4005C75B0 /* NSMutableArray+JJTools.m */,
+				847043AD23D5F37F005C75B0 /* NSArray+JJTools.m */,
 				F77FAC2721FB083600EBC626 /* NSString+JJTools.m */,
 				F77FAC2821FB083600EBC626 /* UIDevice+JJDevice.m */,
 				F77FAC2921FB083600EBC626 /* UIColor+JJTools.h */,
@@ -699,6 +709,7 @@
 				F77FAC6721FB083600EBC626 /* JJBaseNavigationViewController.m in Sources */,
 				F77FAC6B21FB083600EBC626 /* JJBaseComponent.m in Sources */,
 				847857F6226EA7CD003AA9D5 /* UITextField+MasonryLayout.m in Sources */,
+				847043B123D5F3F4005C75B0 /* NSMutableArray+JJTools.m in Sources */,
 				F77FAC6021FB083600EBC626 /* JJTool.m in Sources */,
 				F77FAC6E21FB083600EBC626 /* JJBaseCollectionViewCell.m in Sources */,
 				F77FAC6F21FB083600EBC626 /* JJBaseTableViewHeaderFooterView.m in Sources */,
@@ -722,6 +733,7 @@
 				847857F9226EA7CD003AA9D5 /* UILabel+MasonryLayout.m in Sources */,
 				F77FAC6C21FB083600EBC626 /* JJBaseTableViewCell.m in Sources */,
 				848FBBA2228C74B400590168 /* CocoaSecurity.m in Sources */,
+				847043AE23D5F37F005C75B0 /* NSArray+JJTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
